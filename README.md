@@ -1,2 +1,3 @@
 # PathWrangler
-A path library written in Swift
+
+A description of this package.
