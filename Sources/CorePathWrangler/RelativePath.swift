@@ -11,8 +11,6 @@ public struct RelativePath: _PathProtocol {
         self.storage = storage
     }
 
-    public static let current = RelativePath(elements: []) // Current relative path is always "."
-
     @usableFromInline
     mutating func copyStorageIfNeeded() {
         guard !isKnownUniquelyReferenced(&storage) else { return }
@@ -45,15 +43,21 @@ public struct RelativePath: _PathProtocol {
     }
 }
 
-extension Collection where Element: Equatable, Index: BinaryInteger {
+extension RelativePath {
+    public static let current = RelativePath(elements: []) // Current relative path is always "."
+}
+
+extension Collection where Element: Equatable {
     @usableFromInline
     func contains<Other: Collection>(_ other: Other) -> Bool where Other.Element == Element {
         guard let start = other.first else { return true }
-        guard case let countDiff = count - other.count, countDiff >= 0 else { return false }
-        var dropCount = 0
-        while case let subSequence = dropFirst(dropCount), let idx = subSequence.firstIndex(of: start), idx <= countDiff {
-            guard !subSequence.starts(with: other) else { return true }
-            dropCount = Int(idx)
+        guard let searchStartIdx = firstIndex(of: start),
+            case let otherCount = other.count, count >= other.count else { return false }
+        var lowerBound = searchStartIdx
+        while lowerBound < endIndex && distance(from: lowerBound, to: endIndex) >= otherCount {
+            guard !self[lowerBound...].starts(with: other) else { return true }
+            guard let nextIdx = self[index(after: lowerBound)...].firstIndex(of: start) else { return false }
+            lowerBound = nextIdx
         }
         return false
     }

@@ -103,6 +103,40 @@ final class PathStorageTests: XCTestCase {
         XCTAssertEqual(absStorage.elements, [PathElement(name: "test")])
     }
 
+    func testResolvingLongPathsWithoutSymlinks() {
+        let absStorage1 = PathStorage(isAbsolute: true, pathString: "/A/B/C/D/./E/.././../F/../G/H/I")
+        let absStorage2 = PathStorage(isAbsolute: true, pathString: "/A/../../B/C/D/./E/.././../F/../G/H/I")
+        let absStorage3 = PathStorage(isAbsolute: true, pathString: "/./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
+        let absStorage4 = PathStorage(isAbsolute: true, pathString: "/.././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
+        let absStorage5 = PathStorage(isAbsolute: true, pathString: "/.././.././A/../..")
+        absStorage1.resolve(resolveSymlinks: false)
+        absStorage2.resolve(resolveSymlinks: false)
+        absStorage3.resolve(resolveSymlinks: false)
+        absStorage4.resolve(resolveSymlinks: false)
+        absStorage5.resolve(resolveSymlinks: false)
+        XCTAssertEqual(absStorage1.pathString, "/A/B/C/G/H/I")
+        XCTAssertEqual(absStorage2.pathString, "/B/C/G/H/I")
+        XCTAssertEqual(absStorage3.pathString, "/B/C/G/H/I")
+        XCTAssertEqual(absStorage4.pathString, "/B/C/G/H/I")
+        XCTAssertEqual(absStorage5.pathString, "/")
+
+        let relStorage1 = PathStorage(isAbsolute: false, pathString: "A/B/C/D/./E/.././../F/../G/H/I")
+        let relStorage2 = PathStorage(isAbsolute: false, pathString: "A/../../B/C/D/./E/.././../F/../G/H/I")
+        let relStorage3 = PathStorage(isAbsolute: false, pathString: "./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
+        let relStorage4 = PathStorage(isAbsolute: false, pathString: ".././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
+        let relStorage5 = PathStorage(isAbsolute: false, pathString: ".././.././A/../..")
+        relStorage1.resolve(resolveSymlinks: false)
+        relStorage2.resolve(resolveSymlinks: false)
+        relStorage3.resolve(resolveSymlinks: false)
+        relStorage4.resolve(resolveSymlinks: false)
+        relStorage5.resolve(resolveSymlinks: false)
+        XCTAssertEqual(relStorage1.pathString, "A/B/C/G/H/I")
+        XCTAssertEqual(relStorage2.pathString, "../B/C/G/H/I")
+        XCTAssertEqual(relStorage3.pathString, "../B/C/G/H/I")
+        XCTAssertEqual(relStorage4.pathString, "../../B/C/G/H/I")
+        XCTAssertEqual(relStorage5.pathString, "../../..")
+    }
+
     func testResolvingWithSymlinks() {
         let storage = PathStorage(isAbsolute: true)
         storage.elements = [PathElement(name: "test"), PathElement(name: "test2")]

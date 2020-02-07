@@ -44,13 +44,13 @@ extension _PathProtocol {
     }
 
     @inlinable
-    public func hash(into hasher: inout Hasher) {
-        hasher.combine(storage.elements)
+    public static func ==(lhs: Self, rhs: Self) -> Bool {
+        lhs.storage.elements == rhs.storage.elements
     }
 
     @inlinable
-    public static func ==(lhs: Self, rhs: Self) -> Bool {
-        lhs.storage.elements == rhs.storage.elements
+    public func hash(into hasher: inout Hasher) {
+        hasher.combine(storage.elements)
     }
 
     @inlinable
@@ -122,7 +122,7 @@ extension _PathProtocol {
         guard !storage.elements.isEmpty else { return self }
         let newStorage = storage.copy()
         newStorage.elements.removeLast()
-        return Self(storage: storage)
+        return Self(storage: newStorage)
     }
 
     @inlinable

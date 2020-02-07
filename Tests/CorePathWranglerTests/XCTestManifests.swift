@@ -6,14 +6,15 @@ extension AbsolutePathTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__AbsolutePathTests = [
+        ("testAbsolution", testAbsolution),
         ("testCurrent", testCurrent),
         ("testResolvingWithoutSymlinks", testResolvingWithoutSymlinks),
-        ("testResolvingWithSymlinks", testResolvingWithSymlinks),
         ("testRoot", testRoot),
         ("testStorageAssignment", testStorageAssignment),
         ("testStorageCopyingWhenNonUniquelyReferenced", testStorageCopyingWhenNonUniquelyReferenced),
         ("testStorageCopyingWhenUniquelyReferenced", testStorageCopyingWhenUniquelyReferenced),
-        ("testTemp", testTemp),
+        ("testSubpathDetermination", testSubpathDetermination),
+        ("testTmpDir", testTmpDir),
     ]
 }
 
@@ -51,11 +52,26 @@ extension PathProtocolTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__PathProtocolTests = [
+        ("testAppendingPathComponents", testAppendingPathComponents),
+        ("testAppendingPathExtension", testAppendingPathExtension),
+        ("testAppendingRelativePaths", testAppendingRelativePaths),
         ("testAppendingVariadicPathCompontents", testAppendingVariadicPathCompontents),
         ("testCustomDebugStringConvertibleConformance", testCustomDebugStringConvertibleConformance),
         ("testCustomStringConvertibleConformance", testCustomStringConvertibleConformance),
+        ("testDecodableConformance", testDecodableConformance),
+        ("testElementsInitializer", testElementsInitializer),
+        ("testEncodableConformance", testEncodableConformance),
+        ("testEquatableConformance", testEquatableConformance),
+        ("testHashableConformance", testHashableConformance),
+        ("testLastPathComponent", testLastPathComponent),
+        ("testLastPathExtension", testLastPathExtension),
         ("testLosslessStringConvertibleConformance", testLosslessStringConvertibleConformance),
+        ("testPathString", testPathString),
+        ("testPathStringInitializer", testPathStringInitializer),
+        ("testRemovingLastPathComponent", testRemovingLastPathComponent),
+        ("testRemovingLastPathExtension", testRemovingLastPathExtension),
         ("testSlashAppending", testSlashAppending),
+        ("testSubPathDetermination", testSubPathDetermination),
     ]
 }
 
@@ -71,6 +87,7 @@ extension PathStorageTests {
         ("testLastPathElement", testLastPathElement),
         ("testLastSafeSubsciptIndex", testLastSafeSubsciptIndex),
         ("testPathStringCaching", testPathStringCaching),
+        ("testResolvingLongPathsWithoutSymlinks", testResolvingLongPathsWithoutSymlinks),
         ("testResolvingWithoutSymlinks", testResolvingWithoutSymlinks),
         ("testResolvingWithSymlinks", testResolvingWithSymlinks),
     ]
@@ -81,12 +98,15 @@ extension RelativePathTests {
     //   `swift test --generate-linuxmain`
     // to regenerate.
     static let __allTests__RelativePathTests = [
+        ("testAbsolution", testAbsolution),
+        ("testCollectionContains", testCollectionContains),
         ("testCurrent", testCurrent),
         ("testNestingInAbsolute", testNestingInAbsolute),
         ("testResolving", testResolving),
         ("testStorageAssignment", testStorageAssignment),
         ("testStorageCopyingWhenNonUniquelyReferenced", testStorageCopyingWhenNonUniquelyReferenced),
         ("testStorageCopyingWhenUniquelyReferenced", testStorageCopyingWhenUniquelyReferenced),
+        ("testSubpathDetermination", testSubpathDetermination),
     ]
 }
 
