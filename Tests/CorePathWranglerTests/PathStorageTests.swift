@@ -3,8 +3,15 @@ import XCTest
 
 final class PathStorageTests: XCTestCase {
     func testInitialization() {
-        XCTAssertTrue(PathStorage(isAbsolute: true).isAbsolute)
         XCTAssertFalse(PathStorage(isAbsolute: false).isAbsolute)
+        XCTAssertTrue(PathStorage(isAbsolute: true).isAbsolute)
+        XCTAssertTrue(PathStorage(isAbsolute: false).elements.isEmpty)
+        let storage = PathStorage(isAbsolute: false, elements: [PathElement(name: "test")])
+        XCTAssertFalse(storage.isAbsolute)
+        XCTAssertEqual(storage.elements, [PathElement(name: "test")])
+        let storage2 = PathStorage(isAbsolute: true, pathString: "/a/b/c")
+        XCTAssertTrue(storage2.isAbsolute)
+        XCTAssertEqual(storage2.elements, PathElement.elements(from: "/a/b/c"))
     }
 
     func testElementsUpdateResetsPathStringStorage() {
@@ -33,9 +40,8 @@ final class PathStorageTests: XCTestCase {
         storage.lastPathElement = PathElement(name: "test3")
         XCTAssertEqual(storage.lastPathElement.name, "test3")
         XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test3")])
-        storage.elements.removeAll()
         storage.lastPathElement = PathElement(name: "test4")
-        XCTAssertEqual(storage.elements, [PathElement(name: "test4")])
+        XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test4")])
     }
 
     func testCopying() {

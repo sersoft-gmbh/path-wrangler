@@ -1,5 +1,5 @@
 @usableFromInline
-internal struct PathElement: Hashable, PathComponentConvertible {
+struct PathElement: Hashable, PathComponentConvertible {
     enum SimplificationAction {
         case none, remove, removeParent
     }

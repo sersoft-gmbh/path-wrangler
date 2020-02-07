@@ -1,17 +1,17 @@
 public struct RelativePath: _PathProtocol {
     @usableFromInline
+    static let isAbsolute = false
+
+    @usableFromInline
     private(set) var storage = PathStorage(isAbsolute: false)
 
     @usableFromInline
     init(storage: PathStorage) {
-        assert(!storage.isAbsolute)
+        assert(storage.isAbsolute == Self.isAbsolute)
         self.storage = storage
     }
 
-    @inlinable
-    public init() {}
-
-    public static let current = RelativePath() // Current relative path is always "."
+    public static let current = RelativePath(elements: []) // Current relative path is always "."
 
     @usableFromInline
     mutating func copyStorageIfNeeded() {

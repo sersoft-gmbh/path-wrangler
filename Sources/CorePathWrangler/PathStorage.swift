@@ -12,7 +12,7 @@ final class PathStorage {
     let isAbsolute: Bool
 
     @usableFromInline
-    var elements: [PathElement] = [] {
+    var elements: [PathElement] {
         didSet { _pathString = nil }
     }
 
@@ -23,11 +23,8 @@ final class PathStorage {
             return elements[elements.lastSafeSubscriptIndex]
         }
         set {
-            if elements.isEmpty {
-                elements.append(newValue)
-            } else {
-                elements[elements.lastSafeSubscriptIndex] = newValue
-            }
+            assert(!elements.isEmpty)
+            elements[elements.lastSafeSubscriptIndex] = newValue
         }
     }
 
@@ -39,8 +36,16 @@ final class PathStorage {
         return self.pathString
     }
 
-    init(isAbsolute: Bool) {
+    @usableFromInline
+    init(isAbsolute: Bool, elements: [PathElement] = []) {
         self.isAbsolute = isAbsolute
+        self.elements = elements
+    }
+
+    @inlinable
+    convenience init(isAbsolute: Bool, pathString: String) {
+        self.init(isAbsolute: isAbsolute,
+                  elements: PathElement.elements(from: pathString))
     }
 
     @usableFromInline

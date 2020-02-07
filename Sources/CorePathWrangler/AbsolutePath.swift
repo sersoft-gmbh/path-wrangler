@@ -7,16 +7,16 @@ import CPathWrangler
 
 public struct AbsolutePath: _PathProtocol {
     @usableFromInline
-    private(set) var storage = PathStorage(isAbsolute: true)
+    static let isAbsolute = true
+
+    @usableFromInline
+    private(set) var storage: PathStorage
 
     @usableFromInline
     init(storage: PathStorage) {
-        assert(storage.isAbsolute)
+        assert(storage.isAbsolute == Self.isAbsolute)
         self.storage = storage
     }
-
-    @inlinable
-    public init() {}
 
     @usableFromInline
     mutating func copyStorageIfNeeded() {
@@ -29,7 +29,7 @@ public struct AbsolutePath: _PathProtocol {
         storage.elements.starts(with: other.storage.elements)
     }
 
-    public static let root = AbsolutePath()
+    public static let root = AbsolutePath(elements: [])
 
     public static var current: Self {
         Self(pathString: String(cString: getcwd(nil, 0)))

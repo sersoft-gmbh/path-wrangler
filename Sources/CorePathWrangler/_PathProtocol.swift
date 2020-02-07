@@ -1,5 +1,7 @@
 @usableFromInline
 protocol _PathProtocol: PathProtocol, Codable, CustomStringConvertible, CustomDebugStringConvertible {
+    static var isAbsolute: Bool { get }
+
     var storage: PathStorage { get }
 
     init(storage: PathStorage)
@@ -20,9 +22,13 @@ extension _PathProtocol {
     public var lastPathExtension: PathExtension? { storage.elements.last?.extensions.last }
 
     @inlinable
+    init(elements: [PathElement]) {
+        self.init(storage: PathStorage(isAbsolute: Self.isAbsolute, elements: elements))
+    }
+
+    @inlinable
     public init(pathString: String) {
-        self.init()
-        storage.elements = PathElement.elements(from: pathString)
+        self.init(storage: PathStorage(isAbsolute: Self.isAbsolute, pathString: pathString))
     }
 
     @inlinable

@@ -7,7 +7,6 @@ public protocol PathProtocol: Hashable {
     var lastPathExtension: PathExtension? { get }
 
     init(pathString: String)
-    init()
 
     static var current: Self { get }
 

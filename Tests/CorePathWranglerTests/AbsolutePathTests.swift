@@ -9,10 +9,6 @@ import CPathWrangler
 @testable import CorePathWrangler
 
 final class AbsolutePathTests: XCTestCase {
-    func testAutoCreatedStorage() {
-        XCTAssertTrue(AbsolutePath().storage.isAbsolute)
-    }
-
     func testStorageAssignment() {
         let storage = PathStorage(isAbsolute: true)
         let path = AbsolutePath(storage: storage)

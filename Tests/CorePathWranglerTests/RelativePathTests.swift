@@ -2,10 +2,6 @@ import XCTest
 @testable import CorePathWrangler
 
 final class RelativePathTests: XCTestCase {
-    func testAutoCreatedStorage() {
-        XCTAssertFalse(RelativePath().storage.isAbsolute)
-    }
-
     func testStorageAssignment() {
         let storage = PathStorage(isAbsolute: false)
         let path = RelativePath(storage: storage)
