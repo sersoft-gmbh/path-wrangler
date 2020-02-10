@@ -8,47 +8,15 @@ extension PathProtocol {
     }
 }
 
-extension URL: PathProtocol {
-    @inlinable
-    public var pathString: String { path }
-
-    @inlinable
-    public var lastPathComponent: PathComponent? { pathComponents.last }
-
-    @inlinable
-    public var lastPathExtension: PathExtension? { pathExtension }
-
-    @inlinable
-    public init(pathString: String) {
-        self.init(fileURLWithPath: pathString)
-    }
-
-    @inlinable
-    public init() {
-        self.init(fileURLWithPath: "/")
-    }
-
-    @inlinable
-    public init<Path: PathProtocol>(path: Path) {
-        self.init(fileURLWithPath: path.pathString)
-    }
-
+extension URL {
     @inlinable
     public init<Path: PathProtocol>(path: Path, isDirectory: Bool) {
         self.init(fileURLWithPath: path.pathString, isDirectory: isDirectory)
     }
 
     @inlinable
-    public static var current: URL { URL(fileURLWithPath: FileManager.default.currentDirectoryPath) }
-
-    @inlinable
-    public mutating func append(_ other: RelativePath) {
-        appendPathComponent(other.pathString)
-    }
-
-    @inlinable
-    public func appending(_ other: RelativePath) -> URL {
-        appendingPathComponent(other.pathString)
+    public init<Path: PathProtocol>(path: Path) {
+        self.init(fileURLWithPath: path.pathString)
     }
 
     @inlinable
@@ -61,6 +29,11 @@ extension URL: PathProtocol {
     }
 
     @inlinable
+    public mutating func append(pathComponents: PathComponentConvertible...) {
+        append(pathComponents: pathComponents)
+    }
+
+    @inlinable
     public func appending<Components>(pathComponents: Components) -> URL
         where Components : Sequence, Components.Element == PathComponentConvertible
     {
@@ -68,42 +41,17 @@ extension URL: PathProtocol {
     }
 
     @inlinable
-    public mutating func append(pathExtension: PathExtension) {
-        appendPathExtension(pathExtension)
-    }
-
-    @inlinable
-    public func appending(pathExtension: PathExtension) -> URL {
-        appendingPathExtension(pathExtension)
-    }
-
-    @inlinable
-    public mutating func removeLastPathComponent() {
-        deleteLastPathComponent()
-    }
-
-    @inlinable
-    public func removingLastPathComponent() -> URL {
-        deletingLastPathComponent()
-    }
-
-    @inlinable
-    public mutating func removeLastPathExtension() {
-        deletePathExtension()
-    }
-
-    @inlinable
-    public func removingLastPathExtension() -> URL {
-        deletingPathExtension()
+    public mutating func appending(pathComponents: PathComponentConvertible...) -> URL {
+        appending(pathComponents: pathComponents)
     }
 
     @inlinable
     public func isSubpath(of other: AbsolutePath) -> Bool {
-        RelativePath(url: self).map { other.isSubpath(of: $0) } == true
+        AbsolutePath(url: self)?.isSubpath(of: other) == true
     }
 
     @inlinable
     public func isSubpath(of other: RelativePath) -> Bool {
-        RelativePath(url: self).map { other.isSubpath(of: $0) } == true
+        RelativePath(url: self)?.isSubpath(of: other) == true
     }
 }
