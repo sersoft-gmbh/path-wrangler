@@ -6,13 +6,14 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
     private var tearDownBlocks: [() -> Void] = []
     override func tearDown() {
         tearDownBlocks.forEach { $0() }
+        tearDownBlocks.removeAll()
         super.tearDown()
     }
     func addTeardownBlock(_ block: @escaping () -> Void) {
         tearDownBlocks.append(block)
     }
     #endif
-    
+
     func testItemExistsAtPath() {
         let fileManager = FileManager.default
         XCTAssertTrue(fileManager.itemExists(at: AbsolutePath.tmpDir))

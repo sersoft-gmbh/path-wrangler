@@ -6,6 +6,7 @@ final class PathStorageTests: XCTestCase {
     private var tearDownBlocks: [() -> Void] = []
     override func tearDown() {
         tearDownBlocks.forEach { $0() }
+        tearDownBlocks.removeAll()
         super.tearDown()
     }
     func addTeardownBlock(_ block: @escaping () -> Void) {
