@@ -52,16 +52,5 @@ extension AbsolutePath {
         Self(pathString: String(cString: getcwd(nil, 0)))
     }
 
-    public static let tmpDir: Self = {
-        let tmpPath: String
-        if issetugid() == 0, let ctmpdir = getenv("TMPDIR"),
-            case let path = String(cString: ctmpdir), !path.isEmpty {
-            tmpPath = path
-        } else if !P_tmpdir.isEmpty {
-            tmpPath = P_tmpdir
-        } else {
-            tmpPath = String(cString: CPW_TMPDIR_PATH)
-        }
-        return Self(pathString: tmpPath).resolved(resolveSymlinks: true)
-    }()
+    public static let tmpDir = Self(pathString: String(cString: cpw_tmp_dir_path())).resolved(resolveSymlinks: true)
 }

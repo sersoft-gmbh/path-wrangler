@@ -74,16 +74,7 @@ final class AbsolutePathTests: XCTestCase {
     }
 
     func testTmpDir() {
-        let tmpPath: String
-        if issetugid() == 0, let ctmpdir = getenv("TMPDIR"),
-            case let path = String(cString: ctmpdir), !path.isEmpty {
-            tmpPath = path
-        } else if !P_tmpdir.isEmpty {
-            tmpPath = P_tmpdir
-        } else {
-            tmpPath = String(cString: CPW_TMPDIR_PATH)
-        }
-        let expectedTemp = AbsolutePath(pathString: tmpPath).resolved(resolveSymlinks: true)
+        let expectedTemp = AbsolutePath(pathString: String(cString: cpw_tmp_dir_path())).resolved(resolveSymlinks: true)
         XCTAssertEqual(AbsolutePath.tmpDir, expectedTemp)
     }
 }

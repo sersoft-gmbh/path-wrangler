@@ -5,7 +5,7 @@
 extern "C" {
 #endif
 
-extern const char *_Nonnull CPW_TMPDIR_PATH;
+extern inline const char *_Nonnull cpw_tmp_dir_path();
 
 #ifdef __cplusplus
 }
