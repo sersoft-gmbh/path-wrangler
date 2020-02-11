@@ -24,8 +24,9 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
 
     func testFileExistsAtPath() {
         let fileManager = FileManager.default
-        let absPath = AbsolutePath.tmpDir.appending(pathComponents: "test.txt")
-        let relPath = RelativePath.current.appending(pathComponents: "test.txt")
+        let fileName = UUID().uuidString
+        let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)
+        let relPath = RelativePath.current.appending(pathComponents: fileName)
         fileManager.createFile(atPath: relPath.pathString, contents: nil, attributes: nil)
         fileManager.createFile(atPath: absPath.pathString, contents: nil, attributes: nil)
         addTeardownBlock {
@@ -42,8 +43,9 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
 
     func testDirectoryExistsAtPath() {
         let fileManager = FileManager.default
-        let absPath = AbsolutePath.tmpDir.appending(pathComponents: "test.txt")
-        let relPath = RelativePath.current.appending(pathComponents: "test.txt")
+        let fileName = UUID().uuidString
+        let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)
+        let relPath = RelativePath.current.appending(pathComponents: fileName)
         fileManager.createFile(atPath: relPath.pathString, contents: nil, attributes: nil)
         fileManager.createFile(atPath: absPath.pathString, contents: nil, attributes: nil)
         addTeardownBlock {
