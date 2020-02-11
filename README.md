@@ -23,11 +23,11 @@ TODO
 
 ## Documentation
 
-The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/AuthScope) available for you.
+The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an [online version](https://sersoft-gmbh.github.io/PathWrangler) available for you.
 
 ## Contributing
 
-If you find a bug / like to see a new feature in AuthScope there are a few ways of helping out:
+If you find a bug / like to see a new feature in PathWrangler there are a few ways of helping out:
 
 -   If you can fix the bug / implement the feature yourself please do and open a PR.
 -   If you know how to code (which you probably do), please add a (failing) test and open a PR. We'll try to get your test green ASAP.
