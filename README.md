@@ -12,7 +12,7 @@ A simple path library written in Swift.
 
 Add the following dependency to your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/authscope.git", from: "1.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/pathwrangler.git", from: "1.0.0"),
 ```
 
 Or add it via Xcode (as of Xcode 11).
