@@ -6,7 +6,7 @@ extern "C" {
 #endif
 
 #include <stdbool.h>
-#include <sys/stat.h>
+#include <sys/types.h>
 
 extern inline const bool cpw_mode_is_link(mode_t mode);
 
