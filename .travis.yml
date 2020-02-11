@@ -62,6 +62,19 @@ jobs:
         - SWIFT_BRANCH="swift-5.2-branch"
         - SWIFT_VERSION="swift-5.2-DEVELOPMENT-SNAPSHOT-2020-02-09-a"
 
+    - &macOS
+      stage: test
+      name: SwiftPM macOS Release
+      osx_image: xcode11.3
+      script: swift test --parallel --enable-code-coverage
+      after_success:
+        - xcrun llvm-cov export -format="lcov" .build/debug/*PackageTests.xctest/Contents/MacOS/*PackageTests -instr-profile .build/debug/codecov/default.profdata > coverage.lcov
+        - bash <(curl -fsL https://codecov.io/bash)
+
+    # - <<: *macOS
+    #   name: SwiftPM macOS Beta
+    #   osx_image: xcode11.4
+
     - stage: publish docs
       name: Generate and publish documentation
       osx_image: xcode11.3
