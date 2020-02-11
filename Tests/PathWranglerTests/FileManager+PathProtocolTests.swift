@@ -2,6 +2,17 @@ import XCTest
 import PathWrangler
 
 final class FileManagerPathProtocolExtensionsTests: XCTestCase {
+    #if os(Linux)
+    private var tearDownBlocks: [() -> Void] = []
+    override func tearDown() {
+        tearDownBlocks.forEach { $0() }
+        super.tearDown()
+    }
+    func addTeardownBlock(_ block: @escaping () -> Void) {
+        tearDownBlocks.append(block)
+    }
+    #endif
+    
     func testItemExistsAtPath() {
         let fileManager = FileManager.default
         XCTAssertTrue(fileManager.itemExists(at: AbsolutePath.tmpDir))

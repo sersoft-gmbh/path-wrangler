@@ -2,6 +2,17 @@ import XCTest
 @testable import CorePathWrangler
 
 final class PathStorageTests: XCTestCase {
+    #if os(Linux)
+    private var tearDownBlocks: [() -> Void] = []
+    override func tearDown() {
+        tearDownBlocks.forEach { $0() }
+        super.tearDown()
+    }
+    func addTeardownBlock(_ block: @escaping () -> Void) {
+        tearDownBlocks.append(block)
+    }
+    #endif
+
     func testInitialization() {
         XCTAssertFalse(PathStorage(isAbsolute: false).isAbsolute)
         XCTAssertTrue(PathStorage(isAbsolute: true).isAbsolute)
