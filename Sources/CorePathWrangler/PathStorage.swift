@@ -1,5 +1,5 @@
 #if os(Linux)
-import GLibC
+import Glibc
 #else
 import Darwin.C
 #endif
