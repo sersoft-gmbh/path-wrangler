@@ -82,7 +82,7 @@ jobs:
       script:
         - CORE_PW_DOCS=$(sourcekitten doc --spm-module CorePathWrangler)
         - PW_DOCS=$(sourcekitten doc --spm-module PathWrangler)
-        - echo ${CORE_PW_DOCS%?}', '${PW_DOCS:1} > docs.json
+        - echo "${CORE_PW_DOCS%?}, ${PW_DOCS:1}" > docs.json
         - jazzy --sourcekitten-sourcefile docs.json --module-version $TRAVIS_TAG
       deploy:
         provider: pages
