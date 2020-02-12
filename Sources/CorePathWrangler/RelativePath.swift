@@ -1,3 +1,4 @@
+/// Represents a relative path.
 public struct RelativePath: _PathProtocol {
     @usableFromInline
     static let isAbsolute = false
@@ -22,11 +23,14 @@ public struct RelativePath: _PathProtocol {
         other.storage.elements.contains(storage.elements)
     }
 
+    /// Turns this relative path into an absolute path using the given absolute path.
+    /// - Parameter absolutePath: The absolute path to use as relation point for this relative path.
     @inlinable
     public func absolute(in absolutePath: AbsolutePath) -> AbsolutePath {
         absolutePath.appending(self)
     }
 
+    /// Resolves (simplifies) this relative path by resolving current (.) and parent (..) directory references.
     @inlinable
     public mutating func resolve() {
         guard !storage.elements.isEmpty else { return }
@@ -34,6 +38,7 @@ public struct RelativePath: _PathProtocol {
         storage.resolve(resolveSymlinks: false)
     }
 
+    /// Returns a resolved (simplified) relative path by resolving current (.) and parent (..) directory references.
     @inlinable
     public func resolved() -> Self {
         guard !storage.elements.isEmpty else { return self }
@@ -44,6 +49,7 @@ public struct RelativePath: _PathProtocol {
 }
 
 extension RelativePath {
+    /// The current relative path (is always `.`)
     public static let current = RelativePath(elements: []) // Current relative path is always "."
 }
 

@@ -1,6 +1,9 @@
+/// The type of a path component (e.g. 'home' and 'user' in '/home/user').
 public typealias PathComponent = String
 
+/// A type that can convert itself into a path component.
 public protocol PathComponentConvertible {
+    /// The path component of the conforming type.
     var pathComponent: PathComponent { get }
 }
 
