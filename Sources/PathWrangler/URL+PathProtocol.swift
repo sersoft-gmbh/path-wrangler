@@ -61,6 +61,7 @@ extension URL {
 
     /// Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The variadic list of path component convertible objects, whose path components to append to the receiver and return.
+    /// - SeeAlso: `appendingPathComponent(_:)`
     @inlinable
     public mutating func appending(pathComponents: PathComponentConvertible...) -> URL {
         appending(pathComponents: pathComponents)
