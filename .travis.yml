@@ -78,7 +78,9 @@ jobs:
     - stage: publish docs
       name: Generate and publish documentation
       osx_image: xcode11.3
-      install: gem install jazzy
+      install:
+        - brew install sourcekitten
+        - gem install jazzy
       script:
         - CORE_PW_DOCS=$(sourcekitten doc --spm-module CorePathWrangler)
         - PW_DOCS=$(sourcekitten doc --spm-module PathWrangler)
