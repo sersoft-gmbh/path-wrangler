@@ -3,7 +3,6 @@ clean: true
 theme: fullwidth
 
 output: docs
-source_directory: Sources
 readme: README.md
 
 module: PathWrangler
