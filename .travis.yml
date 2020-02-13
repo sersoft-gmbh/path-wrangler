@@ -73,7 +73,7 @@ jobs:
 
     # - <<: *macOS
     #   name: SwiftPM macOS Beta
-    #   osx_image: xcode11.4
+    #   osx_image: xcode12
 
     - stage: publish docs
       name: Generate and publish documentation

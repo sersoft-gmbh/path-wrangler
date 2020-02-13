@@ -35,8 +35,8 @@ A protocol named `PathComponentConvertible` is used to represent path components
 
 The PathWrangler package contains two frameworks:
 
-- One is `CorePathWrangler` which contains all the underlying logic but has no dependency on Foundation whatsoever. It uses a few system APIs (like `getcwd` for determining the current working directory), but is otherwise mainly implemented in pure Swift using only stdlib types.
-- The other one is `PathWrangler`  which adds a few neat APIs to `Foundation` types like `FileManager` or `URL` that make interacting with `AbsolutePath` and `RelativePath` easier.
+-   One is `CorePathWrangler` which contains all the underlying logic but has no dependency on Foundation whatsoever. It uses a few system APIs (like `getcwd` for determining the current working directory), but is otherwise mainly implemented in pure Swift using only stdlib types.
+-   The other one is `PathWrangler`  which adds a few neat APIs to `Foundation` types like `FileManager` or `URL` that make interacting with `AbsolutePath` and `RelativePath` easier.
 
 ## Documentation
 
