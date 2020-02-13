@@ -37,8 +37,8 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
         XCTAssertTrue(fileManager.fileExists(at: relPath))
         XCTAssertFalse(fileManager.fileExists(at: AbsolutePath.tmpDir))
         XCTAssertFalse(fileManager.fileExists(at: RelativePath.current))
-        XCTAssertFalse(fileManager.fileExists(at: AbsolutePath(pathString: "/a/b/c/")))
-        XCTAssertFalse(fileManager.fileExists(at: RelativePath(pathString: "a/b/c")))
+        XCTAssertFalse(fileManager.fileExists(at: AbsolutePath(pathString: "/d/e/f/")))
+        XCTAssertFalse(fileManager.fileExists(at: RelativePath(pathString: "d/e/f")))
     }
 
     func testDirectoryExistsAtPath() {
@@ -56,7 +56,7 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
         XCTAssertFalse(fileManager.directoryExists(at: relPath))
         XCTAssertTrue(fileManager.directoryExists(at: AbsolutePath.tmpDir))
         XCTAssertTrue(fileManager.directoryExists(at: RelativePath.current))
-        XCTAssertFalse(fileManager.directoryExists(at: AbsolutePath(pathString: "/a/b/c/")))
-        XCTAssertFalse(fileManager.directoryExists(at: RelativePath(pathString: "a/b/c")))
+        XCTAssertFalse(fileManager.directoryExists(at: AbsolutePath(pathString: "/g/h/i/")))
+        XCTAssertFalse(fileManager.directoryExists(at: RelativePath(pathString: "g/h/i")))
     }
 }

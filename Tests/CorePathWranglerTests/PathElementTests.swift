@@ -32,24 +32,12 @@ final class PathElementTests: XCTestCase {
         XCTAssertTrue(pathElement.extensions.isEmpty)
     }
 
-    func testCreationFromString() {
-        let elements = PathElement.elements(from: "test/these.t1/elements.t2.t3/.././end")
-        XCTAssertEqual(elements, [
-            PathElement(name: "test"),
-            PathElement(name: "these", extensions: ["t1"]),
-            PathElement(name: "elements", extensions: ["t2", "t3"]),
-            PathElement(name: ".."),
-            PathElement(name: "."),
-            PathElement(name: "end"),
-        ])
-    }
-
     func testConvenienceExtensionOnPathComponentConvertible() {
         let convertible = "A/B.test"
         XCTAssertEqual(convertible.pathElements, [PathElement(name: "A"), PathElement(name: "B", extensions: ["test"])])
     }
 
-    func testPathStringComputation() {
+    func testPathStringComputationAndParsing() {
         let elements = [
             PathElement(name: "test"),
             PathElement(name: "these", extensions: ["t1"]),
@@ -58,9 +46,15 @@ final class PathElementTests: XCTestCase {
             PathElement(name: "."),
             PathElement(name: "end"),
         ]
-        XCTAssertEqual(elements.pathString(absolute: false), "test/these.t1/elements.t2.t3/.././end")
-        XCTAssertEqual(elements.pathString(absolute: true), "/test/these.t1/elements.t2.t3/.././end")
+        let relPathString = "test/these.t1/elements.t2.t3/.././end"
+        let absPathString = "/test/these.t1/elements.t2.t3/.././end"
+        XCTAssertEqual(PathElement.elements(from: relPathString), elements)
+        XCTAssertEqual(PathElement.elements(from: absPathString), elements)
+        XCTAssertEqual(elements.pathString(absolute: false), relPathString)
+        XCTAssertEqual(elements.pathString(absolute: true), absPathString)
         XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: false), ".")
         XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: true), "/")
+        XCTAssertTrue(PathElement.elements(from: ".").isEmpty)
+        XCTAssertTrue(PathElement.elements(from: "/").isEmpty)
     }
 }

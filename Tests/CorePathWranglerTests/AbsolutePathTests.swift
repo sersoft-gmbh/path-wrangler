@@ -27,7 +27,7 @@ final class AbsolutePathTests: XCTestCase {
     }
 
     func testStorageCopyingWhenNonUniquelyReferenced() {
-        var path = AbsolutePath(pathString: "/A/B/C")
+        var path = AbsolutePath(pathString: "/X/Y/Z")
         let path2 = path
         path.copyStorageIfNeeded()
         XCTAssertFalse(path.storage === path2.storage)

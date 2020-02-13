@@ -20,7 +20,7 @@ final class RelativePathTests: XCTestCase {
     }
 
     func testStorageCopyingWhenNonUniquelyReferenced() {
-        var path = RelativePath(pathString: "A/B/C")
+        var path = RelativePath(pathString: "D/E/F")
         let path2 = path
         path.copyStorageIfNeeded()
         XCTAssertFalse(path.storage === path2.storage)

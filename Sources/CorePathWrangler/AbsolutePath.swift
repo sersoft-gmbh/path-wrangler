@@ -42,7 +42,7 @@ public struct AbsolutePath: _PathProtocol {
     }
 
     /// Returns a new path that has been resolved (simplified), optionally including symlinks.
-    /// By default this tries to resolve e.g. current directory (.) or parent directory (..) references.
+    /// By default this tries to resolve e.g. current directory (.) or parent directory (..) references in a copy of the receiver.
     /// If `resolveSymlinks` is set to `true`, it also attempts to resolve symlinks. This requires the path to exist.
     /// - Parameter resolveSymlinks: Whether or not symlinks should be tried to resolve. This will only work if the path exists on disk.
     @inlinable
