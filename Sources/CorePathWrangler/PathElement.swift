@@ -3,7 +3,7 @@ struct PathElement: Hashable, PathComponentConvertible {
     enum SimplificationAction {
         case none, remove, removeParent
     }
-    
+
     @usableFromInline
     let name: String
     @usableFromInline
