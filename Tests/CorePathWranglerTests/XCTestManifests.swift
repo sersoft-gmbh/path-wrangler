@@ -38,10 +38,9 @@ extension PathElementTests {
     static let __allTests__PathElementTests = [
         ("testAppendingExtensions", testAppendingExtensions),
         ("testConvenienceExtensionOnPathComponentConvertible", testConvenienceExtensionOnPathComponentConvertible),
-        ("testCreationFromString", testCreationFromString),
         ("testInitialization", testInitialization),
         ("testPathComponentConvertibleConformance", testPathComponentConvertibleConformance),
-        ("testPathStringComputation", testPathStringComputation),
+        ("testPathStringComputationAndParsing", testPathStringComputationAndParsing),
         ("testRemovingPathExtensions", testRemovingPathExtensions),
         ("testSimplifactionAction", testSimplifactionAction),
     ]

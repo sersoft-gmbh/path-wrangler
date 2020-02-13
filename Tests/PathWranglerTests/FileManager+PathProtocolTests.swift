@@ -14,6 +14,19 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
     }
     #endif
 
+    private func createFiles(in fileManager: FileManager) -> (absPath: AbsolutePath, relPath: RelativePath) {
+        let fileName = UUID().uuidString
+        let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)
+        let relPath = RelativePath.current.appending(pathComponents: fileName)
+        fileManager.createFile(atPath: relPath.pathString, contents: nil, attributes: nil)
+        fileManager.createFile(atPath: absPath.pathString, contents: nil, attributes: nil)
+        addTeardownBlock {
+            try? fileManager.removeItem(atPath: relPath.pathString)
+            try? fileManager.removeItem(atPath: absPath.pathString)
+        }
+        return (absPath, relPath)
+    }
+
     func testItemExistsAtPath() {
         let fileManager = FileManager.default
         XCTAssertTrue(fileManager.itemExists(at: AbsolutePath.tmpDir))
@@ -24,15 +37,7 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
 
     func testFileExistsAtPath() {
         let fileManager = FileManager.default
-        let fileName = UUID().uuidString
-        let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)
-        let relPath = RelativePath.current.appending(pathComponents: fileName)
-        fileManager.createFile(atPath: relPath.pathString, contents: nil, attributes: nil)
-        fileManager.createFile(atPath: absPath.pathString, contents: nil, attributes: nil)
-        addTeardownBlock {
-            try? fileManager.removeItem(atPath: relPath.pathString)
-            try? fileManager.removeItem(atPath: absPath.pathString)
-        }
+        let (absPath, relPath) = createFiles(in: fileManager)
         XCTAssertTrue(fileManager.fileExists(at: absPath))
         XCTAssertTrue(fileManager.fileExists(at: relPath))
         XCTAssertFalse(fileManager.fileExists(at: AbsolutePath.tmpDir))
@@ -43,15 +48,7 @@ final class FileManagerPathProtocolExtensionsTests: XCTestCase {
 
     func testDirectoryExistsAtPath() {
         let fileManager = FileManager.default
-        let fileName = UUID().uuidString
-        let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)
-        let relPath = RelativePath.current.appending(pathComponents: fileName)
-        fileManager.createFile(atPath: relPath.pathString, contents: nil, attributes: nil)
-        fileManager.createFile(atPath: absPath.pathString, contents: nil, attributes: nil)
-        addTeardownBlock {
-            try? fileManager.removeItem(atPath: relPath.pathString)
-            try? fileManager.removeItem(atPath: absPath.pathString)
-        }
+        let (absPath, relPath) = createFiles(in: fileManager)
         XCTAssertFalse(fileManager.directoryExists(at: absPath))
         XCTAssertFalse(fileManager.directoryExists(at: relPath))
         XCTAssertTrue(fileManager.directoryExists(at: AbsolutePath.tmpDir))

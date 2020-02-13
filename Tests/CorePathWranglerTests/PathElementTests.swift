@@ -54,7 +54,7 @@ final class PathElementTests: XCTestCase {
         XCTAssertEqual(elements.pathString(absolute: true), absPathString)
         XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: false), ".")
         XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: true), "/")
-        XCTAssertTrue(PathElement.elements(from: ".").isEmpty)
+        XCTAssertEqual(PathElement.elements(from: "."), [PathElement(name: ".")])
         XCTAssertTrue(PathElement.elements(from: "/").isEmpty)
     }
 }
