@@ -6,9 +6,11 @@
 #include <paths.h>
 #include <errno.h>
 
+#if defined(__has_include)
 #if __has_include(<sys/auxv.h>)
 #include <sys/auxv.h>
-#endif
+#endif /* __has_include(<sys/auxv.h>) */
+#endif /* defined(__has_include) */
 
 #ifndef HAVE_ISSETUGID
 #if defined(__DARWIN_C_LEVEL) && defined(__DARWIN_C_FULL) && __DARWIN_C_LEVEL >= __DARWIN_C_FULL
