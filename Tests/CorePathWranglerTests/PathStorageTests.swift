@@ -2,7 +2,7 @@ import XCTest
 @testable import CorePathWrangler
 
 final class PathStorageTests: XCTestCase {
-    #if os(Linux)
+    #if os(Linux) && swift(<5.2.1)
     private var tearDownBlocks: [() -> Void] = []
     override func tearDown() {
         tearDownBlocks.forEach { $0() }
