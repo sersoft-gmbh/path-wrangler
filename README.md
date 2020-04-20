@@ -1,7 +1,7 @@
 # PathWrangler
 
 [![GitHub release](https://img.shields.io/github/release/sersoft-gmbh/PathWrangler.svg?style=flat)](https://github.com/sersoft-gmbh/PathWrangler/releases/latest)
-[![CI Status](https://travis-ci.com/sersoft-gmbh/PathWrangler.svg?branch=master)](https://travis-ci.com/sersoft-gmbh/PathWrangler)
+![Tests](https://github.com/sersoft-gmbh/PathWrangler/workflows/Tests/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c8e4e87ed7c4b9b9be446aa2e14b787)](https://www.codacy.com/gh/sersoft-gmbh/PathWrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/PathWrangler&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/PathWrangler/branch/master/graph/badge.svg)](https://codecov.io/gh/sersoft-gmbh/PathWrangler)
 [![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/PathWrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/PathWrangler)
