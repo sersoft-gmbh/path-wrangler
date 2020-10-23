@@ -61,11 +61,14 @@ public protocol PathProtocol: Hashable {
 }
 
 extension PathProtocol where Self: CustomStringConvertible {
+    /// See `CustomStringConvertible.description`
     @inlinable
     public var description: String { pathString }
 }
 
 extension PathProtocol where Self: LosslessStringConvertible {
+    /// See `LosslessStringConvertible.init(_:)`
+    /// - Parameter description: See `LosslessStringConvertible.init(_:)`
     @inlinable
     public init?(_ description: String) {
         self.init(pathString: description)
@@ -73,6 +76,7 @@ extension PathProtocol where Self: LosslessStringConvertible {
 }
 
 extension PathProtocol where Self: CustomDebugStringConvertible {
+    /// See `CustomDebugStringConvertible.debugDescription`
     public var debugDescription: String { "[\(Self.self)]: \(pathString)" }
 }
 

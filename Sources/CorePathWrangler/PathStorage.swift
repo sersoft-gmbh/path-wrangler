@@ -162,5 +162,5 @@ final class PathStorage {
 
 extension BidirectionalCollection {
     @inlinable
-    var lastSafeSubscriptIndex: Index { index(endIndex, offsetBy: -1, limitedBy: startIndex) ?? startIndex }
+    var lastSafeSubscriptIndex: Index { index(before: endIndex) }
 }

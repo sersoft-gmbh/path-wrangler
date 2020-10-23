@@ -81,8 +81,6 @@ final class PathStorageTests: XCTestCase {
     func testLastSafeSubsciptIndex() {
         let arr = ["1"]
         XCTAssertEqual(arr.lastSafeSubscriptIndex, arr.index(before: arr.endIndex))
-        let arr2: [String] = []
-        XCTAssertEqual(arr2.lastSafeSubscriptIndex, arr2.startIndex)
     }
 
     func testResolvingWithoutSymlinks() {
