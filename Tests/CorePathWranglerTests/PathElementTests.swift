@@ -34,7 +34,8 @@ final class PathElementTests: XCTestCase {
 
     func testConvenienceExtensionOnPathComponentConvertible() {
         let convertible = "A/B.test"
-        XCTAssertEqual(convertible.pathElements, [PathElement(name: "A"), PathElement(name: "B", extensions: ["test"])])
+        XCTAssertEqual(convertible.pathElements,
+                       [PathElement(name: "A"), PathElement(name: "B", extensions: ["test"])])
     }
 
     func testPathStringComputationAndParsing() {

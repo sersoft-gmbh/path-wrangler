@@ -8,7 +8,7 @@ readme: README.md
 module: PathWrangler
 swift_build_tool: spm
 undocumented_text: ""
-github_url: https://github.com/sersoft-gmbh/PathWrangler
+github_url: https://github.com/sersoft-gmbh/path-wrangler
 
 author: ser.soft GmbH
 author_url: https://sersoft.de

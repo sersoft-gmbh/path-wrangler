@@ -3,7 +3,7 @@ import Glibc
 #else
 import Darwin.C
 #endif
-import StdLibAlgorithms
+import Algorithms
 import CPathWrangler
 
 @usableFromInline
@@ -58,7 +58,7 @@ final class PathStorage {
 
     @inlinable
     func append<Components>(pathComponents: Components)
-        where Components: Sequence, Components.Element == PathComponentConvertible
+    where Components: Sequence, Components.Element == PathComponentConvertible
     {
         elements.append(contentsOf: pathComponents.flatMap { $0.pathElements })
     }
@@ -94,7 +94,10 @@ final class PathStorage {
     private func resolve<Elements>(elements: inout Elements,
                                    resolveSymlinks: Bool,
                                    symlinkCache: inout Dictionary<String, SymlinkStatus>)
-        where Elements: RandomAccessCollection, Elements: MutableCollection, Elements: RangeReplaceableCollection, Elements.Element == PathElement
+    where Elements: RandomAccessCollection,
+          Elements: MutableCollection,
+          Elements: RangeReplaceableCollection,
+          Elements.Element == PathElement
     {
         assert(!elements.isEmpty)
         assert(!resolveSymlinks || isAbsolute, "Symlinks cannot be resolved for relative paths")
@@ -106,30 +109,29 @@ final class PathStorage {
         while currentIdx < splitIndex {
             @inline(__always)
             func rotate(from lowerBound: Elements.Index) {
-                elements[lowerBound...].rotateRandomAccess(shiftingToStart: elements.index(after: currentIdx))
+                elements[lowerBound...].rotate(toStartAt: elements.index(after: currentIdx))
                 elements.formIndex(&splitIndex, offsetBy: elements.distance(from: currentIdx, to: lowerBound) - 1)
             }
             @inline(__always)
             func resolveSymlinksIfNeeded() -> Bool {
-                if resolveSymlinks && minSafeIndex == elements.startIndex {
-                    let pathStringToResolve = elements[...currentIdx].pathString(absolute: isAbsolute)
-                    let cached = symlinkCache[pathStringToResolve]
-                    let linkStatus = cached ?? resolvedSymlink(at: pathStringToResolve).map { .isLink($0.pathElements) } ?? .noLink
-                    if case .isLink(var resolved) = linkStatus {
-                        resolve(elements: &resolved, resolveSymlinks: resolveSymlinks, symlinkCache: &symlinkCache)
-                        symlinkCache[pathStringToResolve] = .isLink(resolved)
-                        let offsetDiff = resolved.count - elements[...currentIdx].count
-                        elements.formIndex(&splitIndex, offsetBy: offsetDiff)
-                        elements.replaceSubrange(...currentIdx, with: resolved)
-                        if cached == nil {
-                            currentIdx = elements.startIndex
-                            return false // we need to perform the symlink check again in case we have a linked link.
-                        } else {
-                            elements.formIndex(&currentIdx, offsetBy: offsetDiff)
-                        }
+                guard resolveSymlinks && minSafeIndex == elements.startIndex else { return true }
+                let pathStringToResolve = elements[...currentIdx].pathString(absolute: isAbsolute)
+                let cached = symlinkCache[pathStringToResolve]
+                let linkStatus = cached ?? resolvedSymlink(at: pathStringToResolve).map { .isLink($0.pathElements) } ?? .noLink
+                if case .isLink(var resolved) = linkStatus {
+                    resolve(elements: &resolved, resolveSymlinks: resolveSymlinks, symlinkCache: &symlinkCache)
+                    symlinkCache[pathStringToResolve] = .isLink(resolved)
+                    let offsetDiff = resolved.count - elements[...currentIdx].count
+                    elements.formIndex(&splitIndex, offsetBy: offsetDiff)
+                    elements.replaceSubrange(...currentIdx, with: resolved)
+                    if cached == nil {
+                        currentIdx = elements.startIndex
+                        return false // we need to perform the symlink check again in case we have a linked link.
                     } else {
-                        symlinkCache[pathStringToResolve] = linkStatus
+                        elements.formIndex(&currentIdx, offsetBy: offsetDiff)
                     }
+                } else {
+                    symlinkCache[pathStringToResolve] = linkStatus
                 }
                 return true
             }

@@ -5,4 +5,3 @@ coverage:
 
 ignore:
   - "Tests"
-  - "Sources/StdLibAlgorithms"

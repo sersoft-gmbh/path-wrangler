@@ -74,7 +74,8 @@ final class AbsolutePathTests: XCTestCase {
     }
 
     func testTmpDir() {
-        let expectedTemp = AbsolutePath(pathString: String(cString: cpw_tmp_dir_path())).resolved(resolveSymlinks: true)
+        let expectedTemp = AbsolutePath(pathString: String(cString: cpw_tmp_dir_path()))
+            .resolved(resolveSymlinks: true)
         XCTAssertEqual(AbsolutePath.tmpDir, expectedTemp)
     }
 }

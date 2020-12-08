@@ -24,14 +24,15 @@ final class URLPathProtocolExtensionTests: XCTestCase {
         let url3 = URL(path: absPath, isDirectory: true)
         let url4 = URL(path: relPath, isDirectory: true)
 
+        let currentDir = FileManager.default.currentDirectoryPath
         XCTAssertTrue(url1.isFileURL)
         XCTAssertEqual(url1.path, absPath.pathString)
         XCTAssertTrue(url2.isFileURL)
-        XCTAssertEqual(url2.path, FileManager.default.currentDirectoryPath + "/" + relPath.pathString)
+        XCTAssertEqual(url2.path, currentDir + "/" + relPath.pathString)
         XCTAssertTrue(url3.isFileURL)
         XCTAssertEqual(url3.path, absPath.pathString)
         XCTAssertTrue(url4.isFileURL)
-        XCTAssertEqual(url4.path, FileManager.default.currentDirectoryPath + "/" +  relPath.pathString)
+        XCTAssertEqual(url4.path, currentDir + "/" +  relPath.pathString)
     }
 
     func testAppendingPathComponents() {

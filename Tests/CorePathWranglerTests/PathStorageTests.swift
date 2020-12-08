@@ -94,7 +94,11 @@ final class PathStorageTests: XCTestCase {
         relStorage.elements = [PathElement(name: "."), PathElement(name: "..")]
         relStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(relStorage.elements, [PathElement(name: "..")])
-        relStorage.elements = [PathElement(name: "."), PathElement(name: "test"), PathElement(name: "."), PathElement(name: "test2"), PathElement(name: "..")]
+        relStorage.elements = [PathElement(name: "."),
+                               PathElement(name: "test"),
+                               PathElement(name: "."),
+                               PathElement(name: "test2"),
+                               PathElement(name: "..")]
         relStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(relStorage.elements, [PathElement(name: "test")])
 
@@ -108,7 +112,11 @@ final class PathStorageTests: XCTestCase {
         absStorage.elements = [PathElement(name: "."), PathElement(name: "..")]
         absStorage.resolve(resolveSymlinks: false)
         XCTAssertTrue(absStorage.elements.isEmpty)
-        absStorage.elements = [PathElement(name: "."), PathElement(name: "test"), PathElement(name: "."), PathElement(name: "test2"), PathElement(name: "..")]
+        absStorage.elements = [PathElement(name: "."),
+                               PathElement(name: "test"),
+                               PathElement(name: "."),
+                               PathElement(name: "test2"),
+                               PathElement(name: "..")]
         absStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(absStorage.elements, [PathElement(name: "test")])
     }
@@ -158,7 +166,11 @@ final class PathStorageTests: XCTestCase {
         storage.elements = [PathElement(name: "."), PathElement(name: "..")]
         storage.resolve(resolveSymlinks: true)
         XCTAssertTrue(storage.elements.isEmpty)
-        storage.elements = [PathElement(name: "."), PathElement(name: "test"), PathElement(name: "."), PathElement(name: "test2"), PathElement(name: "..")]
+        storage.elements = [PathElement(name: "."),
+                            PathElement(name: "test"),
+                            PathElement(name: "."),
+                            PathElement(name: "test2"),
+                            PathElement(name: "..")]
         storage.resolve(resolveSymlinks: true)
         XCTAssertEqual(storage.elements, [PathElement(name: "test")])
 
@@ -187,7 +199,11 @@ final class PathStorageTests: XCTestCase {
             remove(linkDir1.pathString)
             remove(subDir1.pathString)
         }
-        XCTAssertEqual(storage.elements, tempDir.storage.elements + ["folder", "folder2", "subfolder", "folder3", "target"].map { PathElement(name: $0) })
-        XCTAssertEqual(storage.elements.map { $0.name }, tempDir.storage.elements.map { $0.name } + ["folder", "folder2", "subfolder", "folder3", "target"])
+        XCTAssertEqual(storage.elements,
+                       tempDir.storage.elements
+                        + ["folder", "folder2", "subfolder", "folder3", "target"].map { PathElement(name: $0) })
+        XCTAssertEqual(storage.elements.map { $0.name },
+                       tempDir.storage.elements.map { $0.name }
+                        + ["folder", "folder2", "subfolder", "folder3", "target"])
     }
 }

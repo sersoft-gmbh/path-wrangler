@@ -36,7 +36,8 @@ final class PathProtocolTests: XCTestCase {
 
     func testCustomDebugStringConvertibleConformance() {
         let pathString = "/a/b/c"
-        XCTAssertEqual(DummyAbsPath(pathString: pathString).debugDescription, "[\(DummyAbsPath.self)]: \(pathString)")
+        XCTAssertEqual(DummyAbsPath(pathString: pathString).debugDescription,
+                       "[\(DummyAbsPath.self)]: \(pathString)")
     }
 
     func testLosslessStringConvertibleConformance() {
@@ -50,14 +51,16 @@ final class PathProtocolTests: XCTestCase {
         var path = DummyAbsPath()
         let path2 = path.appending(pathComponents: "a", "b", "c")
         path.append(pathComponents: "a", "b", "c")
-        XCTAssertEqual(path.storage.elements, [PathElement(name: "a"), PathElement(name: "b"), PathElement(name: "c")])
+        XCTAssertEqual(path.storage.elements,
+                       [PathElement(name: "a"), PathElement(name: "b"), PathElement(name: "c")])
         XCTAssertEqual(path.storage.elements, path2.storage.elements)
     }
 
     func testSlashAppending() {
         let path = DummyAbsPath(pathString: "/a/b/c")
         let path2 = path / "d" / "e"
-        XCTAssertEqual(path2.storage.elements, path.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path2.storage.elements,
+                       path.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
     }
 
     // MARK: - _PathProtocol
@@ -94,7 +97,8 @@ final class PathProtocolTests: XCTestCase {
     func testPathStringInitializer() {
         let pathString = "/a/b/c"
         let path = DummyAbsPath(pathString: pathString)
-        XCTAssertEqual(path.storage.elements, PathStorage(isAbsolute: DummyAbsPath.isAbsolute, pathString: pathString).elements)
+        XCTAssertEqual(path.storage.elements,
+                       PathStorage(isAbsolute: DummyAbsPath.isAbsolute, pathString: pathString).elements)
         XCTAssertEqual(path.storage.isAbsolute, DummyAbsPath.isAbsolute)
     }
 
@@ -173,7 +177,8 @@ final class PathProtocolTests: XCTestCase {
         path.append(RelativePath(pathString: "d/e"))
         XCTAssertNotEqual(path, originalPath)
         XCTAssertFalse(path.storage === originalPath.storage)
-        XCTAssertEqual(path.storage.elements, originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path.storage.elements,
+                       originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
 
         path = originalPath.appending(RelativePath(elements: []))
         XCTAssertEqual(path, originalPath)
@@ -182,7 +187,8 @@ final class PathProtocolTests: XCTestCase {
         path = originalPath.appending(RelativePath(pathString: "d/e"))
         XCTAssertNotEqual(path, originalPath)
         XCTAssertFalse(path.storage === originalPath.storage)
-        XCTAssertEqual(path.storage.elements, originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path.storage.elements,
+                       originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
     }
 
     func testAppendingPathComponents() {
