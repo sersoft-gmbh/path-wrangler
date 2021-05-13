@@ -8,10 +8,9 @@ on:
 
 jobs:
   test-spm:
-    name: Run tests with SPM
     strategy:
       matrix:
-        os: [ macos-latest, ubuntu-18.04, ubuntu-20.04 ]
+        os: [ macos-latest, ubuntu-20.04 ]
         swift-version: [ 5.4 ]
 
     runs-on: ${{matrix.os}}
@@ -49,7 +48,6 @@ jobs:
           fail_ci_if_error: true
 
   test-xcode:
-    name: Run tests with Xcode
     runs-on: macos-latest
     strategy:
       matrix:

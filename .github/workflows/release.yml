@@ -8,7 +8,6 @@ on:
 
 jobs:
   publish-docs:
-    name: Publish Documentation
     runs-on: macos-latest
     steps:
       - uses: maxim-lobanov/setup-xcode@v1.2.3
