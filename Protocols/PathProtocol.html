@@ -1,0 +1,1110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>PathProtocol Protocol Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+    <a name="//apple_ref/swift/Protocol/PathProtocol" class="dashAnchor"></a>
+
+    <a title="PathProtocol Protocol Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          PathWrangler 2.3.0 Docs
+        </a>
+         (100% documented)
+      </p>
+    
+      <div class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </div>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/sersoft-gmbh/path-wrangler">
+            <img class="header-icon" src="../img/gh.png" alt="GitHub"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">PathWrangler Reference</a>
+      <img class="carat" src="../img/carat.png" alt=""/>
+      PathProtocol Protocol Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/BinaryInteger.html">BinaryInteger</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Decimal.html">Decimal</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:Sd">Double</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FileManager.html">FileManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:Sf">Float</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/FloatingPoint.html">FloatingPoint</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:Si">Int</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s5Int16V">Int16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s5Int32V">Int32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s5Int64V">Int64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s4Int8V">Int8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/RawRepresentable.html">RawRepresentable</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/StaticString.html">StaticString</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:Su">UInt</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s6UInt16V">UInt16</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s6UInt32V">UInt32</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s6UInt64V">UInt64</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions.html#/s:s5UInt8V">UInt8</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/UUID.html">UUID</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/_PathProtocol.html">_PathProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PathComponentConvertible.html">PathComponentConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/PathProtocol.html">PathProtocol</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/AbsolutePath.html">AbsolutePath</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/RelativePath.html">RelativePath</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CorePathWrangler0B9Componenta">PathComponent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:16CorePathWrangler0B9Extensiona">PathExtension</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content top-matter">
+            <h1>PathProtocol</h1>
+              <div class="declaration">
+                <div class="language">
+                  
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">PathProtocol</span> <span class="p">:</span> <span class="kt">Hashable</span></code></pre>
+
+                </div>
+              </div>
+            <p>A generic protocol around a path. Currently, there are two conformances, <code><a href="../Structs/AbsolutePath.html">AbsolutePath</a></code> and <code><a href="../Structs/RelativePath.html">RelativePath</a></code>.
+It is strongly discouraged to declare new conformances to this protocol. They&rsquo;re not guaranteed to work as expected.</p>
+
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP10pathStringSSvp"></a>
+                    <a name="//apple_ref/swift/Property/pathString" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP10pathStringSSvp">pathString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The string reprensentation of the path this conformance represents.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">pathString</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP04lastB9ComponentSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastPathComponent" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP04lastB9ComponentSSSgvp">lastPathComponent</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The last component of this path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastPathComponent</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:16CorePathWrangler0B9Componenta">PathComponent</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP04lastB9ExtensionSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/lastPathExtension" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP04lastB9ExtensionSSSgvp">lastPathExtension</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The extension of the last component of this path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">lastPathExtension</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:16CorePathWrangler0B9Extensiona">PathExtension</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP10pathStringxSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(pathString:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP10pathStringxSS_tcfc">init(pathString:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new path by parsing the given string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">pathString</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pathString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The path string to parse into a path.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP7currentxvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/current" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP7currentxvpZ">current</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the current path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">current</span><span class="p">:</span> <span class="k">Self</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP9isSubpath2ofSbAA08AbsoluteB0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/isSubpath(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP9isSubpath2ofSbAA08AbsoluteB0V_tF">isSubpath(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks whether the receiver is a sub-path of the given absolute path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isSubpath</span><span class="p">(</span><span class="n">of</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Structs/AbsolutePath.html">AbsolutePath</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The absolute path, which should be checked for being a parent path of the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP9isSubpath2ofSbAA08RelativeB0V_tF"></a>
+                    <a name="//apple_ref/swift/Method/isSubpath(of:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP9isSubpath2ofSbAA08RelativeB0V_tF">isSubpath(of:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Checks whether the receiver is a sub-path of the given relative path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">isSubpath</span><span class="p">(</span><span class="n">of</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Structs/RelativePath.html">RelativePath</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The relative path, which should be checked for being a parent path of the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP6appendyyAA08RelativeB0VF"></a>
+                    <a name="//apple_ref/swift/Method/append(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP6appendyyAA08RelativeB0VF">append(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends a relative path to the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Structs/RelativePath.html">RelativePath</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The relative path to append to the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP9appendingyxAA08RelativeB0VF"></a>
+                    <a name="//apple_ref/swift/Method/appending(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP9appendingyxAA08RelativeB0VF">appending(_:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new path which has <code>other</code> appended to the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">appending</span><span class="p">(</span><span class="n">_</span> <span class="nv">other</span><span class="p">:</span> <span class="kt"><a href="../Structs/RelativePath.html">RelativePath</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>other</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The relative path to append to the reciever.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP6append14pathComponentsyqd___tSTRd__AA0B20ComponentConvertible_p7ElementRtd__lF"></a>
+                    <a name="//apple_ref/swift/Method/append(pathComponents:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP6append14pathComponentsyqd___tSTRd__AA0B20ComponentConvertible_p7ElementRtd__lF">append(pathComponents:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="n">append</span><span class="o">&lt;</span><span class="kt">Components</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">pathComponents</span><span class="p">:</span> <span class="kt">Components</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Components</span> <span class="p">:</span> <span class="kt">Sequence</span><span class="p">,</span> <span class="kt">Components</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Protocols/PathComponentConvertible.html">PathComponentConvertible</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pathComponents</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sequence of path component convertible objects, whose path components to append to the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP9appending14pathComponentsxqd___tSTRd__AA0B20ComponentConvertible_p7ElementRtd__lF"></a>
+                    <a name="//apple_ref/swift/Method/appending(pathComponents:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP9appending14pathComponentsxqd___tSTRd__AA0B20ComponentConvertible_p7ElementRtd__lF">appending(pathComponents:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Default implementation
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.</p>
+
+                      </div>
+                      <h4>Default Implementation</h4>
+                      <div class="default_impl abstract">
+                        <p>Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">appending</span><span class="o">&lt;</span><span class="kt">Components</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">pathComponents</span><span class="p">:</span> <span class="kt">Components</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Components</span> <span class="p">:</span> <span class="kt">Sequence</span><span class="p">,</span> <span class="kt">Components</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt"><a href="../Protocols/PathComponentConvertible.html">PathComponentConvertible</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pathComponents</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The sequence of path component convertible objects, whose path components to append to the receiver and return.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP6append13pathExtensionySS_tF"></a>
+                    <a name="//apple_ref/swift/Method/append(pathExtension:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP6append13pathExtensionySS_tF">append(pathExtension:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Appends a path extension to the last component of the receiver.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the path has no components, this method does nothing.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">pathExtension</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:16CorePathWrangler0B9Extensiona">PathExtension</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pathExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The extension to append to the last component of the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP9appending13pathExtensionxSS_tF"></a>
+                    <a name="//apple_ref/swift/Method/appending(pathExtension:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP9appending13pathExtensionxSS_tF">appending(pathExtension:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new path by appending the given path extension the last component of the receiver.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    If the path has no components, this method returns the unchanged receiver.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">appending</span><span class="p">(</span><span class="nv">pathExtension</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:16CorePathWrangler0B9Extensiona">PathExtension</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pathExtension</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The extension to append to the last component of the receiver.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP010removeLastB9ComponentyyF"></a>
+                    <a name="//apple_ref/swift/Method/removeLastPathComponent()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP010removeLastB9ComponentyyF">removeLastPathComponent()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the last path component of the reciever.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeLastPathComponent</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP012removingLastB9ComponentxyF"></a>
+                    <a name="//apple_ref/swift/Method/removingLastPathComponent()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP012removingLastB9ComponentxyF">removingLastPathComponent()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new path which has the last path component of the receiver removed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removingLastPathComponent</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP010removeLastB9ExtensionyyF"></a>
+                    <a name="//apple_ref/swift/Method/removeLastPathExtension()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP010removeLastB9ExtensionyyF">removeLastPathExtension()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes the last extension of the last component of the receiver.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeLastPathExtension</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP012removingLastB9ExtensionxyF"></a>
+                    <a name="//apple_ref/swift/Method/removingLastPathExtension()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP012removingLastB9ExtensionxyF">removingLastPathExtension()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a new path that has the last extension from the last component of the receiver removed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">removingLastPathExtension</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolPAAE1doiyxx_qd__tAA0B20ComponentConvertibleRd__lFZ"></a>
+                    <a name="//apple_ref/swift/Method//(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolPAAE1doiyxx_qd__tAA0B20ComponentConvertibleRd__lFZ">/(_:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Conveniently forms a path by appending the path component of a path component convertible object to an existing path.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">/</span> <span class="o">&lt;</span><span class="kt">Component</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="k">Self</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Component</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="k">where</span> <span class="kt">Component</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PathComponentConvertible.html">PathComponentConvertible</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The existing path to append the path component to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>rhs</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The path component convertible object to append the path component to.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolP0bC0E3urlxSg10Foundation3URLV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(url:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolP0bC0E3urlxSg10Foundation3URLV_tcfc">init(url:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a new path from the given URL. Returns nil if the url is not a file url.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The url to create the path from.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Self%60%3A%20%60CustomStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Self`: `CustomStringConvertible`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Self%60%3A%20%60CustomStringConvertible%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Self</code>: <code>CustomStringConvertible</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolPAAs23CustomStringConvertibleRzrlE11descriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolPAAs23CustomStringConvertibleRzrlE11descriptionSSvp">description</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomStringConvertible.description</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Self%60%3A%20%60LosslessStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Self`: `LosslessStringConvertible`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Self%60%3A%20%60LosslessStringConvertible%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Self</code>: <code>LosslessStringConvertible</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolPAAs25LosslessStringConvertibleRzrlEyxSgSScfc"></a>
+                    <a name="//apple_ref/swift/Method/init(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolPAAs25LosslessStringConvertibleRzrlEyxSgSScfc">init(_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>LosslessStringConvertible.init(_:)</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">@inlinable</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span><span class="n">_</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>description</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>See <code>LosslessStringConvertible.init(_:)</code></p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Available%20where%20%60Self%60%3A%20%60CustomDebugStringConvertible%60"></a>
+                <a name="//apple_ref/swift/Section/Available where `Self`: `CustomDebugStringConvertible`" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Available%20where%20%60Self%60%3A%20%60CustomDebugStringConvertible%60"></a>
+                  <h3 class="section-name"><span>Available where <code>Self</code>: <code>CustomDebugStringConvertible</code></span>
+</h3>
+                </div>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:16CorePathWrangler0B8ProtocolPAAs28CustomDebugStringConvertibleRzrlE16debugDescriptionSSvp"></a>
+                    <a name="//apple_ref/swift/Property/debugDescription" class="dashAnchor"></a>
+                    <a class="token" href="#/s:16CorePathWrangler0B8ProtocolPAAs28CustomDebugStringConvertibleRzrlE16debugDescriptionSSvp">debugDescription</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>See <code>CustomDebugStringConvertible.debugDescription</code></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">debugDescription</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>&copy; 2022 <a class="link" href="https://sersoft.de" target="_blank" rel="external noopener">ser.soft GmbH</a>. All rights reserved. (Last updated: 2022-03-21)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external noopener">jazzy ♪♫ v0.14.2</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external noopener">Realm</a> project.</p>
+    </section>
+  </body>
+</html>
