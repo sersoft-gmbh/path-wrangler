@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.5
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 import PackageDescription
@@ -15,7 +15,7 @@ let package = Package(
             targets: ["PathWrangler"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-algorithms", .upToNextMinor(from: "0.0.1")),
+        .package(url: "https://github.com/apple/swift-algorithms.git", "0.1.0"..<"2.0.0"),
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.

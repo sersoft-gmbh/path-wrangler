@@ -55,7 +55,9 @@ extension RelativePath {
 
 extension Collection where Element: Equatable {
     @usableFromInline
-    func contains<Other: Collection>(_ other: Other) -> Bool where Other.Element == Element {
+    func contains<Other: Collection>(_ other: Other) -> Bool
+    where Other.Element == Element
+    {
         guard let start = other.first else { return true }
         guard let searchStartIdx = firstIndex(of: start),
               case let otherCount = other.count, count >= other.count

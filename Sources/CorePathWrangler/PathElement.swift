@@ -60,7 +60,7 @@ extension PathComponentConvertible {
 extension Sequence where Element == PathElement {
     @inlinable
     func pathString(absolute: Bool) -> String {
-        let str = lazy.map { $0.pathComponent }.joined(separator: "/")
+        let str = lazy.map(\.pathComponent).joined(separator: "/")
         return absolute ? "/" + str : (str.isEmpty ? "." : str)
     }
 }
