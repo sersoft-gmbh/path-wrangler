@@ -4,7 +4,7 @@
 ![Tests](https://github.com/sersoft-gmbh/path-wrangler/workflows/Tests/badge.svg)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2c8e4e87ed7c4b9b9be446aa2e14b787)](https://www.codacy.com/gh/sersoft-gmbh/path-wrangler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sersoft-gmbh/path-wrangler&amp;utm_campaign=Badge_Grade)
 [![codecov](https://codecov.io/gh/sersoft-gmbh/path-wrangler/branch/master/graph/badge.svg)](https://codecov.io/gh/sersoft-gmbh/path-wrangler)
-[![jazzy](https://raw.githubusercontent.com/sersoft-gmbh/path-wrangler/gh-pages/badge.svg?sanitize=true)](https://sersoft-gmbh.github.io/path-wrangler)
+[![Docs](https://img.shields.io/badge/-documentation-informational)](https://sersoft-gmbh.github.io/path-wrangler)
 
 A simple path library written in Swift.
 
@@ -49,7 +49,10 @@ The PathWrangler package contains two products:
 ## Documentation
 
 The API is documented using header doc. If you prefer to view the documentation as a webpage, t
-here is an [online version](https://sersoft-gmbh.github.io/path-wrangler) available for you.
+here is an online version available for you:
+
+-   [CorePathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/corepathwrangler)
+-   [PathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/pathwrangler)
 
 ## Contributing
 
