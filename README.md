@@ -48,8 +48,7 @@ The PathWrangler package contains two products:
 
 ## Documentation
 
-The API is documented using header doc. If you prefer to view the documentation as a webpage, t
-here is an online version available for you:
+The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an online version available for you:
 
 -   [CorePathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/corepathwrangler)
 -   [PathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/pathwrangler)
