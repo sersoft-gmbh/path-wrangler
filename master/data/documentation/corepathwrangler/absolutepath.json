@@ -87,7 +87,8 @@
         "doc:\/\/CorePathWrangler\/Se",
         "doc:\/\/CorePathWrangler\/SE",
         "doc:\/\/CorePathWrangler\/SQ",
-        "doc:\/\/CorePathWrangler\/SH"
+        "doc:\/\/CorePathWrangler\/SH",
+        "doc:\/\/CorePathWrangler\/s8SendableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -558,6 +559,11 @@
 "doc://CorePathWrangler/s28CustomDebugStringConvertibleP": {
   "identifier" : "doc:\/\/CorePathWrangler\/s28CustomDebugStringConvertibleP",
   "title" : "Swift.CustomDebugStringConvertible",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/s8SendableP": {
+  "identifier" : "doc:\/\/CorePathWrangler\/s8SendableP",
+  "title" : "Swift.Sendable",
   "type" : "unresolvable"
 }
 }
