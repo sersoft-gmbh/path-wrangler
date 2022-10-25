@@ -14,23 +14,10 @@ final class AbsolutePathTests: XCTestCase {
     }
 
     func testStorageAssignment() {
-        let storage = PathStorage(isAbsolute: true)
-        let path = AbsolutePath(storage: storage)
-        XCTAssertTrue(path.storage === storage)
-    }
-
-    func testStorageCopyingWhenUniquelyReferenced() {
-        var path = AbsolutePath(pathString: "/A/B/C")
-        let unretainedStorage = Unmanaged.passUnretained(path.storage)
-        path.copyStorageIfNeeded()
-        XCTAssertTrue(path.storage === unretainedStorage.takeUnretainedValue())
-    }
-
-    func testStorageCopyingWhenNonUniquelyReferenced() {
-        var path = AbsolutePath(pathString: "/X/Y/Z")
-        let path2 = path
-        path.copyStorageIfNeeded()
-        XCTAssertFalse(path.storage === path2.storage)
+        let impl = _PathImpl(isAbsolute: true)
+        let path = AbsolutePath(_impl: impl)
+        XCTAssertEqual(path._impl.isAbsolute, impl.isAbsolute)
+        XCTAssertEqual(path._impl.elements, impl.elements)
     }
 
     func testSubpathDetermination() {
@@ -46,24 +33,20 @@ final class AbsolutePathTests: XCTestCase {
         var path = originalPath
         let path1 = path.resolved()
         path.resolve()
-        XCTAssertTrue(path.storage.elements.isEmpty)
-        XCTAssertEqual(path.storage.elements, path1.storage.elements)
-        XCTAssertTrue(path.storage === originalPath.storage)
-        XCTAssertTrue(path1.storage === originalPath.storage)
+        XCTAssertTrue(path._impl.elements.isEmpty)
+        XCTAssertEqual(path._impl.elements, path1._impl.elements)
 
         originalPath = AbsolutePath(pathString: "/A/./C/..")
         path = originalPath
         let path2 = path.resolved(resolveSymlinks: false)
         path.resolve(resolveSymlinks: false)
-        XCTAssertNotEqual(path.storage.elements, originalPath.storage.elements)
-        XCTAssertNotEqual(path2.storage.elements, originalPath.storage.elements)
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
-        XCTAssertFalse(path.storage === originalPath.storage)
-        XCTAssertFalse(path1.storage === originalPath.storage)
+        XCTAssertNotEqual(path._impl.elements, originalPath._impl.elements)
+        XCTAssertNotEqual(path2._impl.elements, originalPath._impl.elements)
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
     }
 
     func testRoot() {
-        XCTAssertTrue(AbsolutePath.root.storage.elements.isEmpty)
+        XCTAssertTrue(AbsolutePath.root._impl.elements.isEmpty)
         XCTAssertEqual(AbsolutePath.root.pathString, "/")
     }
 

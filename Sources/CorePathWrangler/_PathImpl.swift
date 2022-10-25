@@ -7,14 +7,12 @@ import Algorithms
 import CPathWrangler
 
 @usableFromInline
-final class PathStorage {
+struct _PathImpl: Sendable {
     @usableFromInline
     let isAbsolute: Bool
 
     @usableFromInline
-    var elements: [PathElement] {
-        didSet { _pathString = nil }
-    }
+    var elements: Array<PathElement>
 
     @inlinable
     var lastPathElement: PathElement {
@@ -28,36 +26,25 @@ final class PathStorage {
         }
     }
 
-    private var _pathString: String?
     @usableFromInline
     var pathString: String {
-        if let str = _pathString { return str }
-        _pathString = elements.pathString(absolute: isAbsolute)
-        return self.pathString
+        elements.pathString(absolute: isAbsolute)
     }
 
     @usableFromInline
-    init(isAbsolute: Bool, elements: [PathElement] = []) {
+    init(isAbsolute: Bool, elements: Array<PathElement> = .init()) {
         self.isAbsolute = isAbsolute
         self.elements = elements
     }
 
     @inlinable
-    convenience init(isAbsolute: Bool, pathString: String) {
+    init(isAbsolute: Bool, pathString: String) {
         self.init(isAbsolute: isAbsolute,
                   elements: PathElement.elements(from: pathString))
     }
 
-    @usableFromInline
-    func copy() -> PathStorage {
-        let copy = PathStorage(isAbsolute: isAbsolute)
-        copy.elements = elements
-        copy._pathString = pathString
-        return copy
-    }
-
     @inlinable
-    func append<Components>(pathComponents: Components)
+    mutating func append<Components>(pathComponents: Components)
     where Components: Sequence, Components.Element == PathComponentConvertible
     {
         elements.append(contentsOf: pathComponents.flatMap { $0.pathElements })
@@ -86,9 +73,9 @@ final class PathStorage {
         return String(cString: dstPtr)
     }
 
-    private enum SymlinkStatus {
+    private enum SymlinkStatus: Sendable {
         case noLink
-        case isLink([PathElement])
+        case isLink(Array<PathElement>)
     }
 
     private func resolve<Elements>(elements: inout Elements,
@@ -156,7 +143,7 @@ final class PathStorage {
     }
 
     @usableFromInline
-    func resolve(resolveSymlinks: Bool) {
+    mutating func resolve(resolveSymlinks: Bool) {
         var symlinkMap = Dictionary<String, SymlinkStatus>()
         resolve(elements: &elements, resolveSymlinks: resolveSymlinks, symlinkCache: &symlinkMap)
     }

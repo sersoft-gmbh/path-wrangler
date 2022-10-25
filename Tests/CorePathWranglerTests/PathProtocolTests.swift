@@ -2,27 +2,22 @@ import XCTest
 @testable import CorePathWrangler
 
 final class PathProtocolTests: XCTestCase {
-    fileprivate struct DummyAbsPath: _PathProtocol, LosslessStringConvertible {
+    fileprivate struct DummyAbsPath: _PathProtocol, LosslessStringConvertible, @unchecked Sendable {
         static var current: PathProtocolTests.DummyAbsPath { .init(elements: []) }
 
         static let isAbsolute = true
 
-        private(set) var storage: PathStorage
+        var _impl: _PathImpl
 
-        init(storage: PathStorage) {
-            self.storage = storage
+        init(_impl: _PathImpl) {
+            self._impl = _impl
         }
 
         init() {
-            self.init(storage: PathStorage(isAbsolute: Self.isAbsolute))
+            self.init(_impl: .init(isAbsolute: Self.isAbsolute))
         }
-
-        mutating func copyStorageIfNeeded() {
-            guard !isKnownUniquelyReferenced(&storage) else { return }
-            storage = storage.copy()
-        }
-
-        var isSubpathClosure: ((Any) -> Bool)?
+        
+        var isSubpathClosure: ((any _PathProtocol) -> Bool)?
         func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
             isSubpathClosure?(other) ?? false
         }
@@ -44,62 +39,62 @@ final class PathProtocolTests: XCTestCase {
         let path = DummyAbsPath(pathString: "/a/b/c")
         let path2 = DummyAbsPath(path.pathString)
         XCTAssertNotNil(path2)
-        XCTAssertEqual(path.storage.elements, path2?.storage.elements)
+        XCTAssertEqual(path._impl.elements, path2?._impl.elements)
     }
 
     func testAppendingVariadicPathCompontents() {
         var path = DummyAbsPath()
         let path2 = path.appending(pathComponents: "a", "b", "c")
         path.append(pathComponents: "a", "b", "c")
-        XCTAssertEqual(path.storage.elements,
+        XCTAssertEqual(path._impl.elements,
                        [PathElement(name: "a"), PathElement(name: "b"), PathElement(name: "c")])
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
     }
 
     func testSlashAppending() {
         let path = DummyAbsPath(pathString: "/a/b/c")
         let path2 = path / "d" / "e"
-        XCTAssertEqual(path2.storage.elements,
-                       path.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path2._impl.elements,
+                       path._impl.elements + [PathElement(name: "d"), PathElement(name: "e")])
     }
 
     // MARK: - _PathProtocol
     func testPathString() {
         let path = DummyAbsPath(pathString: "/a/b/c")
-        XCTAssertEqual(path.storage.pathString, path.pathString)
+        XCTAssertEqual(path._impl.pathString, path.pathString)
     }
 
     func testLastPathComponent() {
-        let path = DummyAbsPath()
+        var path = DummyAbsPath()
         XCTAssertNil(path.lastPathComponent)
         let comp = "a"
-        path.storage.elements.append(PathElement(name: comp))
+        path._impl.elements.append(PathElement(name: comp))
         XCTAssertEqual(path.lastPathComponent, comp)
     }
 
     func testLastPathExtension() {
-        let path = DummyAbsPath()
+        var path = DummyAbsPath()
         XCTAssertNil(path.lastPathExtension)
-        path.storage.elements.append(PathElement(name: "a"))
+        path._impl.elements.append(PathElement(name: "a"))
         XCTAssertNil(path.lastPathExtension)
         let ext = "test"
-        path.storage.lastPathElement = PathElement(name: "a", extensions: [ext])
+        path._impl.lastPathElement = PathElement(name: "a", extensions: [ext])
         XCTAssertEqual(path.lastPathExtension, ext)
     }
 
     func testElementsInitializer() {
         let elements = [PathElement(name: "a"), PathElement(name: "b"), PathElement(name: "c")]
         let path = DummyAbsPath(elements: elements)
-        XCTAssertEqual(path.storage.elements, elements)
-        XCTAssertEqual(path.storage.isAbsolute, DummyAbsPath.isAbsolute)
+        XCTAssertEqual(path._impl.elements, elements)
+        XCTAssertEqual(path._impl.isAbsolute, DummyAbsPath.isAbsolute)
     }
 
     func testPathStringInitializer() {
         let pathString = "/a/b/c"
         let path = DummyAbsPath(pathString: pathString)
-        XCTAssertEqual(path.storage.elements,
-                       PathStorage(isAbsolute: DummyAbsPath.isAbsolute, pathString: pathString).elements)
-        XCTAssertEqual(path.storage.isAbsolute, DummyAbsPath.isAbsolute)
+        XCTAssertEqual(path._impl.elements,
+                       _PathImpl(isAbsolute: DummyAbsPath.isAbsolute, pathString: pathString).elements)
+        XCTAssertEqual(path._impl.isAbsolute, DummyAbsPath.isAbsolute)
     }
 
     func testEncodableConformance() throws {
@@ -130,8 +125,8 @@ final class PathProtocolTests: XCTestCase {
         XCTAssertEqual(path1, path2)
         XCTAssertNotEqual(path1, path3)
         XCTAssertNotEqual(path2, path3)
-        XCTAssertEqual(path1 == path2, path1.storage.elements == path2.storage.elements)
-        XCTAssertEqual(path2 == path3, path2.storage.elements == path3.storage.elements)
+        XCTAssertEqual(path1 == path2, path1._impl.elements == path2._impl.elements)
+        XCTAssertEqual(path2 == path3, path2._impl.elements == path3._impl.elements)
     }
 
     func testHashableConformance() {
@@ -141,9 +136,9 @@ final class PathProtocolTests: XCTestCase {
         XCTAssertEqual(path1.hashValue, path2.hashValue)
         XCTAssertNotEqual(path1.hashValue, path3.hashValue)
         XCTAssertNotEqual(path2.hashValue, path3.hashValue)
-        XCTAssertEqual(path1.hashValue, path1.storage.elements.hashValue)
-        XCTAssertEqual(path2.hashValue, path2.storage.elements.hashValue)
-        XCTAssertEqual(path3.hashValue, path3.storage.elements.hashValue)
+        XCTAssertEqual(path1.hashValue, path1._impl.elements.hashValue)
+        XCTAssertEqual(path2.hashValue, path2._impl.elements.hashValue)
+        XCTAssertEqual(path3.hashValue, path3._impl.elements.hashValue)
     }
 
     func testSubPathDetermination() {
@@ -173,106 +168,78 @@ final class PathProtocolTests: XCTestCase {
         var path = originalPath
         path.append(RelativePath(elements: []))
         XCTAssertEqual(path, originalPath)
-        XCTAssertTrue(path.storage === originalPath.storage)
         path.append(RelativePath(pathString: "d/e"))
         XCTAssertNotEqual(path, originalPath)
-        XCTAssertFalse(path.storage === originalPath.storage)
-        XCTAssertEqual(path.storage.elements,
-                       originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path._impl.elements,
+                       originalPath._impl.elements + [PathElement(name: "d"), PathElement(name: "e")])
 
         path = originalPath.appending(RelativePath(elements: []))
         XCTAssertEqual(path, originalPath)
-        XCTAssertTrue(path.storage === originalPath.storage)
 
         path = originalPath.appending(RelativePath(pathString: "d/e"))
         XCTAssertNotEqual(path, originalPath)
-        XCTAssertFalse(path.storage === originalPath.storage)
-        XCTAssertEqual(path.storage.elements,
-                       originalPath.storage.elements + [PathElement(name: "d"), PathElement(name: "e")])
+        XCTAssertEqual(path._impl.elements,
+                       originalPath._impl.elements + [PathElement(name: "d"), PathElement(name: "e")])
     }
 
     func testAppendingPathComponents() {
         let components = ["a", "b", "c"]
         var path = DummyAbsPath()
-        let originalPath = path
         let path2 = path.appending(pathComponents: components)
         path.append(pathComponents: components)
-        XCTAssertEqual(path.storage.elements, components.map { PathElement(name: $0) })
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
-        XCTAssertFalse(originalPath.storage === path.storage)
-        XCTAssertFalse(originalPath.storage === path2.storage)
+        XCTAssertEqual(path._impl.elements, components.map { PathElement(name: $0) })
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
     }
 
     func testAppendingPathExtension() {
         let ext = "test"
         var path = DummyAbsPath()
-        var originalPath = path
         let path2 = path.appending(pathExtension: ext)
         path.append(pathExtension: ext)
-        XCTAssertTrue(path.storage.elements.isEmpty)
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
-        XCTAssertTrue(originalPath.storage === path.storage)
-        XCTAssertTrue(originalPath.storage === path2.storage)
+        XCTAssertTrue(path._impl.elements.isEmpty)
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
 
         path = DummyAbsPath(pathString: "/d/e/f")
-        originalPath = path
         let path3 = path.appending(pathExtension: ext)
         path.append(pathExtension: ext)
-        XCTAssertEqual(path.storage.lastPathElement.extensions, [ext])
-        XCTAssertEqual(path.storage.elements, path3.storage.elements)
-        XCTAssertFalse(originalPath.storage === path.storage)
-        XCTAssertFalse(originalPath.storage === path3.storage)
+        XCTAssertEqual(path._impl.lastPathElement.extensions, [ext])
+        XCTAssertEqual(path._impl.elements, path3._impl.elements)
     }
 
     func testRemovingLastPathComponent() {
         var path = DummyAbsPath()
-        var originalPath = path
         let path2 = path.removingLastPathComponent()
         path.removeLastPathComponent()
-        XCTAssertTrue(path.storage.elements.isEmpty)
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
-        XCTAssertTrue(originalPath.storage === path.storage)
-        XCTAssertTrue(originalPath.storage === path2.storage)
+        XCTAssertTrue(path._impl.elements.isEmpty)
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
 
         path = DummyAbsPath(pathString: "/a/b")
-        originalPath = path
         let path3 = path.removingLastPathComponent()
         path.removeLastPathComponent()
-        XCTAssertEqual(path.storage.elements.count, 1)
-        XCTAssertEqual(path.storage.lastPathElement.name, "a")
-        XCTAssertEqual(path.storage.elements, path3.storage.elements)
-        XCTAssertFalse(originalPath.storage === path.storage)
-        XCTAssertFalse(originalPath.storage === path3.storage)
+        XCTAssertEqual(path._impl.elements.count, 1)
+        XCTAssertEqual(path._impl.lastPathElement.name, "a")
+        XCTAssertEqual(path._impl.elements, path3._impl.elements)
     }
 
     func testRemovingLastPathExtension() {
         var path = DummyAbsPath()
-        var originalPath = path
         let path2 = path.removingLastPathComponent()
         path.removeLastPathComponent()
-        XCTAssertTrue(path.storage.elements.isEmpty)
-        XCTAssertEqual(path.storage.elements, path2.storage.elements)
-        XCTAssertTrue(originalPath.storage === path.storage)
-        XCTAssertTrue(originalPath.storage === path2.storage)
+        XCTAssertTrue(path._impl.elements.isEmpty)
+        XCTAssertEqual(path._impl.elements, path2._impl.elements)
 
         path = DummyAbsPath(pathString: "/a/b")
-        originalPath = path
         let path3 = path.removingLastPathExtension()
         path.removeLastPathExtension()
-        XCTAssertEqual(path.storage.elements.count, 2)
-        XCTAssertEqual(path.storage.elements, path3.storage.elements)
-        XCTAssertTrue(originalPath.storage === path.storage)
-        XCTAssertTrue(originalPath.storage === path3.storage)
+        XCTAssertEqual(path._impl.elements.count, 2)
+        XCTAssertEqual(path._impl.elements, path3._impl.elements)
 
         path = DummyAbsPath(pathString: "/a/b.c.d")
-        originalPath = path
         let path4 = path.removingLastPathExtension()
         path.removeLastPathExtension()
-        XCTAssertEqual(path.storage.elements.count, 2)
-        XCTAssertEqual(path.storage.lastPathElement.name, "b")
-        XCTAssertEqual(path.storage.lastPathElement.extensions, ["c"])
-        XCTAssertEqual(path.storage.elements, path4.storage.elements)
-        XCTAssertFalse(originalPath.storage === path.storage)
-        XCTAssertFalse(originalPath.storage === path4.storage)
+        XCTAssertEqual(path._impl.elements.count, 2)
+        XCTAssertEqual(path._impl.lastPathElement.name, "b")
+        XCTAssertEqual(path._impl.lastPathElement.extensions, ["c"])
+        XCTAssertEqual(path._impl.elements, path4._impl.elements)
     }
 }

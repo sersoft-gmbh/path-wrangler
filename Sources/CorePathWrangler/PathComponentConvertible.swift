@@ -8,26 +8,22 @@ public protocol PathComponentConvertible {
 }
 
 extension String: PathComponentConvertible {
-    /// See `PathComponentConvertible.pathComponent`
     @inlinable
     public var pathComponent: PathComponent { self }
 }
 
 extension StaticString: PathComponentConvertible {
-    /// See `PathComponentConvertible.pathComponent`
     public var pathComponent: PathComponent {
         hasPointerRepresentation ? String(cString: utf8Start) : String(unicodeScalar)
     }
 }
 
 extension BinaryInteger where Self: PathComponentConvertible {
-    /// See `PathComponentConvertible.pathComponent`
     @inlinable
     public var pathComponent: PathComponent { String(self) }
 }
 
 extension FloatingPoint where Self: LosslessStringConvertible, Self: PathComponentConvertible {
-    /// See `PathComponentConvertible.pathComponent`
     @inlinable
     public var pathComponent: PathComponent { String(self) }
 }
@@ -48,7 +44,6 @@ extension Float: PathComponentConvertible {}
 extension Double: PathComponentConvertible {}
 
 extension RawRepresentable where RawValue: PathComponentConvertible, Self: PathComponentConvertible {
-    /// See `PathComponentConvertible.pathComponent`
     @inlinable
     public var pathComponent: PathComponent { rawValue.pathComponent }
 }

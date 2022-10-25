@@ -1,7 +1,7 @@
 import XCTest
 @testable import CorePathWrangler
 
-final class PathStorageTests: XCTestCase {
+final class PathImplTests: XCTestCase {
     #if os(Linux) && swift(<5.2.1)
     private var tearDownBlocks: [() -> Void] = []
     override func tearDown() {
@@ -15,19 +15,19 @@ final class PathStorageTests: XCTestCase {
     #endif
 
     func testInitialization() {
-        XCTAssertFalse(PathStorage(isAbsolute: false).isAbsolute)
-        XCTAssertTrue(PathStorage(isAbsolute: true).isAbsolute)
-        XCTAssertTrue(PathStorage(isAbsolute: false).elements.isEmpty)
-        let storage = PathStorage(isAbsolute: false, elements: [PathElement(name: "test")])
+        XCTAssertFalse(_PathImpl(isAbsolute: false).isAbsolute)
+        XCTAssertTrue(_PathImpl(isAbsolute: true).isAbsolute)
+        XCTAssertTrue(_PathImpl(isAbsolute: false).elements.isEmpty)
+        let storage = _PathImpl(isAbsolute: false, elements: [PathElement(name: "test")])
         XCTAssertFalse(storage.isAbsolute)
         XCTAssertEqual(storage.elements, [PathElement(name: "test")])
-        let storage2 = PathStorage(isAbsolute: true, pathString: "/a/b/c")
+        let storage2 = _PathImpl(isAbsolute: true, pathString: "/a/b/c")
         XCTAssertTrue(storage2.isAbsolute)
         XCTAssertEqual(storage2.elements, PathElement.elements(from: "/a/b/c"))
     }
 
     func testElementsUpdateResetsPathStringStorage() {
-        let storage = PathStorage(isAbsolute: false)
+        var storage = _PathImpl(isAbsolute: false)
         storage.elements = [PathElement(name: "test")]
         let oldString = storage.pathString
         storage.elements = [PathElement(name: "test2")]
@@ -35,18 +35,8 @@ final class PathStorageTests: XCTestCase {
         XCTAssertNotEqual(oldString, newString)
     }
 
-    func testPathStringCaching() {
-        let storage = PathStorage(isAbsolute: false)
-        let element = PathElement(name: "test")
-        storage.elements = [element]
-        let pathStr = storage.pathString
-        // TODO: Figure out a way to prove this
-        XCTAssertEqual(pathStr, storage.pathString)
-        XCTAssertEqual(pathStr, storage.pathString)
-    }
-
     func testLastPathElement() {
-        let storage = PathStorage(isAbsolute: false)
+        var storage = _PathImpl(isAbsolute: false)
         storage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         XCTAssertEqual(storage.lastPathElement.name, "test2")
         storage.lastPathElement = PathElement(name: "test3")
@@ -56,23 +46,8 @@ final class PathStorageTests: XCTestCase {
         XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test4")])
     }
 
-    func testCopying() {
-        let storage = PathStorage(isAbsolute: false)
-        storage.elements = [PathElement(name: "test")]
-        let pathStr = storage.pathString
-        XCTAssertEqual(pathStr, "test")
-        let copy = storage.copy()
-        XCTAssertEqual(copy.isAbsolute, storage.isAbsolute)
-        XCTAssertEqual(copy.elements, storage.elements)
-        XCTAssertEqual(copy.pathString, storage.pathString)
-        copy.elements = [PathElement(name: "test2")]
-        XCTAssertEqual(copy.pathString, "test2")
-        XCTAssertNotEqual(copy.elements, storage.elements)
-        XCTAssertNotEqual(copy.pathString, storage.pathString)
-    }
-
     func testAppending() {
-        let storage = PathStorage(isAbsolute: false)
+        var storage = _PathImpl(isAbsolute: false)
         storage.append(pathComponents: CollectionOfOne(PathElement(name: "test")))
         storage.append(pathComponents: CollectionOfOne("test2"))
         XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
@@ -84,7 +59,7 @@ final class PathStorageTests: XCTestCase {
     }
 
     func testResolvingWithoutSymlinks() {
-        let relStorage = PathStorage(isAbsolute: false)
+        var relStorage = _PathImpl(isAbsolute: false)
         relStorage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         relStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(relStorage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
@@ -102,7 +77,7 @@ final class PathStorageTests: XCTestCase {
         relStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(relStorage.elements, [PathElement(name: "test")])
 
-        let absStorage = PathStorage(isAbsolute: true)
+        var absStorage = _PathImpl(isAbsolute: true)
         absStorage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         absStorage.resolve(resolveSymlinks: false)
         XCTAssertEqual(absStorage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
@@ -122,11 +97,11 @@ final class PathStorageTests: XCTestCase {
     }
 
     func testResolvingLongPathsWithoutSymlinks() {
-        let absStorage1 = PathStorage(isAbsolute: true, pathString: "/A/B/C/D/./E/.././../F/../G/H/I")
-        let absStorage2 = PathStorage(isAbsolute: true, pathString: "/A/../../B/C/D/./E/.././../F/../G/H/I")
-        let absStorage3 = PathStorage(isAbsolute: true, pathString: "/./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
-        let absStorage4 = PathStorage(isAbsolute: true, pathString: "/.././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
-        let absStorage5 = PathStorage(isAbsolute: true, pathString: "/.././.././A/../..")
+        var absStorage1 = _PathImpl(isAbsolute: true, pathString: "/A/B/C/D/./E/.././../F/../G/H/I")
+        var absStorage2 = _PathImpl(isAbsolute: true, pathString: "/A/../../B/C/D/./E/.././../F/../G/H/I")
+        var absStorage3 = _PathImpl(isAbsolute: true, pathString: "/./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
+        var absStorage4 = _PathImpl(isAbsolute: true, pathString: "/.././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
+        var absStorage5 = _PathImpl(isAbsolute: true, pathString: "/.././.././A/../..")
         absStorage1.resolve(resolveSymlinks: false)
         absStorage2.resolve(resolveSymlinks: false)
         absStorage3.resolve(resolveSymlinks: false)
@@ -138,11 +113,11 @@ final class PathStorageTests: XCTestCase {
         XCTAssertEqual(absStorage4.pathString, "/B/C/G/H/I")
         XCTAssertEqual(absStorage5.pathString, "/")
 
-        let relStorage1 = PathStorage(isAbsolute: false, pathString: "A/B/C/D/./E/.././../F/../G/H/I")
-        let relStorage2 = PathStorage(isAbsolute: false, pathString: "A/../../B/C/D/./E/.././../F/../G/H/I")
-        let relStorage3 = PathStorage(isAbsolute: false, pathString: "./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
-        let relStorage4 = PathStorage(isAbsolute: false, pathString: ".././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
-        let relStorage5 = PathStorage(isAbsolute: false, pathString: ".././.././A/../..")
+        var relStorage1 = _PathImpl(isAbsolute: false, pathString: "A/B/C/D/./E/.././../F/../G/H/I")
+        var relStorage2 = _PathImpl(isAbsolute: false, pathString: "A/../../B/C/D/./E/.././../F/../G/H/I")
+        var relStorage3 = _PathImpl(isAbsolute: false, pathString: "./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
+        var relStorage4 = _PathImpl(isAbsolute: false, pathString: ".././A/./../././../B/././C/D/./E/.././../F/../G/./H/I/.")
+        var relStorage5 = _PathImpl(isAbsolute: false, pathString: ".././.././A/../..")
         relStorage1.resolve(resolveSymlinks: false)
         relStorage2.resolve(resolveSymlinks: false)
         relStorage3.resolve(resolveSymlinks: false)
@@ -156,7 +131,7 @@ final class PathStorageTests: XCTestCase {
     }
 
     func testResolvingWithSymlinks() {
-        let storage = PathStorage(isAbsolute: true)
+        var storage = _PathImpl(isAbsolute: true)
         storage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         storage.resolve(resolveSymlinks: true)
         XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
@@ -188,7 +163,7 @@ final class PathStorageTests: XCTestCase {
         mkdir(subDest2.pathString, 0o700)
         symlink(subDest2.pathString, subLink2.pathString)
         let finalPath = subLink2 / "target"
-        storage.elements = finalPath.storage.elements
+        storage.elements = finalPath._impl.elements
         storage.resolve(resolveSymlinks: true)
         addTeardownBlock {
             remove(finalPath.pathString)
@@ -200,10 +175,10 @@ final class PathStorageTests: XCTestCase {
             remove(subDir1.pathString)
         }
         XCTAssertEqual(storage.elements,
-                       tempDir.storage.elements
+                       tempDir._impl.elements
                         + ["folder", "folder2", "subfolder", "folder3", "target"].map { PathElement(name: $0) })
         XCTAssertEqual(storage.elements.map { $0.name },
-                       tempDir.storage.elements.map { $0.name }
+                       tempDir._impl.elements.map { $0.name }
                         + ["folder", "folder2", "subfolder", "folder3", "target"])
     }
 }

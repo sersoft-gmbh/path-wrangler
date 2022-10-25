@@ -11,23 +11,17 @@ public struct AbsolutePath: _PathProtocol {
     static let isAbsolute = true
 
     @usableFromInline
-    private(set) var storage: PathStorage
+    var _impl: _PathImpl
 
     @usableFromInline
-    init(storage: PathStorage) {
-        assert(storage.isAbsolute == Self.isAbsolute)
-        self.storage = storage
-    }
-
-    @usableFromInline
-    mutating func copyStorageIfNeeded() {
-        guard !isKnownUniquelyReferenced(&storage) else { return }
-        storage = storage.copy()
+    init(_impl: _PathImpl) {
+        assert(_impl.isAbsolute == Self.isAbsolute)
+        self._impl = _impl
     }
 
     @inlinable
     func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
-        storage.elements.starts(with: other.storage.elements)
+        _impl.elements.starts(with: other._impl.elements)
     }
 
     /// Resolves (simplifies) the receiver, optionally including symlinks.
@@ -36,9 +30,8 @@ public struct AbsolutePath: _PathProtocol {
     /// - Parameter resolveSymlinks: Whether or not symlinks should be tried to resolve. This will only work if the path exists on disk.
     @inlinable
     public mutating func resolve(resolveSymlinks: Bool = false) {
-        guard !storage.elements.isEmpty else { return }
-        copyStorageIfNeeded()
-        storage.resolve(resolveSymlinks: resolveSymlinks)
+        guard !_impl.elements.isEmpty else { return }
+        _impl.resolve(resolveSymlinks: resolveSymlinks)
     }
 
     /// Returns a new path that has been resolved (simplified), optionally including symlinks.
@@ -47,16 +40,14 @@ public struct AbsolutePath: _PathProtocol {
     /// - Parameter resolveSymlinks: Whether or not symlinks should be tried to resolve. This will only work if the path exists on disk.
     @inlinable
     public func resolved(resolveSymlinks: Bool = false) -> Self {
-        guard !storage.elements.isEmpty else { return self }
-        let newStorage = storage.copy()
-        newStorage.resolve(resolveSymlinks: resolveSymlinks)
-        return Self(storage: newStorage)
+        guard !_impl.elements.isEmpty else { return self }
+        return _withCopiedImpl { $0.resolve(resolveSymlinks: resolveSymlinks) }
     }
 }
 
 extension AbsolutePath {
     /// The absolute root path (/).
-    public static let root = Self(elements: [])
+    public static let root = Self(elements: .init())
 
     /// The current absolute path (cwd).
     public static var current: Self {

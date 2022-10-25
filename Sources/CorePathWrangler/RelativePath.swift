@@ -4,23 +4,17 @@ public struct RelativePath: _PathProtocol {
     static let isAbsolute = false
 
     @usableFromInline
-    private(set) var storage = PathStorage(isAbsolute: false)
+    var _impl: _PathImpl
 
     @usableFromInline
-    init(storage: PathStorage) {
-        assert(storage.isAbsolute == Self.isAbsolute)
-        self.storage = storage
-    }
-
-    @usableFromInline
-    mutating func copyStorageIfNeeded() {
-        guard !isKnownUniquelyReferenced(&storage) else { return }
-        storage = storage.copy()
+    init(_impl: _PathImpl) {
+        assert(_impl.isAbsolute == Self.isAbsolute)
+        self._impl = _impl
     }
 
     @inlinable
     func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
-        other.storage.elements.contains(storage.elements)
+        other._impl.elements.contains(_impl.elements)
     }
 
     /// Turns this relative path into an absolute path using the given absolute path.
@@ -33,18 +27,15 @@ public struct RelativePath: _PathProtocol {
     /// Resolves (simplifies) this relative path by resolving current (.) and parent (..) directory references.
     @inlinable
     public mutating func resolve() {
-        guard !storage.elements.isEmpty else { return }
-        copyStorageIfNeeded()
-        storage.resolve(resolveSymlinks: false)
+        guard !_impl.elements.isEmpty else { return }
+        _impl.resolve(resolveSymlinks: false)
     }
 
     /// Returns a resolved (simplified) relative path by resolving current (.) and parent (..) directory references.
     @inlinable
     public func resolved() -> Self {
-        guard !storage.elements.isEmpty else { return self }
-        let newStorage = storage.copy()
-        newStorage.resolve(resolveSymlinks: false)
-        return Self(storage: newStorage)
+        guard !_impl.elements.isEmpty else { return self }
+        return _withCopiedImpl { $0.resolve(resolveSymlinks: false) }
     }
 }
 

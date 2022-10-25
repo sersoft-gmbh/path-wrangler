@@ -1,13 +1,13 @@
 @usableFromInline
-struct PathElement: Hashable, PathComponentConvertible {
-    enum SimplificationAction {
+struct PathElement: Hashable, Sendable, PathComponentConvertible {
+    enum SimplificationAction: Sendable {
         case none, remove, removeParent
     }
 
     @usableFromInline
     let name: String
     @usableFromInline
-    private(set) var extensions: [PathExtension]
+    private(set) var extensions: Array<PathExtension>
 
     @inlinable
     var pathComponent: PathComponent { (CollectionOfOne(name) + extensions).joined(separator: ".") }
@@ -21,7 +21,7 @@ struct PathElement: Hashable, PathComponentConvertible {
     }
 
     @usableFromInline
-    init(name: String, extensions: [PathExtension] = []) {
+    init(name: String, extensions: Array<PathExtension> = .init()) {
         assert(!name.contains("/"), "The name of a \(PathElement.self) must not contain slashes!")
         assert(extensions.allSatisfy { !$0.contains(".") }, "No path extension in \(PathElement.self) must contain a dot!")
         self.name = name
@@ -43,7 +43,7 @@ struct PathElement: Hashable, PathComponentConvertible {
 
 extension PathElement {
     @inlinable
-    static func elements(from string: String) -> [PathElement] {
+    static func elements(from string: String) -> Array<PathElement> {
         string.split(separator: "/").map {
             var parts = $0.split(separator: ".") // Current element ($0) is "." or "..", parts will be empty.
             return PathElement(name: parts.isEmpty ? String($0) : String(parts.removeFirst()),
@@ -54,7 +54,7 @@ extension PathElement {
 
 extension PathComponentConvertible {
     @inlinable
-    var pathElements: [PathElement] { PathElement.elements(from: pathComponent) }
+    var pathElements: Array<PathElement> { PathElement.elements(from: pathComponent) }
 }
 
 extension Sequence where Element == PathElement {

@@ -35,10 +35,12 @@ public protocol PathProtocol: Hashable {
 
     /// Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver.
-    mutating func append<Components>(pathComponents: Components) where Components: Sequence, Components.Element == PathComponentConvertible
+    mutating func append<Components>(pathComponents: Components)
+    where Components: Sequence, Components.Element == PathComponentConvertible
     /// Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver and return.
-    func appending<Components>(pathComponents: Components) -> Self where Components: Sequence, Components.Element == PathComponentConvertible
+    func appending<Components>(pathComponents: Components) -> Self
+    where Components: Sequence, Components.Element == PathComponentConvertible
 
     /// Appends a path extension to the last component of the receiver.
     /// - Parameter pathExtension: The extension to append to the last component of the receiver.
