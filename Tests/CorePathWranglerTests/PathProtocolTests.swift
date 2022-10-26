@@ -16,8 +16,12 @@ final class PathProtocolTests: XCTestCase {
         init() {
             self.init(_impl: .init(isAbsolute: Self.isAbsolute))
         }
-        
+
+#if compiler(>=5.7)
         var isSubpathClosure: ((any _PathProtocol) -> Bool)?
+#else
+        var isSubpathClosure: ((Any) -> Bool)?
+#endif
         func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
             isSubpathClosure?(other) ?? false
         }
@@ -143,7 +147,11 @@ final class PathProtocolTests: XCTestCase {
 
     func testSubPathDetermination() {
         var path = DummyAbsPath(pathString: "/a/b/c")
+#if compiler(>=5.7)
+        var subPathParam: (any _PathProtocol)?
+#else
         var subPathParam: Any?
+#endif
         var subPathResult = false
         path.isSubpathClosure = {
             subPathParam = $0
