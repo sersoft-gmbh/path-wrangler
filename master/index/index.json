@@ -222,6 +222,22 @@
               {
                 "children" : [
                   {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -317,6 +333,22 @@
               {
                 "title" : "Default Implementations",
                 "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
               },
               {
                 "children" : [
