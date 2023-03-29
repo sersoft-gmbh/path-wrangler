@@ -1,0 +1,334 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns a new path that has been resolved (simplified), optionally including symlinks.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "By default this tries to resolve e.g. current directory (.) or parent directory (..) references in a copy of the receiver.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "If ",
+      "type" : "text"
+    },
+    {
+      "code" : "resolveSymlinks",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "true",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", it also attempts to resolve symlinks. This requires the path to exist.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/resolved(resolveSymlinks:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16CorePathWrangler08AbsoluteB0V8resolved15resolveSymlinksACSb_tF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "resolved"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "resolveSymlinks"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:Sb",
+        "text" : "Bool"
+      },
+      {
+        "kind" : "text",
+        "text" : ") -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+        "text" : "AbsolutePath"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "resolved(resolveSymlinks:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "resolved"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "resolveSymlinks"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:Sb",
+              "text" : "Bool"
+            },
+            {
+              "kind" : "text",
+              "text" : " = false) -> "
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+              "text" : "AbsolutePath"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "Whether or not symlinks should be tried to resolve. This will only work if the path exists on disk.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "resolveSymlinks"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/absolutepath\/resolved(resolvesymlinks:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/resolved(resolveSymlinks:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path that has been resolved (simplified), optionally including symlinks.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "By default this tries to resolve e.g. current directory (.) or parent directory (..) references in a copy of the receiver.",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "If ",
+      "type" : "text"
+    },
+    {
+      "code" : "resolveSymlinks",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " is set to ",
+      "type" : "text"
+    },
+    {
+      "code" : "true",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ", it also attempts to resolve symlinks. This requires the path to exist.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "resolved"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "resolveSymlinks"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/resolved(resolveSymlinks:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "resolved(resolveSymlinks:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/resolved(resolvesymlinks:)"
+}
+}
+}
