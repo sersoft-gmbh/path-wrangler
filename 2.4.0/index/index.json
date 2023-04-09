@@ -1,0 +1,453 @@
+{
+  "interfaceLanguages" : {
+    "swift" : [
+      {
+        "children" : [
+          {
+            "title" : "Protocols",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathcomponentconvertible\/pathcomponent",
+                "title" : "var pathComponent: PathComponent",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/corepathwrangler\/pathcomponentconvertible",
+            "title" : "PathComponentConvertible",
+            "type" : "protocol"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Operators",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/\/(_:_:)",
+                "title" : "static func \/ <Component>(Self, Component) -> Self",
+                "type" : "op"
+              },
+              {
+                "title" : "Initializers",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/init(_:)",
+                "title" : "init?(String)",
+                "type" : "init"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/init(pathstring:)",
+                "title" : "init(pathString: String)",
+                "type" : "init"
+              },
+              {
+                "title" : "Instance Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/debugdescription",
+                "title" : "var debugDescription: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/description",
+                "title" : "var description: String",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/lastpathcomponent",
+                "title" : "var lastPathComponent: PathComponent?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/lastpathextension",
+                "title" : "var lastPathExtension: PathExtension?",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/pathstring",
+                "title" : "var pathString: String",
+                "type" : "property"
+              },
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(_:)",
+                "title" : "func append(RelativePath)",
+                "type" : "method"
+              },
+              {
+                "children" : [
+                  {
+                    "children" : [
+                      {
+                        "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-5vkaf",
+                        "title" : "func append(pathComponents: PathComponentConvertible...)",
+                        "type" : "method"
+                      }
+                    ],
+                    "title" : "PathProtocol Implementations",
+                    "type" : "groupMarker"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-7bmur",
+                "title" : "func append<Components>(pathComponents: Components)",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathextension:)",
+                "title" : "func append(pathExtension: PathExtension)",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(_:)",
+                "title" : "func appending(RelativePath) -> Self",
+                "type" : "method"
+              },
+              {
+                "children" : [
+                  {
+                    "children" : [
+                      {
+                        "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-60uqw",
+                        "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                        "type" : "method"
+                      }
+                    ],
+                    "title" : "PathProtocol Implementations",
+                    "type" : "groupMarker"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0",
+                "title" : "func appending<Components>(pathComponents: Components) -> Self",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathextension:)",
+                "title" : "func appending(pathExtension: PathExtension) -> Self",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/issubpath(of:)-73na8",
+                "title" : "func isSubpath(of: RelativePath) -> Bool",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/issubpath(of:)-x5ip",
+                "title" : "func isSubpath(of: AbsolutePath) -> Bool",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/removelastpathcomponent()",
+                "title" : "func removeLastPathComponent()",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/removelastpathextension()",
+                "title" : "func removeLastPathExtension()",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/removinglastpathcomponent()",
+                "title" : "func removingLastPathComponent() -> Self",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/removinglastpathextension()",
+                "title" : "func removingLastPathExtension() -> Self",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/current",
+                "title" : "static var current: Self",
+                "type" : "property"
+              }
+            ],
+            "path" : "\/documentation\/corepathwrangler\/pathprotocol",
+            "title" : "PathProtocol",
+            "type" : "protocol"
+          },
+          {
+            "title" : "Structures",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/resolve(resolvesymlinks:)",
+                "title" : "func resolve(resolveSymlinks: Bool)",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/resolved(resolvesymlinks:)",
+                "title" : "func resolved(resolveSymlinks: Bool) -> AbsolutePath",
+                "type" : "method"
+              },
+              {
+                "title" : "Type Properties",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/root",
+                "title" : "static let root: AbsolutePath",
+                "type" : "property"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/tmpdir",
+                "title" : "static let tmpDir: AbsolutePath",
+                "type" : "property"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/\/(_:_:)",
+                    "title" : "static func \/ <Component>(Self, Component) -> Self",
+                    "type" : "op"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/debugdescription",
+                    "title" : "var debugDescription: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/append(pathcomponents:)",
+                    "title" : "func append(pathComponents: PathComponentConvertible...)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/appending(pathcomponents:)",
+                    "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/current",
+                    "title" : "static var current: AbsolutePath",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/absolutepath\/pathprotocol-implementations",
+                "title" : "PathProtocol Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/corepathwrangler\/absolutepath",
+            "title" : "AbsolutePath",
+            "type" : "struct"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Instance Methods",
+                "type" : "groupMarker"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/absolute(in:)",
+                "title" : "func absolute(in: AbsolutePath) -> AbsolutePath",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/resolve()",
+                "title" : "func resolve()",
+                "type" : "method"
+              },
+              {
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/resolved()",
+                "title" : "func resolved() -> RelativePath",
+                "type" : "method"
+              },
+              {
+                "title" : "Default Implementations",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/halfwidthcornerquoted",
+                    "title" : "var halfWidthCornerQuoted: String",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/customstringconvertible-implementations",
+                "title" : "CustomStringConvertible Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/!=(_:_:)",
+                    "title" : "static func != (Self, Self) -> Bool",
+                    "type" : "op"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/equatable-implementations",
+                "title" : "Equatable Implementations",
+                "type" : "symbol"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Operators",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/\/(_:_:)",
+                    "title" : "static func \/ <Component>(Self, Component) -> Self",
+                    "type" : "op"
+                  },
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/debugdescription",
+                    "title" : "var debugDescription: String",
+                    "type" : "property"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/description",
+                    "title" : "var description: String",
+                    "type" : "property"
+                  },
+                  {
+                    "title" : "Instance Methods",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/append(pathcomponents:)",
+                    "title" : "func append(pathComponents: PathComponentConvertible...)",
+                    "type" : "method"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/appending(pathcomponents:)",
+                    "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                    "type" : "method"
+                  },
+                  {
+                    "title" : "Type Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/current",
+                    "title" : "static let current: RelativePath",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/relativepath\/pathprotocol-implementations",
+                "title" : "PathProtocol Implementations",
+                "type" : "symbol"
+              }
+            ],
+            "path" : "\/documentation\/corepathwrangler\/relativepath",
+            "title" : "RelativePath",
+            "type" : "struct"
+          },
+          {
+            "title" : "Type Aliases",
+            "type" : "groupMarker"
+          },
+          {
+            "path" : "\/documentation\/corepathwrangler\/pathcomponent",
+            "title" : "PathComponent",
+            "type" : "typealias"
+          },
+          {
+            "path" : "\/documentation\/corepathwrangler\/pathextension",
+            "title" : "PathExtension",
+            "type" : "typealias"
+          }
+        ],
+        "path" : "\/documentation\/corepathwrangler",
+        "title" : "CorePathWrangler",
+        "type" : "module"
+      }
+    ]
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 1,
+    "patch" : 0
+  }
+}
