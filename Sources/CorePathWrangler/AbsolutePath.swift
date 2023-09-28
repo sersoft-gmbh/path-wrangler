@@ -20,7 +20,7 @@ public struct AbsolutePath: _PathProtocol {
     }
 
     @inlinable
-    func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
+    func _isSubpath(of other: some _PathProtocol) -> Bool {
         _impl.elements.starts(with: other._impl.elements)
     }
 

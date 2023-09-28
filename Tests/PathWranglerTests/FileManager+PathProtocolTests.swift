@@ -2,18 +2,6 @@ import XCTest
 import PathWrangler
 
 final class FileManagerPathProtocolExtensionsTests: XCTestCase {
-    #if os(Linux) && swift(<5.2.1)
-    private var tearDownBlocks: [() -> Void] = []
-    override func tearDown() {
-        tearDownBlocks.forEach { $0() }
-        tearDownBlocks.removeAll()
-        super.tearDown()
-    }
-    func addTeardownBlock(_ block: @escaping () -> Void) {
-        tearDownBlocks.append(block)
-    }
-    #endif
-
     private func createFiles(in fileManager: FileManager) -> (absPath: AbsolutePath, relPath: RelativePath) {
         let fileName = UUID().uuidString
         let absPath = AbsolutePath.tmpDir.appending(pathComponents: fileName)

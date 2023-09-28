@@ -2,18 +2,6 @@ import XCTest
 @testable import CorePathWrangler
 
 final class PathImplTests: XCTestCase {
-    #if os(Linux) && swift(<5.2.1)
-    private var tearDownBlocks: [() -> Void] = []
-    override func tearDown() {
-        tearDownBlocks.forEach { $0() }
-        tearDownBlocks.removeAll()
-        super.tearDown()
-    }
-    func addTeardownBlock(_ block: @escaping () -> Void) {
-        tearDownBlocks.append(block)
-    }
-    #endif
-
     func testInitialization() {
         XCTAssertFalse(_PathImpl(isAbsolute: false).isAbsolute)
         XCTAssertTrue(_PathImpl(isAbsolute: true).isAbsolute)

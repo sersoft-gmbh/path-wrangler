@@ -35,12 +35,10 @@ public protocol PathProtocol: Hashable {
 
     /// Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver.
-    mutating func append<Components>(pathComponents: Components)
-    where Components: Sequence, Components.Element == PathComponentConvertible
+    mutating func append(pathComponents: some Sequence<any PathComponentConvertible>)
     /// Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver and return.
-    func appending<Components>(pathComponents: Components) -> Self
-    where Components: Sequence, Components.Element == PathComponentConvertible
+    func appending(pathComponents: some Sequence<any PathComponentConvertible>) -> Self
 
     /// Appends a path extension to the last component of the receiver.
     /// - Parameter pathExtension: The extension to append to the last component of the receiver.
@@ -63,14 +61,11 @@ public protocol PathProtocol: Hashable {
 }
 
 extension PathProtocol where Self: CustomStringConvertible {
-    /// See `CustomStringConvertible.description`
     @inlinable
     public var description: String { pathString }
 }
 
 extension PathProtocol where Self: LosslessStringConvertible {
-    /// See `LosslessStringConvertible.init(_:)`
-    /// - Parameter description: See `LosslessStringConvertible.init(_:)`
     @inlinable
     public init?(_ description: String) {
         self.init(pathString: description)
@@ -78,7 +73,6 @@ extension PathProtocol where Self: LosslessStringConvertible {
 }
 
 extension PathProtocol where Self: CustomDebugStringConvertible {
-    /// See `CustomDebugStringConvertible.debugDescription`
     public var debugDescription: String { "[\(Self.self)]: \(pathString)" }
 }
 
@@ -86,14 +80,14 @@ extension PathProtocol {
     /// Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The variadic list of path component convertible objects, whose path components to append to the receiver.
     @inlinable
-    public mutating func append(pathComponents: PathComponentConvertible...) {
+    public mutating func append(pathComponents: any PathComponentConvertible...) {
         append(pathComponents: pathComponents)
     }
 
     /// Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The variadic list of path component convertible objects, whose path components to append to the receiver and return.
     @inlinable
-    public func appending(pathComponents: PathComponentConvertible...) -> Self {
+    public func appending(pathComponents: any PathComponentConvertible...) -> Self {
         appending(pathComponents: pathComponents)
     }
 }
@@ -104,7 +98,7 @@ extension PathProtocol {
     ///   - lhs: The existing path to append the path component to.
     ///   - rhs: The path component convertible object to append the path component to.
     @inlinable
-    public static func / <Component: PathComponentConvertible> (lhs: Self, rhs: Component) -> Self {
+    public static func / (lhs: Self, rhs: some PathComponentConvertible) -> Self {
         lhs.appending(pathComponents: rhs)
     }
 }

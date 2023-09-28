@@ -6,7 +6,7 @@ protocol _PathProtocol: PathProtocol, Sendable, Codable, CustomStringConvertible
 
     init(_impl: _PathImpl)
 
-    func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool
+    func _isSubpath(of other: some _PathProtocol) -> Bool
 }
 
 extension _PathProtocol {
@@ -39,13 +39,13 @@ extension _PathProtocol {
     }
 
     @inlinable
-    public init(from decoder: Decoder) throws {
+    public init(from decoder: any Decoder) throws {
         let container = try decoder.singleValueContainer()
         try self.init(pathString: container.decode(String.self))
     }
 
     @inlinable
-    public func encode(to encoder: Encoder) throws {
+    public func encode(to encoder: any Encoder) throws {
         var container = encoder.singleValueContainer()
         try container.encode(pathString)
     }
@@ -85,16 +85,12 @@ extension _PathProtocol {
     }
 
     @inlinable
-    public mutating func append<Components>(pathComponents: Components)
-    where Components: Sequence, Components.Element == PathComponentConvertible
-    {
+    public mutating func append(pathComponents: some Sequence<any PathComponentConvertible>) {
         _impl.append(pathComponents: pathComponents)
     }
 
     @inlinable
-    public func appending<Components>(pathComponents: Components) -> Self
-    where Components: Sequence, Components.Element == PathComponentConvertible
-    {
+    public func appending(pathComponents: some Sequence<any PathComponentConvertible>) -> Self {
         _withCopiedImpl { $0.append(pathComponents: pathComponents) }
     }
 

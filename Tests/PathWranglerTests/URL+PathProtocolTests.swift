@@ -2,9 +2,9 @@ import XCTest
 import PathWrangler
 
 final class URLPathProtocolExtensionTests: XCTestCase {
-    func testPathProtocolURLInitializer() {
+    func testPathProtocolURLInitializer() throws {
         let fileURL = URL(fileURLWithPath: "/a/b/c")
-        let httpURL = URL(string: "https://test.com/a/b/c")!
+        let httpURL = try XCTUnwrap(URL(string: "https://test.com/a/b/c"))
 
         let relPath = RelativePath(url: fileURL)
         let absPath = AbsolutePath(url: fileURL)
@@ -51,10 +51,10 @@ final class URLPathProtocolExtensionTests: XCTestCase {
         XCTAssertEqual(url.path, "/a/b/c/d/e/f")
     }
 
-    func testSubPathChecks() {
+    func testSubPathChecks() throws {
         let fileURL1 = URL(fileURLWithPath: "/a/b/c")
         let fileURL2 = URL(fileURLWithPath: "/f/b/c")
-        let httpURL = URL(string: "https://test.com/a/b/c")!
+        let httpURL = try XCTUnwrap(URL(string: "https://test.com/a/b/c"))
 
         XCTAssertTrue(fileURL1.isSubpath(of: AbsolutePath(pathString: "/a/b/c")))
         XCTAssertFalse(fileURL1.isSubpath(of: AbsolutePath(pathString: "/d/e/f")))

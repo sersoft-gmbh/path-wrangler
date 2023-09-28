@@ -13,7 +13,7 @@ public struct RelativePath: _PathProtocol {
     }
 
     @inlinable
-    func _isSubpath<Path: _PathProtocol>(of other: Path) -> Bool {
+    func _isSubpath(of other: some _PathProtocol) -> Bool {
         other._impl.elements.contains(_impl.elements)
     }
 
@@ -41,14 +41,12 @@ public struct RelativePath: _PathProtocol {
 
 extension RelativePath {
     /// The current relative path (is always `.`)
-    public static let current = RelativePath(elements: []) // Current relative path is always "."
+    public static let current = RelativePath(elements: .init()) // Current relative path is always "."
 }
 
 extension Collection where Element: Equatable {
     @usableFromInline
-    func contains<Other: Collection>(_ other: Other) -> Bool
-    where Other.Element == Element
-    {
+    func contains(_ other: some Collection<Element>) -> Bool {
         guard let start = other.first else { return true }
         guard let searchStartIdx = firstIndex(of: start),
               case let otherCount = other.count, count >= other.count

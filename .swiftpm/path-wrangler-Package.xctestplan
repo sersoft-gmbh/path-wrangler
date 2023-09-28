@@ -1,0 +1,33 @@
+{
+  "configurations" : [
+    {
+      "id" : "F1934292-5540-49F4-B2DD-A89C9787F241",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "CorePathWranglerTests",
+        "name" : "CorePathWranglerTests"
+      }
+    },
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:",
+        "identifier" : "PathWranglerTests",
+        "name" : "PathWranglerTests"
+      }
+    }
+  ],
+  "version" : 1
+}

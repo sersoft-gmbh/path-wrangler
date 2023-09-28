@@ -44,10 +44,8 @@ struct _PathImpl: Sendable {
     }
 
     @inlinable
-    mutating func append<Components>(pathComponents: Components)
-    where Components: Sequence, Components.Element == PathComponentConvertible
-    {
-        elements.append(contentsOf: pathComponents.flatMap { $0.pathElements })
+    mutating func append(pathComponents: some Sequence<any PathComponentConvertible>) {
+        elements.append(contentsOf: pathComponents.flatMap(\.pathElements))
     }
 
     private func resolvedSymlink(at path: String) -> String? {
@@ -88,7 +86,7 @@ struct _PathImpl: Sendable {
     {
         assert(!elements.isEmpty)
         assert(!resolveSymlinks || isAbsolute, "Symlinks cannot be resolved for relative paths")
-        // This sorta performs a half stable partition moving all elements to the back that should be removed.
+        // This sort of performs a half stable partition moving all elements to the back that should be removed.
         // We don't care about the ordering of the elements in the back. We just need the elements the front to stay in the same order.
         var minSafeIndex = elements.startIndex
         var currentIdx = elements.startIndex
