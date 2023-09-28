@@ -48,15 +48,7 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
-      },
-      {
-        "kind" : "genericParameter",
-        "text" : "Component"
-      },
-      {
-        "kind" : "text",
-        "text" : ">("
+        "text" : "("
       },
       {
         "kind" : "typeIdentifier",
@@ -64,11 +56,12 @@
       },
       {
         "kind" : "text",
-        "text" : ", "
+        "text" : ", some "
       },
       {
         "kind" : "typeIdentifier",
-        "text" : "Component"
+        "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+        "text" : "PathComponentConvertible"
       },
       {
         "kind" : "text",
@@ -126,15 +119,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
-            },
-            {
-              "kind" : "genericParameter",
-              "text" : "Component"
-            },
-            {
-              "kind" : "text",
-              "text" : ">("
+              "text" : "("
             },
             {
               "kind" : "internalParam",
@@ -158,11 +143,13 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
+              "text" : ": some "
             },
             {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
               "kind" : "typeIdentifier",
-              "text" : "Component"
+              "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+              "text" : "PathComponentConvertible"
             },
             {
               "kind" : "text",
@@ -171,32 +158,6 @@
             {
               "kind" : "typeIdentifier",
               "text" : "Self"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "keyword",
-              "text" : "where"
-            },
-            {
-              "kind" : "text",
-              "text" : " "
-            },
-            {
-              "kind" : "typeIdentifier",
-              "text" : "Component"
-            },
-            {
-              "kind" : "text",
-              "text" : " : "
-            },
-            {
-              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
-              "text" : "PathComponentConvertible"
             }
           ]
         }
@@ -396,15 +357,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Component"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
@@ -412,11 +365,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Component"
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
     },
     {
       "kind" : "text",

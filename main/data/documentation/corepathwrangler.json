@@ -52,6 +52,12 @@
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathExtension"
       ],
       "title" : "Type Aliases"
+    },
+    {
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift"
+      ],
+      "title" : "Extended Modules"
     }
   ],
   "variants" : [
@@ -306,6 +312,17 @@
   "title" : "RelativePath",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/relativepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/swift"
 }
 }
 }

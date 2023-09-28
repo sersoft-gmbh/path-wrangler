@@ -69,7 +69,10 @@
     ],
     "modules" : [
       {
-        "name" : "CorePathWrangler"
+        "name" : "CorePathWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
       }
     ],
     "role" : "symbol",

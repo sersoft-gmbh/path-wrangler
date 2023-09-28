@@ -154,15 +154,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
-    },
-    {
-      "kind" : "genericParameter",
-      "text" : "Component"
-    },
-    {
-      "kind" : "text",
-      "text" : ">("
+      "text" : "("
     },
     {
       "kind" : "typeIdentifier",
@@ -170,11 +162,12 @@
     },
     {
       "kind" : "text",
-      "text" : ", "
+      "text" : ", some "
     },
     {
       "kind" : "typeIdentifier",
-      "text" : "Component"
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
     },
     {
       "kind" : "text",
@@ -349,14 +342,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/debugDescription": {
   "abstract" : [
-    {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "CustomDebugStringConvertible.debugDescription",
-      "type" : "codeVoice"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [
@@ -422,14 +408,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/description": {
   "abstract" : [
-    {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "CustomStringConvertible.description",
-      "type" : "codeVoice"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

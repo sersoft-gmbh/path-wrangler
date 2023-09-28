@@ -31,7 +31,7 @@
               },
               {
                 "path" : "\/documentation\/corepathwrangler\/pathprotocol\/\/(_:_:)",
-                "title" : "static func \/ <Component>(Self, Component) -> Self",
+                "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                 "type" : "op"
               },
               {
@@ -101,7 +101,7 @@
                   }
                 ],
                 "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-7bmur",
-                "title" : "func append<Components>(pathComponents: Components)",
+                "title" : "func append(pathComponents: some Sequence<PathComponentConvertible>)",
                 "type" : "method"
               },
               {
@@ -129,7 +129,7 @@
                   }
                 ],
                 "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0",
-                "title" : "func appending<Components>(pathComponents: Components) -> Self",
+                "title" : "func appending(pathComponents: some Sequence<PathComponentConvertible>) -> Self",
                 "type" : "method"
               },
               {
@@ -222,22 +222,6 @@
               {
                 "children" : [
                   {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/corepathwrangler\/absolutepath\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -259,7 +243,7 @@
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/absolutepath\/\/(_:_:)",
-                    "title" : "static func \/ <Component>(Self, Component) -> Self",
+                    "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                     "type" : "op"
                   },
                   {
@@ -337,22 +321,6 @@
               {
                 "children" : [
                   {
-                    "title" : "Instance Properties",
-                    "type" : "groupMarker"
-                  },
-                  {
-                    "path" : "\/documentation\/corepathwrangler\/relativepath\/halfwidthcornerquoted",
-                    "title" : "var halfWidthCornerQuoted: String",
-                    "type" : "property"
-                  }
-                ],
-                "path" : "\/documentation\/corepathwrangler\/relativepath\/customstringconvertible-implementations",
-                "title" : "CustomStringConvertible Implementations",
-                "type" : "symbol"
-              },
-              {
-                "children" : [
-                  {
                     "title" : "Operators",
                     "type" : "groupMarker"
                   },
@@ -374,7 +342,7 @@
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/relativepath\/\/(_:_:)",
-                    "title" : "static func \/ <Component>(Self, Component) -> Self",
+                    "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                     "type" : "op"
                   },
                   {
@@ -437,6 +405,127 @@
             "path" : "\/documentation\/corepathwrangler\/pathextension",
             "title" : "PathExtension",
             "type" : "typealias"
+          },
+          {
+            "title" : "Extended Modules",
+            "type" : "groupMarker"
+          },
+          {
+            "children" : [
+              {
+                "title" : "Extended Protocols",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/swift\/binaryinteger\/pathcomponent",
+                    "title" : "var pathComponent: PathComponent",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/swift\/binaryinteger",
+                "title" : "BinaryInteger",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/swift\/floatingpoint\/pathcomponent",
+                    "title" : "var pathComponent: PathComponent",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/swift\/floatingpoint",
+                "title" : "FloatingPoint",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Instance Properties",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "path" : "\/documentation\/corepathwrangler\/swift\/rawrepresentable\/pathcomponent",
+                    "title" : "var pathComponent: PathComponent",
+                    "type" : "property"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/swift\/rawrepresentable",
+                "title" : "RawRepresentable",
+                "type" : "extension"
+              },
+              {
+                "title" : "Extended Structures",
+                "type" : "groupMarker"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/corepathwrangler\/swift\/staticstring\/pathcomponent",
+                        "title" : "var pathComponent: PathComponent",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/corepathwrangler\/swift\/staticstring\/pathcomponentconvertible-implementations",
+                    "title" : "PathComponentConvertible Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/swift\/staticstring",
+                "title" : "StaticString",
+                "type" : "extension"
+              },
+              {
+                "children" : [
+                  {
+                    "title" : "Default Implementations",
+                    "type" : "groupMarker"
+                  },
+                  {
+                    "children" : [
+                      {
+                        "title" : "Instance Properties",
+                        "type" : "groupMarker"
+                      },
+                      {
+                        "path" : "\/documentation\/corepathwrangler\/swift\/string\/pathcomponent",
+                        "title" : "var pathComponent: PathComponent",
+                        "type" : "property"
+                      }
+                    ],
+                    "path" : "\/documentation\/corepathwrangler\/swift\/string\/pathcomponentconvertible-implementations",
+                    "title" : "PathComponentConvertible Implementations",
+                    "type" : "symbol"
+                  }
+                ],
+                "path" : "\/documentation\/corepathwrangler\/swift\/string",
+                "title" : "String",
+                "type" : "extension"
+              }
+            ],
+            "path" : "\/documentation\/corepathwrangler\/swift",
+            "title" : "Swift",
+            "type" : "extension"
           }
         ],
         "path" : "\/documentation\/corepathwrangler",
@@ -448,6 +537,6 @@
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
-    "patch" : 0
+    "patch" : 1
   }
 }

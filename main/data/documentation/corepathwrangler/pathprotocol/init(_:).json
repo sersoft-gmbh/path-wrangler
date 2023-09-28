@@ -1,14 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "LosslessStringConvertible.init(_:)",
-      "type" : "codeVoice"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -134,29 +124,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "See ",
-                  "type" : "text"
-                },
-                {
-                  "code" : "LosslessStringConvertible.init(_:)",
-                  "type" : "codeVoice"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "description"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -252,14 +219,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/init(_:)": {
   "abstract" : [
-    {
-      "text" : "See ",
-      "type" : "text"
-    },
-    {
-      "code" : "LosslessStringConvertible.init(_:)",
-      "type" : "codeVoice"
-    }
+
   ],
   "conformance" : {
     "availabilityPrefix" : [

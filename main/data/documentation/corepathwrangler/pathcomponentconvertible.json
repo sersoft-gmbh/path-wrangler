@@ -78,6 +78,29 @@
       "kind" : "declarations"
     }
   ],
+  "relationshipsSections" : [
+    {
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Double",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Float",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int16",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int32",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int64",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int8",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/StaticString",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt16",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt32",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt64",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt8"
+      ],
+      "kind" : "relationships",
+      "title" : "Conforming Types",
+      "type" : "conformingTypes"
+    }
+  ],
   "schemaVersion" : {
     "major" : 0,
     "minor" : 3,
@@ -190,6 +213,130 @@
   "title" : "pathComponent",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathcomponentconvertible\/pathcomponent"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Double": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Double",
+  "title" : "Double",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Float": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Float",
+  "title" : "Float",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Int": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int",
+  "title" : "Int",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Int16": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int16",
+  "title" : "Int16",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Int32": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int32",
+  "title" : "Int32",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Int64": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int64",
+  "title" : "Int64",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/Int8": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/Int8",
+  "title" : "Int8",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/StaticString": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:s12StaticStringV",
+      "text" : "StaticString"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/StaticString",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "StaticString"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "StaticString",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/swift\/staticstring"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/String": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "String"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "String",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/swift\/string"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/UInt": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt",
+  "title" : "UInt",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/UInt16": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt16",
+  "title" : "UInt16",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/UInt32": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt32",
+  "title" : "UInt32",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/UInt64": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt64",
+  "title" : "UInt64",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/UInt8": {
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/UInt8",
+  "title" : "UInt8",
+  "type" : "unresolvable"
 }
 }
 }
