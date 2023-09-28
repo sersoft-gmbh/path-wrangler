@@ -12,7 +12,7 @@ A simple path library written in Swift.
 
 Add the following package dependency in your `Package.swift`:
 ```swift
-.package(url: "https://github.com/sersoft-gmbh/path-wrangler", from: "3.0.0"),
+.package(url: "https://github.com/sersoft-gmbh/path-wrangler", from: "2.0.0"),
 ```
 
 Or add it via Xcode (as of Xcode 11).
@@ -50,8 +50,8 @@ The PathWrangler package contains two products:
 
 The API is documented using header doc. If you prefer to view the documentation as a webpage, there is an online version available for you:
 
--   [CorePathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/corepathwrangler)
--   [PathWrangler](https://sersoft-gmbh.github.io/path-wrangler/master/documentation/pathwrangler)
+-   [CorePathWrangler](https://sersoft-gmbh.github.io/path-wrangler/main/documentation/corepathwrangler)
+-   [PathWrangler](https://sersoft-gmbh.github.io/path-wrangler/main/documentation/pathwrangler)
 
 ## Contributing
 
