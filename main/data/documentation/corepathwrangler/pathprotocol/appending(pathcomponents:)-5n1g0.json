@@ -60,7 +60,7 @@
       },
       {
         "kind" : "text",
-        "text" : "<"
+        "text" : "<any "
       },
       {
         "kind" : "typeIdentifier",
@@ -129,7 +129,7 @@
             },
             {
               "kind" : "text",
-              "text" : "<"
+              "text" : "<any "
             },
             {
               "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
@@ -335,7 +335,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
+      "text" : "<any "
     },
     {
       "kind" : "typeIdentifier",
@@ -389,7 +389,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "typeIdentifier",

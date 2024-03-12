@@ -30,7 +30,7 @@
                 "type" : "groupMarker"
               },
               {
-                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/\/(_:_:)",
+                "path" : "\/documentation\/corepathwrangler\/pathprotocol\/_(_:_:)",
                 "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                 "type" : "op"
               },
@@ -92,7 +92,7 @@
                     "children" : [
                       {
                         "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-5vkaf",
-                        "title" : "func append(pathComponents: PathComponentConvertible...)",
+                        "title" : "func append(pathComponents: any PathComponentConvertible...)",
                         "type" : "method"
                       }
                     ],
@@ -101,7 +101,7 @@
                   }
                 ],
                 "path" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-7bmur",
-                "title" : "func append(pathComponents: some Sequence<PathComponentConvertible>)",
+                "title" : "func append(pathComponents: some Sequence<any PathComponentConvertible>)",
                 "type" : "method"
               },
               {
@@ -120,7 +120,7 @@
                     "children" : [
                       {
                         "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-60uqw",
-                        "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                        "title" : "func appending(pathComponents: any PathComponentConvertible...) -> Self",
                         "type" : "method"
                       }
                     ],
@@ -129,7 +129,7 @@
                   }
                 ],
                 "path" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0",
-                "title" : "func appending(pathComponents: some Sequence<PathComponentConvertible>) -> Self",
+                "title" : "func appending(pathComponents: some Sequence<any PathComponentConvertible>) -> Self",
                 "type" : "method"
               },
               {
@@ -242,7 +242,7 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/\/(_:_:)",
+                    "path" : "\/documentation\/corepathwrangler\/absolutepath\/_(_:_:)",
                     "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                     "type" : "op"
                   },
@@ -266,12 +266,12 @@
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/absolutepath\/append(pathcomponents:)",
-                    "title" : "func append(pathComponents: PathComponentConvertible...)",
+                    "title" : "func append(pathComponents: any PathComponentConvertible...)",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/absolutepath\/appending(pathcomponents:)",
-                    "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                    "title" : "func appending(pathComponents: any PathComponentConvertible...) -> Self",
                     "type" : "method"
                   },
                   {
@@ -341,7 +341,7 @@
                     "type" : "groupMarker"
                   },
                   {
-                    "path" : "\/documentation\/corepathwrangler\/relativepath\/\/(_:_:)",
+                    "path" : "\/documentation\/corepathwrangler\/relativepath\/_(_:_:)",
                     "title" : "static func \/ (Self, some PathComponentConvertible) -> Self",
                     "type" : "op"
                   },
@@ -365,12 +365,12 @@
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/relativepath\/append(pathcomponents:)",
-                    "title" : "func append(pathComponents: PathComponentConvertible...)",
+                    "title" : "func append(pathComponents: any PathComponentConvertible...)",
                     "type" : "method"
                   },
                   {
                     "path" : "\/documentation\/corepathwrangler\/relativepath\/appending(pathcomponents:)",
-                    "title" : "func appending(pathComponents: PathComponentConvertible...) -> Self",
+                    "title" : "func appending(pathComponents: any PathComponentConvertible...) -> Self",
                     "type" : "method"
                   },
                   {

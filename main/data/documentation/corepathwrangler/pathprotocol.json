@@ -142,7 +142,7 @@
   "topicSections" : [
     {
       "identifiers" : [
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/\/(_:_:)"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/_(_:_:)"
       ],
       "title" : "Operators"
     },
@@ -314,7 +314,7 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol"
 },
-"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol//(_:_:)": {
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/_(_:_:)": {
   "abstract" : [
     {
       "text" : "Conveniently forms a path by appending the path component of a path component convertible object to an existing path.",
@@ -372,12 +372,12 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/\/(_:_:)",
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/_(_:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "\/(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/\/(_:_:)"
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/_(_:_:)"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(_:)": {
   "abstract" : [
@@ -461,7 +461,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
+      "text" : "<any "
     },
     {
       "kind" : "typeIdentifier",
@@ -625,7 +625,7 @@
     },
     {
       "kind" : "text",
-      "text" : "<"
+      "text" : "<any "
     },
     {
       "kind" : "typeIdentifier",

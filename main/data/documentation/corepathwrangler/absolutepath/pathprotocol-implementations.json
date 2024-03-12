@@ -19,6 +19,7 @@
       }
     ],
     "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
     "title" : "PathProtocol Implementations"
   },
   "schemaVersion" : {
@@ -33,7 +34,7 @@
     {
       "generated" : true,
       "identifiers" : [
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/\/(_:_:)"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/_(_:_:)"
       ],
       "title" : "Operators"
     },
@@ -120,7 +121,7 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/absolutepath"
 },
-"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath//(_:_:)": {
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/_(_:_:)": {
   "abstract" : [
     {
       "text" : "Conveniently forms a path by appending the path component of a path component convertible object to an existing path.",
@@ -178,12 +179,12 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/\/(_:_:)",
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/_(_:_:)",
   "kind" : "symbol",
   "role" : "symbol",
   "title" : "\/(_:_:)",
   "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/absolutepath\/\/(_:_:)"
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/_(_:_:)"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(pathComponents:)": {
   "abstract" : [
@@ -215,7 +216,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "typeIdentifier",
@@ -264,7 +265,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
+      "text" : ": any "
     },
     {
       "kind" : "typeIdentifier",
