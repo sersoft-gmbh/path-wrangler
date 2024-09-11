@@ -48,6 +48,10 @@
         "name" : "CorePathWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "PathComponentConvertible.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L7"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",

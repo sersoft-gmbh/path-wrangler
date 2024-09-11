@@ -58,6 +58,10 @@
         "name" : "CorePathWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "AbsolutePath.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/AbsolutePath.swift#L53"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Property",
     "symbolKind" : "property",

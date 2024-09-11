@@ -48,6 +48,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "PathComponentConvertibleConformances.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/PathWrangler\/PathComponentConvertibleConformances.swift#L10"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
     "symbolKind" : "property",

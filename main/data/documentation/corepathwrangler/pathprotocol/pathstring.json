@@ -48,6 +48,10 @@
         "name" : "CorePathWrangler"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L8"
+    },
     "required" : true,
     "role" : "symbol",
     "roleHeading" : "Instance Property",

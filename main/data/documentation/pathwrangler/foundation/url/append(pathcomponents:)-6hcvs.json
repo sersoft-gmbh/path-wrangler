@@ -65,6 +65,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "URL+PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/PathWrangler\/URL+PathProtocol.swift#L46"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

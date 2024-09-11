@@ -44,6 +44,10 @@
         "text" : "PathComponent"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "PathComponentConvertible.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L2"
+    },
     "role" : "symbol",
     "roleHeading" : "Type Alias",
     "symbolKind" : "typealias",

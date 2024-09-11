@@ -70,6 +70,10 @@
         ]
       }
     ],
+    "remoteSource" : {
+      "fileName" : "FileManager+PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/PathWrangler\/FileManager+PathProtocol.swift#L23"
+    },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
     "symbolKind" : "method",

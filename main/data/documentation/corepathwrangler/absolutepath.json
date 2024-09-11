@@ -44,6 +44,10 @@
         "text" : "AbsolutePath"
       }
     ],
+    "remoteSource" : {
+      "fileName" : "AbsolutePath.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/AbsolutePath.swift#L9"
+    },
     "role" : "symbol",
     "roleHeading" : "Structure",
     "symbolKind" : "struct",
