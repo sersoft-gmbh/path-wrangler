@@ -1,5 +1,5 @@
-import Foundation
-import CorePathWrangler
+public import Foundation
+public import CorePathWrangler
 
 extension UUID: PathComponentConvertible {
     @inlinable

@@ -1,5 +1,5 @@
-import Foundation
-import CorePathWrangler
+public import Foundation
+public import CorePathWrangler
 
 extension FileManager {
     /// Returns whether an item at the given path exists. No distinction is made between files and folders.

@@ -1,5 +1,5 @@
-import CorePathWrangler
-import Foundation
+public import CorePathWrangler
+public import Foundation
 
 extension PathProtocol {
     /// Creates a new path from the given URL. Returns nil if the url is not a file url.
