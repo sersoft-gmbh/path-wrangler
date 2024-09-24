@@ -1,1 +1,1 @@
-@_exported import CorePathWrangler
+@_exported public import CorePathWrangler
