@@ -33,9 +33,11 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Modules",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/PathWrangler\/documentation\/PathWrangler\/CorePathWrangler",
-        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Foundation"
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials"
       ],
       "title" : "Extended Modules"
     }
@@ -76,16 +78,16 @@
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler\/corepathwrangler"
 },
-"doc://PathWrangler/documentation/PathWrangler/Foundation": {
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials": {
   "abstract" : [
 
   ],
-  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Foundation",
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials",
   "kind" : "symbol",
   "role" : "collection",
-  "title" : "Foundation",
+  "title" : "FoundationEssentials",
   "type" : "topic",
-  "url" : "\/documentation\/pathwrangler\/foundation"
+  "url" : "\/documentation\/pathwrangler\/foundationessentials"
 }
 }
 }

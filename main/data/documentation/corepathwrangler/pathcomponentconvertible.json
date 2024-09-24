@@ -115,6 +115,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible\/pathComponent"
       ],

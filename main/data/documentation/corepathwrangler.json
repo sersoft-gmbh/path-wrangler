@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol"
@@ -40,6 +42,8 @@
       "title" : "Protocols"
     },
     {
+      "anchor" : "Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath"
@@ -47,6 +51,8 @@
       "title" : "Structures"
     },
     {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponent",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathExtension"
@@ -54,6 +60,8 @@
       "title" : "Type Aliases"
     },
     {
+      "anchor" : "Extended-Modules",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift"
       ],

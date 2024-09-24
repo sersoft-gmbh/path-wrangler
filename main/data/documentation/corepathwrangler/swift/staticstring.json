@@ -82,7 +82,8 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+        "doc:\/\/CorePathWrangler\/s8CopyableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -99,6 +100,7 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/StaticString\/PathComponentConvertible-Implementations"
@@ -218,6 +220,11 @@
   "title" : "PathComponentConvertible Implementations",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/swift\/staticstring\/pathcomponentconvertible-implementations"
+},
+"doc://CorePathWrangler/s8CopyableP": {
+  "identifier" : "doc:\/\/CorePathWrangler\/s8CopyableP",
+  "title" : "Swift.Copyable",
+  "type" : "unresolvable"
 }
 }
 }

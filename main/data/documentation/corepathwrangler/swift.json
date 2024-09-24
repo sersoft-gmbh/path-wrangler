@@ -33,6 +33,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Extended-Protocols",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/BinaryInteger",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/FloatingPoint",
@@ -41,6 +43,8 @@
       "title" : "Extended Protocols"
     },
     {
+      "anchor" : "Extended-Structures",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/StaticString",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String"

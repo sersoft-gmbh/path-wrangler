@@ -14,7 +14,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "CorePathWrangler",
-    "externalID" : "s:e:s:16CorePathWrangler0B8ProtocolP0bC0E3urlxSg10Foundation3URLV_tcfc",
+    "externalID" : "s:e:s:16CorePathWrangler0B8ProtocolP0bC0E3urlxSg20FoundationEssentials3URLV_tcfc",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -89,6 +89,8 @@
   ],
   "topicSections" : [
     {
+      "anchor" : "Initializers",
+      "generated" : true,
       "identifiers" : [
         "doc:\/\/PathWrangler\/documentation\/PathWrangler\/CorePathWrangler\/PathProtocol\/init(url:)"
       ],
@@ -189,7 +191,7 @@
     },
     {
       "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:10Foundation3URLV",
+      "preciseIdentifier" : "s:20FoundationEssentials3URLV",
       "text" : "URL"
     },
     {

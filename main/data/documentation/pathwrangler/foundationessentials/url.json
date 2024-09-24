@@ -1,0 +1,614 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "FoundationEssentials",
+    "externalID" : "s:e:s:20FoundationEssentials3URLV12PathWranglerE4path11isDirectoryACx_Sbtc04CoredE00D8ProtocolRzlufc",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "extension"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "preciseIdentifier" : "s:20FoundationEssentials3URLV",
+        "text" : "URL"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler",
+        "relatedModules" : [
+          "FoundationEssentials"
+        ]
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "URL"
+      }
+    ],
+    "role" : "symbol",
+    "roleHeading" : "Extended Structure",
+    "symbolKind" : "extension",
+    "title" : "URL"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "extension"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:20FoundationEssentials3URLV",
+              "text" : "URL"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/init(path:)",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/init(path:isDirectory:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/append(pathComponents:)-8kvg3",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/append(pathComponents:)-8z78s",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/appending(pathComponents:)-2o13",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/appending(pathComponents:)-62qtb",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/isSubpath(of:)-4dqk5",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/isSubpath(of:)-5uesr"
+      ],
+      "title" : "Instance Methods"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/foundationessentials\/url"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FoundationEssentials",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:20FoundationEssentials3URLV",
+      "text" : "URL"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "URL"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "URL",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/append(pathComponents:)-8kvg3": {
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...)"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/append(pathComponents:)-8kvg3",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/append(pathcomponents:)-8kvg3"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/append(pathComponents:)-8z78s": {
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": some "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/append(pathComponents:)-8z78s",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/append(pathcomponents:)-8z78s"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/appending(pathComponents:)-2o13": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": some "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20FoundationEssentials3URLV",
+      "text" : "URL"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/appending(pathComponents:)-2o13",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/appending(pathcomponents:)-2o13"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/appending(pathComponents:)-62qtb": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:20FoundationEssentials3URLV",
+      "text" : "URL"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/appending(pathComponents:)-62qtb",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/appending(pathcomponents:)-62qtb"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/init(path:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a file url from the given path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": some "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B8ProtocolP",
+      "text" : "PathProtocol"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/init(path:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(path:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/init(path:)"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/init(path:isDirectory:)": {
+  "abstract" : [
+    {
+      "text" : "Creates a file url from the given path, by also specifying whether it points to a directory or not.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "path"
+    },
+    {
+      "kind" : "text",
+      "text" : ": some "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B8ProtocolP",
+      "text" : "PathProtocol"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "isDirectory"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/init(path:isDirectory:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(path:isDirectory:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/init(path:isdirectory:)"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/isSubpath(of:)-4dqk5": {
+  "abstract" : [
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isSubpath"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "of"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
+      "text" : "RelativePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/isSubpath(of:)-4dqk5",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isSubpath(of:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/issubpath(of:)-4dqk5"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/URL/isSubpath(of:)-5uesr": {
+  "abstract" : [
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isSubpath"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "of"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+      "text" : "AbsolutePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/URL\/isSubpath(of:)-5uesr",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isSubpath(of:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/issubpath(of:)-5uesr"
+}
+}
+}
