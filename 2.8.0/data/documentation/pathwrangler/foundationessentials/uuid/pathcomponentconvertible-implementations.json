@@ -1,0 +1,147 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID\/PathComponentConvertible-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "PathWrangler"
+      }
+    ],
+    "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
+    "title" : "PathComponentConvertible Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID\/pathComponent"
+      ],
+      "title" : "Instance Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/foundationessentials\/uuid\/pathcomponentconvertible-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "FoundationEssentials",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/UUID": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:20FoundationEssentials4UUIDV",
+      "text" : "UUID"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "UUID"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "UUID",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/uuid"
+},
+"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/UUID/pathComponent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID\/pathComponent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/foundationessentials\/uuid\/pathcomponent"
+}
+}
+}
