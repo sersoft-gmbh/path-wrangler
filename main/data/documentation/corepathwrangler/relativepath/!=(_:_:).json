@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Equatable-Implementations"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath"
       ]
     ]
   },
@@ -429,17 +428,6 @@
   "title" : "!=(_:_:)",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/relativepath\/!=(_:_:)"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/Equatable-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Equatable-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "Equatable Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/relativepath\/equatable-implementations"
 }
 }
 }

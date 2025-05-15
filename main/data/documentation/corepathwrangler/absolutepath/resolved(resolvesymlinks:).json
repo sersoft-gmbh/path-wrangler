@@ -99,7 +99,7 @@
     ],
     "remoteSource" : {
       "fileName" : "AbsolutePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/AbsolutePath.swift#L42"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/AbsolutePath.swift#L48"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",

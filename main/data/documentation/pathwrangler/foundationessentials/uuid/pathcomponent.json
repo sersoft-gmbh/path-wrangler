@@ -4,8 +4,7 @@
       [
         "doc:\/\/PathWrangler\/documentation\/PathWrangler",
         "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials",
-        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID",
-        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID\/PathComponentConvertible-Implementations"
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID"
       ]
     ]
   },
@@ -50,7 +49,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathComponentConvertibleConformances.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/PathWrangler\/PathComponentConvertibleConformances.swift#L6"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/PathComponentConvertibleConformances.swift#L6"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -182,17 +181,6 @@
   "title" : "UUID",
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler\/foundationessentials\/uuid"
-},
-"doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/UUID/PathComponentConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/FoundationEssentials\/UUID\/PathComponentConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "PathComponentConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/pathwrangler\/foundationessentials\/uuid\/pathcomponentconvertible-implementations"
 },
 "doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/UUID/pathComponent": {
   "abstract" : [

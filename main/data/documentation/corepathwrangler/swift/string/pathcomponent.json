@@ -4,8 +4,7 @@
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String\/PathComponentConvertible-Implementations"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String"
       ]
     ]
   },
@@ -50,7 +49,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathComponentConvertible.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L12"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L12"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -217,17 +216,6 @@
   "title" : "String",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/swift\/string"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/Swift/String/PathComponentConvertible-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift\/String\/PathComponentConvertible-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "PathComponentConvertible Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/swift\/string\/pathcomponentconvertible-implementations"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/Swift/String/pathComponent": {
   "abstract" : [

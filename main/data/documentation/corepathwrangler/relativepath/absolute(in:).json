@@ -67,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "RelativePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/RelativePath.swift#L23"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/RelativePath.swift#L23"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",

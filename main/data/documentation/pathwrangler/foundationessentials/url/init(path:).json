@@ -37,7 +37,15 @@
       },
       {
         "kind" : "text",
-        "text" : ": some "
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -59,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "URL+PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/PathWrangler\/URL+PathProtocol.swift#L28"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/URL+PathProtocol.swift#L28"
     },
     "role" : "symbol",
     "roleHeading" : "Initializer",
@@ -91,7 +99,15 @@
             },
             {
               "kind" : "text",
-              "text" : ": some "
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "kind" : "typeIdentifier",
@@ -256,7 +272,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",

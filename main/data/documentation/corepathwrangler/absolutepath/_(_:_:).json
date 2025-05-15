@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/PathProtocol-Implementations"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
       ]
     ]
   },
@@ -57,7 +56,15 @@
       },
       {
         "kind" : "text",
-        "text" : ", some "
+        "text" : ", "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -80,7 +87,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L101"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L101"
     },
     "role" : "symbol",
     "roleHeading" : "Operator",
@@ -148,7 +155,15 @@
             },
             {
               "kind" : "text",
-              "text" : ": some "
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
@@ -270,17 +285,6 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/absolutepath"
 },
-"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/PathProtocol-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/PathProtocol-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "PathProtocol Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/absolutepath\/pathprotocol-implementations"
-},
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/_(_:_:)": {
   "abstract" : [
     {
@@ -323,7 +327,15 @@
     },
     {
       "kind" : "text",
-      "text" : ", some "
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",

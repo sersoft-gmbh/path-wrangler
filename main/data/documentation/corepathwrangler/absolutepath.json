@@ -46,7 +46,7 @@
     ],
     "remoteSource" : {
       "fileName" : "AbsolutePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/AbsolutePath.swift#L9"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/AbsolutePath.swift#L15"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -130,7 +130,10 @@
       "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Decodable-Implementations",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Encodable-Implementations",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Equatable-Implementations",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Hashable-Implementations",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/PathProtocol-Implementations"
       ],
       "title" : "Default Implementations"
@@ -215,6 +218,28 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/absolutepath"
 },
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/decodable-implementations"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/encodable-implementations"
+},
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/Equatable-Implementations": {
   "abstract" : [
 
@@ -225,6 +250,17 @@
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/absolutepath\/equatable-implementations"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/Hashable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/Hashable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Hashable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/hashable-implementations"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/PathProtocol-Implementations": {
   "abstract" : [

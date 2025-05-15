@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/PathProtocol-Implementations"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
       ]
     ]
   },
@@ -68,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L90"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L90"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -215,17 +214,6 @@
   "title" : "AbsolutePath",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/absolutepath"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/PathProtocol-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/PathProtocol-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "PathProtocol Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/absolutepath\/pathprotocol-implementations"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/appending(pathComponents:)": {
   "abstract" : [

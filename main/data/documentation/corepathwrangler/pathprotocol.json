@@ -70,7 +70,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L6"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L6"
     },
     "role" : "symbol",
     "roleHeading" : "Protocol",
@@ -178,10 +178,10 @@
       "generated" : true,
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(_:)",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-7bmur",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathExtension:)",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(_:)",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathExtension:)",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/isSubpath(of:)-73na8",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/isSubpath(of:)-x5ip",
@@ -370,7 +370,15 @@
     },
     {
       "kind" : "text",
-      "text" : ", some "
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -435,7 +443,7 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(_:)"
 },
-"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(pathComponents:)-7bmur": {
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(pathComponents:)": {
   "abstract" : [
     {
       "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
@@ -466,7 +474,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -487,13 +503,13 @@
       "text" : ">)"
     }
   ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-7bmur",
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "append(pathComponents:)",
   "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-7bmur"
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(pathExtension:)": {
   "abstract" : [
@@ -599,7 +615,7 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(_:)"
 },
-"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/appending(pathComponents:)-5n1g0": {
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/appending(pathComponents:)": {
   "abstract" : [
     {
       "text" : "Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
@@ -630,7 +646,15 @@
     },
     {
       "kind" : "text",
-      "text" : ": some "
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
@@ -655,13 +679,13 @@
       "text" : "Self"
     }
   ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0",
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)",
   "kind" : "symbol",
   "required" : true,
   "role" : "symbol",
   "title" : "appending(pathComponents:)",
   "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0"
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/appending(pathExtension:)": {
   "abstract" : [

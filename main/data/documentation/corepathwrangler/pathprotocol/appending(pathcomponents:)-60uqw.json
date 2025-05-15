@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol"
       ]
     ]
   },
@@ -68,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L90"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L90"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -273,70 +272,6 @@
   "title" : "PathProtocol",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/appending(pathComponents:)-5n1g0": {
-  "abstract" : [
-    {
-      "text" : "Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
-      "type" : "text"
-    }
-  ],
-  "defaultImplementations" : 1,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "appending"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "pathComponents"
-    },
-    {
-      "kind" : "text",
-      "text" : ": some "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:ST",
-      "text" : "Sequence"
-    },
-    {
-      "kind" : "text",
-      "text" : "<any "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
-      "text" : "PathComponentConvertible"
-    },
-    {
-      "kind" : "text",
-      "text" : ">) -> "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "text" : "Self"
-    }
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "appending(pathComponents:)",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/appending(pathComponents:)-60uqw": {
   "abstract" : [

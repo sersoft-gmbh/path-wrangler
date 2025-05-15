@@ -46,7 +46,7 @@
     ],
     "remoteSource" : {
       "fileName" : "RelativePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/RelativePath.swift#L2"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/RelativePath.swift#L2"
     },
     "role" : "symbol",
     "roleHeading" : "Structure",
@@ -122,7 +122,10 @@
       "anchor" : "Default-Implementations",
       "generated" : true,
       "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Decodable-Implementations",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Encodable-Implementations",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Equatable-Implementations",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Hashable-Implementations",
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/PathProtocol-Implementations"
       ],
       "title" : "Default Implementations"
@@ -265,6 +268,28 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/relativepath"
 },
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/Decodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Decodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Decodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/decodable-implementations"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/Encodable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Encodable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Encodable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/encodable-implementations"
+},
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/Equatable-Implementations": {
   "abstract" : [
 
@@ -275,6 +300,17 @@
   "title" : "Equatable Implementations",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/relativepath\/equatable-implementations"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/Hashable-Implementations": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/Hashable-Implementations",
+  "kind" : "article",
+  "role" : "collectionGroup",
+  "title" : "Hashable Implementations",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/hashable-implementations"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/PathProtocol-Implementations": {
   "abstract" : [

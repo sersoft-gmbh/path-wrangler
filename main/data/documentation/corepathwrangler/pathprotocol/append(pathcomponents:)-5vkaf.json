@@ -9,8 +9,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-7bmur"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol"
       ]
     ]
   },
@@ -64,7 +63,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/PathProtocol.swift#L83"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L83"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -322,66 +321,6 @@
   "title" : "append(pathComponents:)",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-5vkaf"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(pathComponents:)-7bmur": {
-  "abstract" : [
-    {
-      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
-      "type" : "text"
-    }
-  ],
-  "defaultImplementations" : 1,
-  "fragments" : [
-    {
-      "kind" : "keyword",
-      "text" : "func"
-    },
-    {
-      "kind" : "text",
-      "text" : " "
-    },
-    {
-      "kind" : "identifier",
-      "text" : "append"
-    },
-    {
-      "kind" : "text",
-      "text" : "("
-    },
-    {
-      "kind" : "externalParam",
-      "text" : "pathComponents"
-    },
-    {
-      "kind" : "text",
-      "text" : ": some "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:ST",
-      "text" : "Sequence"
-    },
-    {
-      "kind" : "text",
-      "text" : "<any "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
-      "text" : "PathComponentConvertible"
-    },
-    {
-      "kind" : "text",
-      "text" : ">)"
-    }
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-7bmur",
-  "kind" : "symbol",
-  "required" : true,
-  "role" : "symbol",
-  "title" : "append(pathComponents:)",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-7bmur"
 }
 }
 }

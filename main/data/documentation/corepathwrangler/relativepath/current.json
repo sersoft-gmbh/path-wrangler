@@ -17,8 +17,7 @@
     "paths" : [
       [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
-        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/PathProtocol-Implementations"
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath"
       ]
     ]
   },
@@ -68,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "RelativePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/Sources\/CorePathWrangler\/RelativePath.swift#L44"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/RelativePath.swift#L44"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -188,17 +187,6 @@
   "title" : "RelativePath",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/relativepath"
-},
-"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/PathProtocol-Implementations": {
-  "abstract" : [
-
-  ],
-  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/PathProtocol-Implementations",
-  "kind" : "article",
-  "role" : "collectionGroup",
-  "title" : "PathProtocol Implementations",
-  "type" : "topic",
-  "url" : "\/documentation\/corepathwrangler\/relativepath\/pathprotocol-implementations"
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/current": {
   "abstract" : [
