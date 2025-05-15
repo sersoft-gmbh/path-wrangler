@@ -1,7 +1,13 @@
-#if os(Linux)
-import Glibc
-#else
+#if canImport(Darwin)
 import Darwin.C
+#elseif canImport(Glibc)
+import Glibc
+#elseif canImport(Musl)
+import Musl
+#elseif os(Windows)
+import ucrt
+#else
+#error("Unknown platform")
 #endif
 import CPathWrangler
 

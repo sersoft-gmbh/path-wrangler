@@ -94,6 +94,6 @@ inline char *_Nonnull cpw_tmp_dir_path() {
 
 #if !defined(P_tmpdir) && !defined(_PATH_TMP)
 #warning Missing TMP dir defines. Using '/tmp'
-    return "/tmp";
 #endif /* !defined(P_tmpdir) && !defined(_PATH_TMP) */
+    return "/tmp";
 }
