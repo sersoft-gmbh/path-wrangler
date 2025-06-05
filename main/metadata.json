@@ -1,6 +1,6 @@
 {
-  "bundleDisplayName" : "PathWrangler",
-  "bundleID" : "PathWrangler",
+  "bundleDisplayName" : "CorePathWrangler",
+  "bundleID" : "CorePathWrangler",
   "schemaVersion" : {
     "major" : 0,
     "minor" : 1,
