@@ -68,7 +68,7 @@ struct AbsolutePathTests {
 #if compiler(>=6.2)
         let cwd = unsafe String(cString: getcwd(nil, 0))
 #else
-        let cwd = unsafe String(cString: getcwd(nil, 0))
+        let cwd = String(cString: getcwd(nil, 0))
 #endif
         #expect(current.pathString == cwd)
     }
