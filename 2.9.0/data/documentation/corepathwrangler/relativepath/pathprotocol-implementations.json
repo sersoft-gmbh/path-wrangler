@@ -1,0 +1,1127 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/PathProtocol-Implementations"
+  },
+  "kind" : "article",
+  "metadata" : {
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "role" : "collectionGroup",
+    "roleHeading" : "API Collection",
+    "title" : "PathProtocol Implementations"
+  },
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Operators",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/_(_:_:)"
+      ],
+      "title" : "Operators"
+    },
+    {
+      "anchor" : "Initializers",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/init(pathString:)"
+      ],
+      "title" : "Initializers"
+    },
+    {
+      "anchor" : "Instance-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/debugDescription",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/description",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/lastPathComponent",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/lastPathExtension",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/pathString"
+      ],
+      "title" : "Instance Properties"
+    },
+    {
+      "anchor" : "Instance-Methods",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(_:)",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathComponents:)-1fhsg",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathComponents:)-3v1fi",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathExtension:)",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(_:)",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(pathComponents:)",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(pathExtension:)",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/isSubpath(of:)-8n023",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/isSubpath(of:)-p0dz",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removeLastPathComponent()",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removeLastPathExtension()",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removingLastPathComponent()",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removingLastPathExtension()"
+      ],
+      "title" : "Instance Methods"
+    },
+    {
+      "anchor" : "Type-Properties",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/current"
+      ],
+      "title" : "Type Properties"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/relativepath\/pathprotocol-implementations"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/_(_:_:)": {
+  "abstract" : [
+    {
+      "text" : "Conveniently forms a path by appending the path component of a path component convertible object to an existing path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "\/"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    },
+    {
+      "kind" : "text",
+      "text" : ", "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/_(_:_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "\/(_:_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/_(_:_:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
+      "text" : "RelativePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/append(_:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(pathComponents:)-1fhsg": {
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...)"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathComponents:)-1fhsg",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/append(pathcomponents:)-1fhsg"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(pathComponents:)-3v1fi": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : ">)"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathComponents:)-3v1fi",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/append(pathcomponents:)-3v1fi"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(pathExtension:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Extensiona",
+      "text" : "PathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/append(pathExtension:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathExtension:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/append(pathextension:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/appending(_:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
+      "text" : "RelativePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(_:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(_:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/appending(_:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/appending(pathComponents:)": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(pathComponents:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/appending(pathcomponents:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/appending(pathExtension:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Extensiona",
+      "text" : "PathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/appending(pathExtension:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathExtension:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/appending(pathextension:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/current": {
+  "abstract" : [
+    {
+      "text" : "The current relative path (is always ",
+      "type" : "text"
+    },
+    {
+      "code" : ".",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ")",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "static"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "let"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "current"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/current",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "current",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/current"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/debugDescription": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomDebugStringConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "debugDescription"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/debugDescription",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "debugDescription",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/debugdescription"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/description": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "CustomStringConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "description"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/description",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "description",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/description"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/init(pathString:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathString"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/init(pathString:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(pathString:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/init(pathstring:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/isSubpath(of:)-8n023": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isSubpath"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "of"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+      "text" : "AbsolutePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/isSubpath(of:)-8n023",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isSubpath(of:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/issubpath(of:)-8n023"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/isSubpath(of:)-p0dz": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "isSubpath"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "of"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
+      "text" : "RelativePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:Sb",
+      "text" : "Bool"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/isSubpath(of:)-p0dz",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "isSubpath(of:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/issubpath(of:)-p0dz"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/lastPathComponent": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "lastPathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
+      "text" : "PathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/lastPathComponent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "lastPathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/lastpathcomponent"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/lastPathExtension": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "lastPathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Extensiona",
+      "text" : "PathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "?"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/lastPathExtension",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "lastPathExtension",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/lastpathextension"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/pathString": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pathString"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/pathString",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pathString",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/pathstring"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removeLastPathComponent()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removeLastPathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removeLastPathComponent()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removeLastPathComponent()",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/removelastpathcomponent()"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removeLastPathExtension()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removeLastPathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removeLastPathExtension()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removeLastPathExtension()",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/removelastpathextension()"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removingLastPathComponent()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removingLastPathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removingLastPathComponent()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removingLastPathComponent()",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/removinglastpathcomponent()"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removingLastPathExtension()": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removingLastPathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/removingLastPathExtension()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removingLastPathExtension()",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/removinglastpathextension()"
+}
+}
+}
