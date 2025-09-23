@@ -1,14 +1,18 @@
-import XCTest
+import Foundation
+import Testing
 import PathWrangler
 
-final class PathComponentConvertibleConformancesTests: XCTestCase {
-    func testUUIDPathComponentConvertibleConformance() {
+@Suite
+struct PathComponentConvertibleConformancesTests {
+    @Test
+    func uuidPathComponentConvertibleConformance() {
         let uuid = UUID()
-        XCTAssertEqual(uuid.pathComponent, uuid.uuidString)
+        #expect(uuid.pathComponent == uuid.uuidString)
     }
 
-    func testDecimalPathComponentConvertibleConformance() {
+    @Test
+    func decimalPathComponentConvertibleConformance() {
         let decimal: Decimal = 12.34
-        XCTAssertEqual(decimal.pathComponent, NSDecimalNumber(decimal: decimal).stringValue)
+        #expect(decimal.pathComponent == NSDecimalNumber(decimal: decimal).stringValue)
     }
 }

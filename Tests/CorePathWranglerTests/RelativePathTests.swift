@@ -1,65 +1,73 @@
-import XCTest
+import Testing
 @testable import CorePathWrangler
 
-final class RelativePathTests: XCTestCase {
-    func testAbsolution() {
-        XCTAssertFalse(RelativePath.isAbsolute)
+@Suite
+struct RelativePathTests {
+    @Test
+    func absolution() {
+        #expect(!RelativePath.isAbsolute)
     }
 
-    func testImplAssignment() {
+    @Test
+    func implAssignment() {
         let impl = _PathImpl(isAbsolute: false)
         let path = RelativePath(_impl: impl)
-        XCTAssertTrue(path._impl.elements == impl.elements)
-        XCTAssertTrue(path._impl.isAbsolute == impl.isAbsolute)
+        #expect(path._impl.elements == impl.elements)
+        #expect(path._impl.isAbsolute == impl.isAbsolute)
     }
 
-    func testSubpathDetermination() {
+    @Test
+    func subpathDetermination() {
         let path = RelativePath(pathString: "B/C/D")
-        XCTAssertTrue(path._isSubpath(of: AbsolutePath(pathString: "/A/B/C/D/E/F")))
-        XCTAssertFalse(path._isSubpath(of: AbsolutePath(pathString: "/D/E/F")))
-        XCTAssertTrue(path._isSubpath(of: RelativePath(pathString: "A/B/C/D/E/F")))
-        XCTAssertFalse(path._isSubpath(of: RelativePath(pathString: "D/E/F")))
+        #expect(path._isSubpath(of: AbsolutePath(pathString: "/A/B/C/D/E/F")))
+        #expect(!path._isSubpath(of: AbsolutePath(pathString: "/D/E/F")))
+        #expect(path._isSubpath(of: RelativePath(pathString: "A/B/C/D/E/F")))
+        #expect(!path._isSubpath(of: RelativePath(pathString: "D/E/F")))
     }
 
-    func testNestingInAbsolute() {
+    @Test
+    func nestingInAbsolute() {
         let absPath = AbsolutePath(pathString: "/A/B/C")
         let relPath = RelativePath(pathString: "D/E/F")
         let nested = relPath.absolute(in: absPath)
-        XCTAssertEqual(nested, absPath.appending(relPath))
-        XCTAssertEqual(nested.pathString, "/A/B/C/D/E/F")
+        #expect(nested == absPath.appending(relPath))
+        #expect(nested.pathString == "/A/B/C/D/E/F")
     }
 
-    func testResolving() {
+    @Test
+    func resolving() {
         var originalPath = RelativePath(elements: [])
         var path = originalPath
         let path1 = path.resolved()
         path.resolve()
-        XCTAssertTrue(path._impl.elements.isEmpty)
-        XCTAssertEqual(path._impl.elements, path1._impl.elements)
+        #expect(path._impl.elements.isEmpty)
+        #expect(path._impl.elements == path1._impl.elements)
 
         originalPath = RelativePath(pathString: "A/./C/..")
         path = originalPath
         let path2 = path.resolved()
         path.resolve()
-        XCTAssertNotEqual(path._impl.elements, originalPath._impl.elements)
-        XCTAssertNotEqual(path2._impl.elements, originalPath._impl.elements)
-        XCTAssertEqual(path._impl.elements, path2._impl.elements)
+        #expect(path._impl.elements != originalPath._impl.elements)
+        #expect(path2._impl.elements != originalPath._impl.elements)
+        #expect(path._impl.elements == path2._impl.elements)
     }
 
-    func testCurrent() {
-        XCTAssertTrue(RelativePath.current._impl.elements.isEmpty)
-        XCTAssertEqual(RelativePath.current.pathString, ".")
+    @Test
+    func current() {
+        #expect(RelativePath.current._impl.elements.isEmpty)
+        #expect(RelativePath.current.pathString == ".")
     }
 
-    func testCollectionContains() {
-        XCTAssertTrue(CollectionOfOne("A").contains(EmptyCollection()))
-        XCTAssertFalse(CollectionOfOne("A").contains(["A", "B"]))
-        XCTAssertTrue(["A", "B", "C"].contains(["A", "B"]))
-        XCTAssertTrue(["A", "B", "C"].contains(["B", "C"]))
-        XCTAssertTrue(["A", "B", "C"].contains(["A", "B", "C"]))
-        XCTAssertTrue(["A", "B", "G", "A", "B", "C", "F"].contains(["A", "B", "C"]))
-        XCTAssertFalse(["A", "B", "G", "B", "C", "F"].contains(["A", "B", "C"]))
-        XCTAssertTrue((1..<10).contains(2...5))
-        XCTAssertFalse((1..<10).contains(5...12))
+    @Test
+    func collectionContains() {
+        #expect(CollectionOfOne("A").contains(EmptyCollection()))
+        #expect(!CollectionOfOne("A").contains(["A", "B"]))
+        #expect(["A", "B", "C"].contains(["A", "B"]))
+        #expect(["A", "B", "C"].contains(["B", "C"]))
+        #expect(["A", "B", "C"].contains(["A", "B", "C"]))
+        #expect(["A", "B", "G", "A", "B", "C", "F"].contains(["A", "B", "C"]))
+        #expect(!["A", "B", "G", "B", "C", "F"].contains(["A", "B", "C"]))
+        #expect((1..<10).contains(2...5))
+        #expect(!(1..<10).contains(5...12))
     }
 }

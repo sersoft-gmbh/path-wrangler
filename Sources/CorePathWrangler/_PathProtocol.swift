@@ -10,21 +10,12 @@ protocol _PathProtocol: PathProtocol, Sendable, Codable, CustomStringConvertible
 }
 
 extension _PathProtocol {
-#if swift(>=6.0)
     @inlinable
     func _withCopiedImpl<E: Error>(do work: (inout _PathImpl) throws(E) -> ()) throws(E) -> Self {
         var newImpl = _impl
         try work(&newImpl)
         return Self(_impl: newImpl)
     }
-#else
-    @inlinable
-    func _withCopiedImpl(do work: (inout _PathImpl) throws -> ()) rethrows -> Self {
-        var newImpl = _impl
-        try work(&newImpl)
-        return Self(_impl: newImpl)
-    }
-#endif
 }
 
 extension _PathProtocol {

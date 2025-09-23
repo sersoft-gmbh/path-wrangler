@@ -57,9 +57,18 @@ extension AbsolutePath {
 
     /// The current absolute path (cwd).
     public static var current: Self {
+#if compiler(>=6.2)
+        Self(pathString: unsafe String(cString: getcwd(nil, 0)))
+#else
         Self(pathString: String(cString: getcwd(nil, 0)))
+#endif
     }
 
+#if compiler(>=6.2)
+    /// The absolute path to the system's temporary directory. Note that this does not create a new subdirectory (like `mktemp` would).
+    public static let tmpDir = Self(pathString: unsafe String(cString: cpw_tmp_dir_path())).resolved(resolveSymlinks: true)
+#else
     /// The absolute path to the system's temporary directory. Note that this does not create a new subdirectory (like `mktemp` would).
     public static let tmpDir = Self(pathString: String(cString: cpw_tmp_dir_path())).resolved(resolveSymlinks: true)
+#endif
 }

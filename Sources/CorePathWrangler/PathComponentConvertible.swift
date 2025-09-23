@@ -14,7 +14,11 @@ extension String: PathComponentConvertible {
 
 extension StaticString: PathComponentConvertible {
     public var pathComponent: PathComponent {
-        hasPointerRepresentation ? String(cString: utf8Start) : String(unicodeScalar)
+#if compiler(>=6.2)
+        return hasPointerRepresentation ? unsafe String(cString: utf8Start) : String(unicodeScalar)
+#else
+        return hasPointerRepresentation ? String(cString: utf8Start) : String(unicodeScalar)
+#endif
     }
 }
 

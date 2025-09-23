@@ -1,90 +1,99 @@
-import XCTest
+import Foundation
+import Testing
 @testable import CorePathWrangler
 
-final class PathImplTests: XCTestCase {
-    func testInitialization() {
-        XCTAssertFalse(_PathImpl(isAbsolute: false).isAbsolute)
-        XCTAssertTrue(_PathImpl(isAbsolute: true).isAbsolute)
-        XCTAssertTrue(_PathImpl(isAbsolute: false).elements.isEmpty)
+@Suite
+struct PathImplTests {
+    @Test
+    func initialization() {
+        #expect(!_PathImpl(isAbsolute: false).isAbsolute)
+        #expect(_PathImpl(isAbsolute: true).isAbsolute)
+        #expect(_PathImpl(isAbsolute: false).elements.isEmpty)
         let storage = _PathImpl(isAbsolute: false, elements: [PathElement(name: "test")])
-        XCTAssertFalse(storage.isAbsolute)
-        XCTAssertEqual(storage.elements, [PathElement(name: "test")])
+        #expect(!storage.isAbsolute)
+        #expect(storage.elements == [PathElement(name: "test")])
         let storage2 = _PathImpl(isAbsolute: true, pathString: "/a/b/c")
-        XCTAssertTrue(storage2.isAbsolute)
-        XCTAssertEqual(storage2.elements, PathElement.elements(from: "/a/b/c"))
+        #expect(storage2.isAbsolute)
+        #expect(storage2.elements == PathElement.elements(from: "/a/b/c"))
     }
 
-    func testElementsUpdateResetsPathStringStorage() {
+    @Test
+    func elementsUpdateResetsPathStringStorage() {
         var storage = _PathImpl(isAbsolute: false)
         storage.elements = [PathElement(name: "test")]
         let oldString = storage.pathString
         storage.elements = [PathElement(name: "test2")]
         let newString = storage.pathString
-        XCTAssertNotEqual(oldString, newString)
+        #expect(oldString != newString)
     }
 
-    func testLastPathElement() {
+    @Test
+    func lastPathElement() {
         var storage = _PathImpl(isAbsolute: false)
         storage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
-        XCTAssertEqual(storage.lastPathElement.name, "test2")
+        #expect(storage.lastPathElement.name == "test2")
         storage.lastPathElement = PathElement(name: "test3")
-        XCTAssertEqual(storage.lastPathElement.name, "test3")
-        XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test3")])
+        #expect(storage.lastPathElement.name == "test3")
+        #expect(storage.elements == [PathElement(name: "test"), PathElement(name: "test3")])
         storage.lastPathElement = PathElement(name: "test4")
-        XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test4")])
+        #expect(storage.elements == [PathElement(name: "test"), PathElement(name: "test4")])
     }
 
-    func testAppending() {
+    @Test
+    func appending() {
         var storage = _PathImpl(isAbsolute: false)
         storage.append(pathComponents: CollectionOfOne(PathElement(name: "test")))
         storage.append(pathComponents: CollectionOfOne("test2"))
-        XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
+        #expect(storage.elements == [PathElement(name: "test"), PathElement(name: "test2")])
     }
 
-    func testLastSafeSubsciptIndex() {
+    @Test
+    func lastSafeSubsciptIndex() {
         let arr = ["1"]
-        XCTAssertEqual(arr.lastSafeSubscriptIndex, arr.index(before: arr.endIndex))
+        #expect(arr.lastSafeSubscriptIndex == arr.index(before: arr.endIndex))
     }
 
-    func testResolvingWithoutSymlinks() {
+    @Test
+    func resolvingWithoutSymlinks() {
         var relStorage = _PathImpl(isAbsolute: false)
         relStorage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         relStorage.resolve(resolveSymlinks: false)
-        XCTAssertEqual(relStorage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
+        #expect(relStorage.elements == [PathElement(name: "test"), PathElement(name: "test2")])
         relStorage.elements = [PathElement(name: "test"), PathElement(name: "..")]
         relStorage.resolve(resolveSymlinks: false)
-        XCTAssertTrue(relStorage.elements.isEmpty)
+        #expect(relStorage.elements.isEmpty)
         relStorage.elements = [PathElement(name: "."), PathElement(name: "..")]
         relStorage.resolve(resolveSymlinks: false)
-        XCTAssertEqual(relStorage.elements, [PathElement(name: "..")])
+        #expect(relStorage.elements == [PathElement(name: "..")])
         relStorage.elements = [PathElement(name: "."),
                                PathElement(name: "test"),
                                PathElement(name: "."),
                                PathElement(name: "test2"),
                                PathElement(name: "..")]
         relStorage.resolve(resolveSymlinks: false)
-        XCTAssertEqual(relStorage.elements, [PathElement(name: "test")])
+        #expect(relStorage.elements == [PathElement(name: "test")])
 
         var absStorage = _PathImpl(isAbsolute: true)
         absStorage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         absStorage.resolve(resolveSymlinks: false)
-        XCTAssertEqual(absStorage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
+        #expect(absStorage.elements == [PathElement(name: "test"), PathElement(name: "test2")])
         absStorage.elements = [PathElement(name: "test"), PathElement(name: "..")]
         absStorage.resolve(resolveSymlinks: false)
-        XCTAssertTrue(absStorage.elements.isEmpty)
+        #expect(absStorage.elements.isEmpty)
         absStorage.elements = [PathElement(name: "."), PathElement(name: "..")]
         absStorage.resolve(resolveSymlinks: false)
-        XCTAssertTrue(absStorage.elements.isEmpty)
+        #expect(absStorage.elements.isEmpty)
         absStorage.elements = [PathElement(name: "."),
                                PathElement(name: "test"),
                                PathElement(name: "."),
                                PathElement(name: "test2"),
                                PathElement(name: "..")]
         absStorage.resolve(resolveSymlinks: false)
-        XCTAssertEqual(absStorage.elements, [PathElement(name: "test")])
+        #expect(absStorage.elements == [PathElement(name: "test")])
     }
 
-    func testResolvingLongPathsWithoutSymlinks() {
+    @Test
+    func resolvingLongPathsWithoutSymlinks() {
         var absStorage1 = _PathImpl(isAbsolute: true, pathString: "/A/B/C/D/./E/.././../F/../G/H/I")
         var absStorage2 = _PathImpl(isAbsolute: true, pathString: "/A/../../B/C/D/./E/.././../F/../G/H/I")
         var absStorage3 = _PathImpl(isAbsolute: true, pathString: "/./A/./../././../B/././C/D/./E/.././../F/../G/./H/I")
@@ -95,11 +104,11 @@ final class PathImplTests: XCTestCase {
         absStorage3.resolve(resolveSymlinks: false)
         absStorage4.resolve(resolveSymlinks: false)
         absStorage5.resolve(resolveSymlinks: false)
-        XCTAssertEqual(absStorage1.pathString, "/A/B/C/G/H/I")
-        XCTAssertEqual(absStorage2.pathString, "/B/C/G/H/I")
-        XCTAssertEqual(absStorage3.pathString, "/B/C/G/H/I")
-        XCTAssertEqual(absStorage4.pathString, "/B/C/G/H/I")
-        XCTAssertEqual(absStorage5.pathString, "/")
+        #expect(absStorage1.pathString == "/A/B/C/G/H/I")
+        #expect(absStorage2.pathString == "/B/C/G/H/I")
+        #expect(absStorage3.pathString == "/B/C/G/H/I")
+        #expect(absStorage4.pathString == "/B/C/G/H/I")
+        #expect(absStorage5.pathString == "/")
 
         var relStorage1 = _PathImpl(isAbsolute: false, pathString: "A/B/C/D/./E/.././../F/../G/H/I")
         var relStorage2 = _PathImpl(isAbsolute: false, pathString: "A/../../B/C/D/./E/.././../F/../G/H/I")
@@ -111,49 +120,71 @@ final class PathImplTests: XCTestCase {
         relStorage3.resolve(resolveSymlinks: false)
         relStorage4.resolve(resolveSymlinks: false)
         relStorage5.resolve(resolveSymlinks: false)
-        XCTAssertEqual(relStorage1.pathString, "A/B/C/G/H/I")
-        XCTAssertEqual(relStorage2.pathString, "../B/C/G/H/I")
-        XCTAssertEqual(relStorage3.pathString, "../B/C/G/H/I")
-        XCTAssertEqual(relStorage4.pathString, "../../B/C/G/H/I")
-        XCTAssertEqual(relStorage5.pathString, "../../..")
+        #expect(relStorage1.pathString == "A/B/C/G/H/I")
+        #expect(relStorage2.pathString == "../B/C/G/H/I")
+        #expect(relStorage3.pathString == "../B/C/G/H/I")
+        #expect(relStorage4.pathString == "../../B/C/G/H/I")
+        #expect(relStorage5.pathString == "../../..")
     }
 
-    func testResolvingWithSymlinks() {
+    @Test
+    func resolvingWithSymlinks() {
         var storage = _PathImpl(isAbsolute: true)
         storage.elements = [PathElement(name: "test"), PathElement(name: "test2")]
         storage.resolve(resolveSymlinks: true)
-        XCTAssertEqual(storage.elements, [PathElement(name: "test"), PathElement(name: "test2")])
+        #expect(storage.elements == [PathElement(name: "test"), PathElement(name: "test2")])
         storage.elements = [PathElement(name: "test"), PathElement(name: "..")]
         storage.resolve(resolveSymlinks: true)
-        XCTAssertTrue(storage.elements.isEmpty)
+        #expect(storage.elements.isEmpty)
         storage.elements = [PathElement(name: "."), PathElement(name: "..")]
         storage.resolve(resolveSymlinks: true)
-        XCTAssertTrue(storage.elements.isEmpty)
+        #expect(storage.elements.isEmpty)
         storage.elements = [PathElement(name: "."),
                             PathElement(name: "test"),
                             PathElement(name: "."),
                             PathElement(name: "test2"),
                             PathElement(name: "..")]
         storage.resolve(resolveSymlinks: true)
-        XCTAssertEqual(storage.elements, [PathElement(name: "test")])
+        #expect(storage.elements == [PathElement(name: "test")])
 
         let tempDir = AbsolutePath.tmpDir
         let subDir1 = tempDir / "folder"
         let linkDir1 = subDir1 / "link"
         let linkDest1 = subDir1 / "folder2"
+#if compiler(>=6.2)
+        unsafe mkdir(subDir1.pathString, 0o700)
+        unsafe mkdir(linkDest1.pathString, 0o700)
+        unsafe symlink(linkDest1.pathString, linkDir1.pathString)
+#else
         mkdir(subDir1.pathString, 0o700)
         mkdir(linkDest1.pathString, 0o700)
         symlink(linkDest1.pathString, linkDir1.pathString)
+#endif
         let subDir2 = linkDir1 / "subfolder"
         let subLink2 = subDir2 / "link2"
         let subDest2 = subDir2 / "folder3"
+#if compiler(>=6.2)
+        unsafe mkdir(subDir2.pathString, 0o700)
+        unsafe mkdir(subDest2.pathString, 0o700)
+        unsafe symlink(subDest2.pathString, subLink2.pathString)
+#else
         mkdir(subDir2.pathString, 0o700)
         mkdir(subDest2.pathString, 0o700)
         symlink(subDest2.pathString, subLink2.pathString)
+#endif
         let finalPath = subLink2 / "target"
         storage.elements = finalPath._impl.elements
         storage.resolve(resolveSymlinks: true)
-        addTeardownBlock {
+        defer {
+#if compiler(>=6.2)
+            unsafe remove(finalPath.pathString)
+            unsafe remove(subDest2.pathString)
+            unsafe remove(subLink2.pathString)
+            unsafe remove(subDir2.pathString)
+            unsafe remove(linkDest1.pathString)
+            unsafe remove(linkDir1.pathString)
+            unsafe remove(subDir1.pathString)
+#else
             remove(finalPath.pathString)
             remove(subDest2.pathString)
             remove(subLink2.pathString)
@@ -161,12 +192,15 @@ final class PathImplTests: XCTestCase {
             remove(linkDest1.pathString)
             remove(linkDir1.pathString)
             remove(subDir1.pathString)
+#endif
         }
-        XCTAssertEqual(storage.elements,
-                       tempDir._impl.elements
-                        + ["folder", "folder2", "subfolder", "folder3", "target"].map { PathElement(name: $0) })
-        XCTAssertEqual(storage.elements.map { $0.name },
-                       tempDir._impl.elements.map { $0.name }
-                        + ["folder", "folder2", "subfolder", "folder3", "target"])
+        #expect(storage.elements
+                ==
+                tempDir._impl.elements
+                + ["folder", "folder2", "subfolder", "folder3", "target"].map { PathElement(name: $0) })
+        #expect(storage.elements.map { $0.name }
+                ==
+                tempDir._impl.elements.map { $0.name }
+                + ["folder", "folder2", "subfolder", "folder3", "target"])
     }
 }

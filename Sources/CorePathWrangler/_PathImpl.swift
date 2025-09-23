@@ -57,25 +57,46 @@ struct _PathImpl: Sendable {
 
     private func resolvedSymlink(at path: String) -> String? {
         var statresult = stat()
+#if compiler(>=6.2)
+        guard unsafe lstat(path, &statresult) == 0 else {
+            unsafe print("lstat failed (\(errno)) \(String(cString: strerror(errno)))!")
+            return nil
+        }
+#else
         guard lstat(path, &statresult) == 0 else {
             print("lstat failed (\(errno)) \(String(cString: strerror(errno)))!")
             return nil
         }
+#endif
         guard cpw_mode_is_link(statresult.st_mode) else { return nil }
         let allocationSize: Int = numericCast(statresult.st_size) + 1
         let dstPtr = UnsafeMutablePointer<Int8>.allocate(capacity: allocationSize)
+#if compiler(>=6.2)
+        defer { unsafe dstPtr.deallocate() }
+        let readlinkSize = unsafe readlink(path, dstPtr, allocationSize)
+#else
         defer { dstPtr.deallocate() }
         let readlinkSize = readlink(path, dstPtr, allocationSize)
+#endif
         guard readlinkSize >= 0 else {
+#if compiler(>=6.2)
+            print("readlink failed (\(errno)) \(unsafe String(cString: strerror(errno)))!")
+#else
             print("readlink failed (\(errno)) \(String(cString: strerror(errno)))!")
+#endif
             return nil
         }
         if readlinkSize != statresult.st_size {
             print("link size changed between lstat and readlink!")
             return nil
         }
+#if compiler(>=6.2)
+        unsafe dstPtr[allocationSize - 1] = 0
+        return unsafe String(cString: dstPtr)
+#else
         dstPtr[allocationSize - 1] = 0
         return String(cString: dstPtr)
+#endif
     }
 
     private enum SymlinkStatus: Sendable {

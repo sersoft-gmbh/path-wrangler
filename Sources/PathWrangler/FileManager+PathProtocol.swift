@@ -14,7 +14,11 @@ extension FileManager {
     @inlinable
     public func fileExists(at path: some PathProtocol) -> Bool {
         var isDir: ObjCBool = true
+#if compiler(>=6.2)
+        return unsafe fileExists(atPath: path.pathString, isDirectory: &isDir) && !isDir.boolValue
+#else
         return fileExists(atPath: path.pathString, isDirectory: &isDir) && !isDir.boolValue
+#endif
     }
 
     /// Checks whether the directory exists at the given path.
@@ -22,6 +26,10 @@ extension FileManager {
     @inlinable
     public func directoryExists(at path: some PathProtocol) -> Bool {
         var isDir: ObjCBool = false
+#if compiler(>=6.2)
+        return unsafe fileExists(atPath: path.pathString, isDirectory: &isDir) && isDir.boolValue
+#else
         return fileExists(atPath: path.pathString, isDirectory: &isDir) && isDir.boolValue
+#endif
     }
 }

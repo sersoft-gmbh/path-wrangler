@@ -1,7 +1,7 @@
 /// The type of a path extension (e.g. 'txt' of 'file.txt').
 public typealias PathExtension = String
 
-/// A generic protocol around a path. Currently, there are two conformances, `AbsolutePath` and `RelativePath`.
+/// A generic protocol around a path. Currently, there are two conformances, ``AbsolutePath`` and ``RelativePath``.
 /// It is strongly discouraged to declare new conformances to this protocol. They're not guaranteed to work as expected.
 public protocol PathProtocol: Hashable {
     /// The string reprensentation of the path this conformance represents.

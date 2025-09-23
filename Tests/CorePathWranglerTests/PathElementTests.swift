@@ -1,44 +1,51 @@
-import XCTest
+import Testing
 @testable import CorePathWrangler
 
-final class PathElementTests: XCTestCase {
-    func testInitialization() {
+@Suite
+struct PathElementTests {
+    @Test
+    func initialization() {
         let pathElement = PathElement(name: "test", extensions: ["t1"])
-        XCTAssertEqual(pathElement.name, "test")
-        XCTAssertEqual(pathElement.extensions, ["t1"])
+        #expect(pathElement.name == "test")
+        #expect(pathElement.extensions == ["t1"])
     }
 
-    func testPathComponentConvertibleConformance() {
+    @Test
+    func pathComponentConvertibleConformance() {
         let pathElement = PathElement(name: "test", extensions: ["t1", "t2"])
-        XCTAssertEqual(pathElement.pathComponent, "test.t1.t2")
+        #expect(pathElement.pathComponent == "test.t1.t2")
     }
 
-    func testSimplifactionAction() {
-        XCTAssertEqual(PathElement(name: "test").simplificationAction, .none)
-        XCTAssertEqual(PathElement(name: ".").simplificationAction, .remove)
-        XCTAssertEqual(PathElement(name: "..").simplificationAction, .removeParent)
+    @Test
+    func simplifactionAction() {
+        #expect(PathElement(name: "test").simplificationAction == .none)
+        #expect(PathElement(name: ".").simplificationAction == .remove)
+        #expect(PathElement(name: "..").simplificationAction == .removeParent)
     }
 
-    func testAppendingExtensions() {
+    @Test
+    func appendingExtensions() {
         var pathElement = PathElement(name: "test")
-        XCTAssertTrue(pathElement.extensions.isEmpty)
+        #expect(pathElement.extensions.isEmpty)
         pathElement.append(pathExtension: "t1")
-        XCTAssertEqual(pathElement.extensions, ["t1"])
+        #expect(pathElement.extensions == ["t1"])
     }
 
-    func testRemovingPathExtensions() {
+    @Test
+    func removingPathExtensions() {
         var pathElement = PathElement(name: "test", extensions: ["t1"])
         pathElement.removeLastPathExtension()
-        XCTAssertTrue(pathElement.extensions.isEmpty)
+        #expect(pathElement.extensions.isEmpty)
     }
 
-    func testConvenienceExtensionOnPathComponentConvertible() {
+    @Test
+    func convenienceExtensionOnPathComponentConvertible() {
         let convertible = "A/B.test"
-        XCTAssertEqual(convertible.pathElements,
-                       [PathElement(name: "A"), PathElement(name: "B", extensions: ["test"])])
+        #expect(convertible.pathElements == [PathElement(name: "A"), PathElement(name: "B", extensions: ["test"])])
     }
 
-    func testPathStringComputationAndParsing() {
+    @Test
+    func pathStringComputationAndParsing() {
         let elements = [
             PathElement(name: "test"),
             PathElement(name: "these", extensions: ["t1"]),
@@ -49,13 +56,13 @@ final class PathElementTests: XCTestCase {
         ]
         let relPathString = "test/these.t1/elements.t2.t3/.././end"
         let absPathString = "/test/these.t1/elements.t2.t3/.././end"
-        XCTAssertEqual(PathElement.elements(from: relPathString), elements)
-        XCTAssertEqual(PathElement.elements(from: absPathString), elements)
-        XCTAssertEqual(elements.pathString(absolute: false), relPathString)
-        XCTAssertEqual(elements.pathString(absolute: true), absPathString)
-        XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: false), ".")
-        XCTAssertEqual(EmptyCollection<PathElement>().pathString(absolute: true), "/")
-        XCTAssertEqual(PathElement.elements(from: "."), [PathElement(name: ".")])
-        XCTAssertTrue(PathElement.elements(from: "/").isEmpty)
+        #expect(PathElement.elements(from: relPathString) == elements)
+        #expect(PathElement.elements(from: absPathString) == elements)
+        #expect(elements.pathString(absolute: false) == relPathString)
+        #expect(elements.pathString(absolute: true) == absPathString)
+        #expect(EmptyCollection<PathElement>().pathString(absolute: false) == ".")
+        #expect(EmptyCollection<PathElement>().pathString(absolute: true) == "/")
+        #expect(PathElement.elements(from: ".") == [PathElement(name: ".")])
+        #expect(PathElement.elements(from: "/").isEmpty)
     }
 }

@@ -1,64 +1,87 @@
-import XCTest
-#if os(Linux)
-import Glibc
-#else
+import Testing
+#if canImport(Darwin)
 import Darwin.C
+#elseif canImport(Glibc)
+import Glibc
+#elseif canImport(Musl)
+import Musl
+#elseif os(Windows)
+import ucrt
+#else
+#error("Unknown platform")
 #endif
 import CPathWrangler
 
 @testable import CorePathWrangler
 
-final class AbsolutePathTests: XCTestCase {
-    func testAbsolution() {
-        XCTAssertTrue(AbsolutePath.isAbsolute)
+@Suite
+struct AbsolutePathTests {
+    @Test
+    func absolution() {
+        #expect(AbsolutePath.isAbsolute)
     }
 
-    func testStorageAssignment() {
+    @Test
+    func storageAssignment() {
         let impl = _PathImpl(isAbsolute: true)
         let path = AbsolutePath(_impl: impl)
-        XCTAssertEqual(path._impl.isAbsolute, impl.isAbsolute)
-        XCTAssertEqual(path._impl.elements, impl.elements)
+        #expect(path._impl.isAbsolute == impl.isAbsolute)
+        #expect(path._impl.elements == impl.elements)
     }
 
-    func testSubpathDetermination() {
+    @Test
+    func subpathDetermination() {
         let path = AbsolutePath(pathString: "/A/B/C/D/E/F")
-        XCTAssertTrue(path._isSubpath(of: AbsolutePath(pathString: "/A/B/C")))
-        XCTAssertFalse(path._isSubpath(of: AbsolutePath(pathString: "/D/E/F")))
-        XCTAssertTrue(path._isSubpath(of: RelativePath(pathString: "A/B/C")))
-        XCTAssertFalse(path._isSubpath(of: RelativePath(pathString: "D/E/F")))
+        #expect(path._isSubpath(of: AbsolutePath(pathString: "/A/B/C")))
+        #expect(!path._isSubpath(of: AbsolutePath(pathString: "/D/E/F")))
+        #expect(path._isSubpath(of: RelativePath(pathString: "A/B/C")))
+        #expect(!path._isSubpath(of: RelativePath(pathString: "D/E/F")))
     }
 
-    func testResolvingWithoutSymlinks() {
+    @Test
+    func resolvingWithoutSymlinks() {
         var originalPath = AbsolutePath(elements: [])
         var path = originalPath
         let path1 = path.resolved()
         path.resolve()
-        XCTAssertTrue(path._impl.elements.isEmpty)
-        XCTAssertEqual(path._impl.elements, path1._impl.elements)
+        #expect(path._impl.elements.isEmpty)
+        #expect(path._impl.elements == path1._impl.elements)
 
         originalPath = AbsolutePath(pathString: "/A/./C/..")
         path = originalPath
         let path2 = path.resolved(resolveSymlinks: false)
         path.resolve(resolveSymlinks: false)
-        XCTAssertNotEqual(path._impl.elements, originalPath._impl.elements)
-        XCTAssertNotEqual(path2._impl.elements, originalPath._impl.elements)
-        XCTAssertEqual(path._impl.elements, path2._impl.elements)
+        #expect(path._impl.elements != originalPath._impl.elements)
+        #expect(path2._impl.elements != originalPath._impl.elements)
+        #expect(path._impl.elements == path2._impl.elements)
     }
 
-    func testRoot() {
-        XCTAssertTrue(AbsolutePath.root._impl.elements.isEmpty)
-        XCTAssertEqual(AbsolutePath.root.pathString, "/")
+    @Test
+    func root() {
+        #expect(AbsolutePath.root._impl.elements.isEmpty)
+        #expect(AbsolutePath.root.pathString == "/")
     }
 
-    func testCurrent() {
+    @Test
+    func current() {
         let current = AbsolutePath.current
-        let cwd = String(cString: getcwd(nil, 0))
-        XCTAssertEqual(current.pathString, cwd)
+#if compiler(>=6.2)
+        let cwd = unsafe String(cString: getcwd(nil, 0))
+#else
+        let cwd = unsafe String(cString: getcwd(nil, 0))
+#endif
+        #expect(current.pathString == cwd)
     }
 
-    func testTmpDir() {
+    @Test
+    func tmpDir() {
+#if compiler(>=6.2)
+        let expectedTemp = AbsolutePath(pathString: unsafe String(cString: cpw_tmp_dir_path()))
+            .resolved(resolveSymlinks: true)
+#else
         let expectedTemp = AbsolutePath(pathString: String(cString: cpw_tmp_dir_path()))
             .resolved(resolveSymlinks: true)
-        XCTAssertEqual(AbsolutePath.tmpDir, expectedTemp)
+#endif
+        #expect(AbsolutePath.tmpDir == expectedTemp)
     }
 }
