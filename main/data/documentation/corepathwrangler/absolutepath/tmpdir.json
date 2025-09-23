@@ -67,7 +67,7 @@
     ],
     "remoteSource" : {
       "fileName" : "AbsolutePath.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/AbsolutePath.swift#L64"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/AbsolutePath.swift#L69"
     },
     "role" : "symbol",
     "roleHeading" : "Type Property",
@@ -145,7 +145,10 @@
 "references": {
 "doc://CorePathWrangler/documentation/CorePathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
   "kind" : "symbol",

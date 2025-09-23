@@ -97,7 +97,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathComponentConvertible.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L48"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L52"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Property",
@@ -179,7 +179,10 @@
 "references": {
 "doc://CorePathWrangler/documentation/CorePathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
   "kind" : "symbol",

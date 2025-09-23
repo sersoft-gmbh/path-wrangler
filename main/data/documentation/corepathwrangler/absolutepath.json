@@ -92,7 +92,8 @@
         "doc:\/\/CorePathWrangler\/SE",
         "doc:\/\/CorePathWrangler\/SQ",
         "doc:\/\/CorePathWrangler\/SH",
-        "doc:\/\/CorePathWrangler\/s8SendableP"
+        "doc:\/\/CorePathWrangler\/s8SendableP",
+        "doc:\/\/CorePathWrangler\/s16SendableMetatypeP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -175,7 +176,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
   "kind" : "symbol",
@@ -545,16 +549,18 @@
       "type" : "text"
     },
     {
-      "code" : "AbsolutePath",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " and ",
       "type" : "text"
     },
     {
-      "code" : "RelativePath",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -595,6 +601,45 @@
   "title" : "PathProtocol",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath"
+},
+"doc://CorePathWrangler/s16SendableMetatypeP": {
+  "identifier" : "doc:\/\/CorePathWrangler\/s16SendableMetatypeP",
+  "title" : "Swift.SendableMetatype",
+  "type" : "unresolvable"
 },
 "doc://CorePathWrangler/s23CustomStringConvertibleP": {
   "identifier" : "doc:\/\/CorePathWrangler\/s23CustomStringConvertibleP",

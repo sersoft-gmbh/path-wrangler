@@ -113,7 +113,10 @@
 "references": {
 "doc://CorePathWrangler/documentation/CorePathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
   "kind" : "symbol",

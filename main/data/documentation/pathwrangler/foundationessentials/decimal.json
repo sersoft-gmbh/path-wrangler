@@ -129,7 +129,18 @@
 },
 "doc://PathWrangler/documentation/PathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
   "kind" : "symbol",

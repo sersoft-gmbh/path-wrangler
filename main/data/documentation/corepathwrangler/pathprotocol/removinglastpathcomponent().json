@@ -118,7 +118,10 @@
 "references": {
 "doc://CorePathWrangler/documentation/CorePathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
   "kind" : "symbol",
@@ -127,6 +130,40 @@
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler"
 },
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
 "doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol": {
   "abstract" : [
     {
@@ -134,16 +171,18 @@
       "type" : "text"
     },
     {
-      "code" : "AbsolutePath",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : " and ",
       "type" : "text"
     },
     {
-      "code" : "RelativePath",
-      "type" : "codeVoice"
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+      "isActive" : true,
+      "type" : "reference"
     },
     {
       "text" : ".",
@@ -221,6 +260,40 @@
   "title" : "removingLastPathComponent()",
   "type" : "topic",
   "url" : "\/documentation\/corepathwrangler\/pathprotocol\/removinglastpathcomponent()"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath"
 }
 }
 }

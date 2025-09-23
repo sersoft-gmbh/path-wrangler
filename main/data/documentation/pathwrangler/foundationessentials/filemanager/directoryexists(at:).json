@@ -80,7 +80,7 @@
     ],
     "remoteSource" : {
       "fileName" : "FileManager+PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/FileManager+PathProtocol.swift#L23"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/FileManager+PathProtocol.swift#L27"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -201,7 +201,18 @@
 "references": {
 "doc://PathWrangler/documentation/PathWrangler": {
   "abstract" : [
-
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
   ],
   "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
   "kind" : "symbol",
