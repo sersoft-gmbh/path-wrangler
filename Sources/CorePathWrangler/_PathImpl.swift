@@ -120,6 +120,36 @@ struct _PathImpl: Sendable {
         var currentIdx = elements.startIndex
         var splitIndex = elements.endIndex
         while currentIdx < splitIndex {
+#if compiler(>=6.3)
+            @inline(always)
+            func rotate(from lowerBound: Elements.Index) {
+                elements[lowerBound...].rotate(toStartAt: elements.index(after: currentIdx))
+                elements.formIndex(&splitIndex, offsetBy: elements.distance(from: currentIdx, to: lowerBound) - 1)
+            }
+            @inline(always)
+            func resolveSymlinksIfNeeded() -> Bool {
+                guard resolveSymlinks && minSafeIndex == elements.startIndex else { return true }
+                let pathStringToResolve = elements[...currentIdx].pathString(absolute: isAbsolute)
+                let cached = symlinkCache[pathStringToResolve]
+                let linkStatus = cached ?? resolvedSymlink(at: pathStringToResolve).map { .isLink($0.pathElements) } ?? .noLink
+                if case .isLink(var resolved) = linkStatus {
+                    resolve(elements: &resolved, resolveSymlinks: resolveSymlinks, symlinkCache: &symlinkCache)
+                    symlinkCache[pathStringToResolve] = .isLink(resolved)
+                    let offsetDiff = resolved.count - elements[...currentIdx].count
+                    elements.formIndex(&splitIndex, offsetBy: offsetDiff)
+                    elements.replaceSubrange(...currentIdx, with: resolved)
+                    if cached == nil {
+                        currentIdx = elements.startIndex
+                        return false // we need to perform the symlink check again in case we have a linked link.
+                    } else {
+                        elements.formIndex(&currentIdx, offsetBy: offsetDiff)
+                    }
+                } else {
+                    symlinkCache[pathStringToResolve] = linkStatus
+                }
+                return true
+            }
+#else
             @inline(__always)
             func rotate(from lowerBound: Elements.Index) {
                 elements[lowerBound...].rotate(toStartAt: elements.index(after: currentIdx))
@@ -148,6 +178,7 @@ struct _PathImpl: Sendable {
                 }
                 return true
             }
+#endif
             switch elements[currentIdx].simplificationAction {
             case .none:
                 guard resolveSymlinksIfNeeded() else { continue }
