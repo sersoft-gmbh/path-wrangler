@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Appends a path extension to the last component of the receiver.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -121,6 +127,52 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The extension to append to the last component of the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pathExtension"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "If the path has no components, this method does nothing.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Note",
+          "style" : "note",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -195,7 +247,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(pathExtension:)": {
   "abstract" : [
-
+    {
+      "text" : "Appends a path extension to the last component of the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The extension of the last component of this path.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -213,7 +219,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/lastPathExtension": {
   "abstract" : [
-
+    {
+      "text" : "The extension of the last component of this path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

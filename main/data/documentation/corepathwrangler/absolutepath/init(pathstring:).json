@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Creates a new path by parsing the given string.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -96,6 +102,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The path string to parse into a path.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pathString"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -170,7 +195,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/init(pathString:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new path by parsing the given string.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

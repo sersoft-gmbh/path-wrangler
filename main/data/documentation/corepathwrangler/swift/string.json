@@ -83,7 +83,8 @@
     {
       "identifiers" : [
         "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
-        "doc:\/\/CorePathWrangler\/s8CopyableP"
+        "doc:\/\/CorePathWrangler\/s8CopyableP",
+        "doc:\/\/CorePathWrangler\/s9EscapableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -227,6 +228,11 @@
 "doc://CorePathWrangler/s8CopyableP": {
   "identifier" : "doc:\/\/CorePathWrangler\/s8CopyableP",
   "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://CorePathWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/CorePathWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

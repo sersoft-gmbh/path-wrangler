@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The path component of the conforming type.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -195,7 +201,10 @@
 },
 "doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/Decimal/pathComponent": {
   "abstract" : [
-
+    {
+      "text" : "The path component of the conforming type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

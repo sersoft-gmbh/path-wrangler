@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Removes the last extension of the last component of the receiver.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -160,7 +166,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removeLastPathExtension()": {
   "abstract" : [
-
+    {
+      "text" : "Removes the last extension of the last component of the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

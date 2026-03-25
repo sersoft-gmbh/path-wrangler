@@ -104,7 +104,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/init(from:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new instance by decoding from the given decoder.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

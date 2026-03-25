@@ -114,7 +114,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/Swift/String/pathComponent": {
   "abstract" : [
-
+    {
+      "text" : "The path component of the conforming type.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

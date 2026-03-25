@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The string reprensentation of the path this conformance represents.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -174,7 +180,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/pathString": {
   "abstract" : [
-
+    {
+      "text" : "The string reprensentation of the path this conformance represents.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

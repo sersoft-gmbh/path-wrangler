@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -155,6 +161,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The sequence of path component convertible objects, whose path components to append to the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pathComponents"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -263,7 +288,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(pathComponents:)-3v1fi": {
   "abstract" : [
-
+    {
+      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given absolute path.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -131,6 +137,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The absolute path, which should be checked for being a parent path of the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "other"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -239,7 +264,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/isSubpath(of:)-8n023": {
   "abstract" : [
-
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given absolute path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

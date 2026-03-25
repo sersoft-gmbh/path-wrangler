@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -160,7 +166,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removingLastPathExtension()": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

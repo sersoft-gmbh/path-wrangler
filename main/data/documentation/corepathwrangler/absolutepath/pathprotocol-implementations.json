@@ -225,7 +225,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Appends a relative path to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -312,7 +315,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(pathComponents:)-6nlf3": {
   "abstract" : [
-
+    {
+      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -375,7 +381,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(pathExtension:)": {
   "abstract" : [
-
+    {
+      "text" : "Appends a path extension to the last component of the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -421,7 +430,18 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/appending(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path which has ",
+      "type" : "text"
+    },
+    {
+      "code" : "other",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " appended to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -516,7 +536,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/appending(pathExtension:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path by appending the given path extension the last component of the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -743,7 +766,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/init(pathString:)": {
   "abstract" : [
-
+    {
+      "text" : "Creates a new path by parsing the given string.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -781,7 +807,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/isSubpath(of:)-6edaj": {
   "abstract" : [
-
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given absolute path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -832,7 +861,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/isSubpath(of:)-94dlo": {
   "abstract" : [
-
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given relative path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -883,7 +915,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/lastPathComponent": {
   "abstract" : [
-
+    {
+      "text" : "The last component of this path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -921,7 +956,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/lastPathExtension": {
   "abstract" : [
-
+    {
+      "text" : "The extension of the last component of this path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -959,7 +997,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/pathString": {
   "abstract" : [
-
+    {
+      "text" : "The string reprensentation of the path this conformance represents.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -993,7 +1034,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removeLastPathComponent()": {
   "abstract" : [
-
+    {
+      "text" : "Removes the last path component of the reciever.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -1022,7 +1066,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removeLastPathExtension()": {
   "abstract" : [
-
+    {
+      "text" : "Removes the last extension of the last component of the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -1051,7 +1098,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removingLastPathComponent()": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path which has the last path component of the receiver removed.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
@@ -1084,7 +1134,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removingLastPathExtension()": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

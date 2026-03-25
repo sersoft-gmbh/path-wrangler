@@ -83,7 +83,8 @@
     {
       "identifiers" : [
         "doc:\/\/PathWrangler\/16CorePathWrangler0B20ComponentConvertibleP",
-        "doc:\/\/PathWrangler\/s8CopyableP"
+        "doc:\/\/PathWrangler\/s8CopyableP",
+        "doc:\/\/PathWrangler\/s9EscapableP"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -206,6 +207,11 @@
 "doc://PathWrangler/s8CopyableP": {
   "identifier" : "doc:\/\/PathWrangler\/s8CopyableP",
   "title" : "Swift.Copyable",
+  "type" : "unresolvable"
+},
+"doc://PathWrangler/s9EscapableP": {
+  "identifier" : "doc:\/\/PathWrangler\/s9EscapableP",
+  "title" : "Swift.Escapable",
   "type" : "unresolvable"
 }
 }

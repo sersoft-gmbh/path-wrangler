@@ -1,4 +1,18 @@
 {
+  "abstract" : [
+    {
+      "text" : "Returns a new path which has ",
+      "type" : "text"
+    },
+    {
+      "code" : "other",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " appended to the receiver.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -121,6 +135,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The relative path to append to the reciever.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "other"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -195,7 +228,18 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/appending(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Returns a new path which has ",
+      "type" : "text"
+    },
+    {
+      "code" : "other",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : " appended to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

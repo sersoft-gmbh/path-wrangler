@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Appends a relative path to the receiver.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -121,6 +127,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The relative path to append to the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "other"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -195,7 +220,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(_:)": {
   "abstract" : [
-
+    {
+      "text" : "Appends a relative path to the receiver.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

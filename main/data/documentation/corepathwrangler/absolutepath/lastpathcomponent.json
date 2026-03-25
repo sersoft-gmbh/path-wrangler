@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "The last component of this path.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -179,7 +185,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/lastPathComponent": {
   "abstract" : [
-
+    {
+      "text" : "The last component of this path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {

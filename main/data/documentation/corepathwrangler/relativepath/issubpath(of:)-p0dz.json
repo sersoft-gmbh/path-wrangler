@@ -1,4 +1,10 @@
 {
+  "abstract" : [
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given relative path.",
+      "type" : "text"
+    }
+  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -131,6 +137,25 @@
         }
       ],
       "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The relative path, which should be checked for being a parent path of the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "other"
+        }
+      ]
     }
   ],
   "schemaVersion" : {
@@ -205,7 +230,10 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/isSubpath(of:)-p0dz": {
   "abstract" : [
-
+    {
+      "text" : "Checks whether the receiver is a sub-path of the given relative path.",
+      "type" : "text"
+    }
   ],
   "fragments" : [
     {
