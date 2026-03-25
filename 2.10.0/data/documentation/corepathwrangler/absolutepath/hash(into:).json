@@ -1,0 +1,446 @@
+{
+  "abstract" : [
+    {
+      "text" : "Hashes the essential components of this value by feeding them into the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "given hasher.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/hash(into:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "CorePathWrangler",
+    "externalID" : "s:16CorePathWrangler01_B8ProtocolPAAE4hash4intoys6HasherVz_tF::SYNTHESIZED::s:16CorePathWrangler08AbsoluteB0V",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "hash"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "into"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "inout"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s6HasherV",
+        "text" : "Hasher"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "_PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.10.0\/Sources\/CorePathWrangler\/_PathProtocol.swift#L59"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "hash(into:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "hash"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "into"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "internalParam",
+              "text" : "hasher"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "inout"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s6HasherV",
+              "text" : "Hasher"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The hasher to use when combining the components",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "of this instance.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "hasher"
+        }
+      ]
+    },
+    {
+      "content" : [
+        {
+          "anchor" : "discussion",
+          "level" : 2,
+          "text" : "Discussion",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Implement this method to conform to the ",
+              "type" : "text"
+            },
+            {
+              "code" : "Hashable",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " protocol. The",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "components used for hashing must be the same as the components compared",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "in your type’s ",
+              "type" : "text"
+            },
+            {
+              "code" : "==",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " operator implementation. Call ",
+              "type" : "text"
+            },
+            {
+              "code" : "hasher.combine(_:)",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "with each of these components.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "In your implementation of ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "hash(into:)",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : ",",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "don’t call ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "finalize()",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " on the ",
+                  "type" : "text"
+                },
+                {
+                  "code" : "hasher",
+                  "type" : "codeVoice"
+                },
+                {
+                  "text" : " instance provided,",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "or replace it with a different instance.",
+                  "type" : "text"
+                },
+                {
+                  "text" : " ",
+                  "type" : "text"
+                },
+                {
+                  "text" : "Doing so may become a compile-time error in the future.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "Important",
+          "style" : "important",
+          "type" : "aside"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/absolutepath\/hash(into:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/hash(into:)": {
+  "abstract" : [
+    {
+      "text" : "Hashes the essential components of this value by feeding them into the",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "given hasher.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "hash"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "into"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "inout"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s6HasherV",
+      "text" : "Hasher"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/hash(into:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "hash(into:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/hash(into:)"
+}
+}
+}

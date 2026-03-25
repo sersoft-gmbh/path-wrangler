@@ -1,0 +1,204 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/removingLastPathExtension()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "CorePathWrangler",
+    "externalID" : "s:16CorePathWrangler01_B8ProtocolPAAE012removingLastB9ExtensionxyF::SYNTHESIZED::s:16CorePathWrangler08AbsoluteB0V",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "removingLastPathExtension"
+      },
+      {
+        "kind" : "text",
+        "text" : "() -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "_PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.10.0\/Sources\/CorePathWrangler\/_PathProtocol.swift#L130"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "removingLastPathExtension()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "removingLastPathExtension"
+            },
+            {
+              "kind" : "text",
+              "text" : "() -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/absolutepath\/removinglastpathextension()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/removingLastPathExtension()": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "removingLastPathExtension"
+    },
+    {
+      "kind" : "text",
+      "text" : "() -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/removingLastPathExtension()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "removingLastPathExtension()",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/removinglastpathextension()"
+}
+}
+}

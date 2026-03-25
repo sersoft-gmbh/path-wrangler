@@ -1,0 +1,399 @@
+{
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-5vkaf"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "CorePathWrangler",
+    "externalID" : "s:16CorePathWrangler0B8ProtocolPAAE6append14pathComponentsyAA0B20ComponentConvertible_pd_tF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "append"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "pathComponents"
+      },
+      {
+        "kind" : "text",
+        "text" : ": any "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+        "text" : "PathComponentConvertible"
+      },
+      {
+        "kind" : "text",
+        "text" : "...)"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.10.0\/Sources\/CorePathWrangler\/PathProtocol.swift#L83"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "append(pathComponents:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "mutating"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "append"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "pathComponents"
+            },
+            {
+              "kind" : "text",
+              "text" : ": any "
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+              "text" : "PathComponentConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : "...)"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The variadic list of path component convertible objects, whose path components to append to the receiver.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pathComponents"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-5vkaf"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathComponentConvertible": {
+  "abstract" : [
+    {
+      "text" : "A type that can convert itself into a path component.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathcomponentconvertible"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol": {
+  "abstract" : [
+    {
+      "text" : "A generic protocol around a path. Currently, there are two conformances, ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "It is strongly discouraged to declare new conformances to this protocol. They’re not guaranteed to work as expected.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol/append(pathComponents:)-5vkaf": {
+  "abstract" : [
+    {
+      "text" : "Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "append"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...)"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol\/append(pathComponents:)-5vkaf",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "append(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol\/append(pathcomponents:)-5vkaf"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath"
+}
+}
+}

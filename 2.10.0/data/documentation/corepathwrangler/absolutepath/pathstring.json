@@ -1,0 +1,219 @@
+{
+  "abstract" : [
+    {
+      "text" : "The string reprensentation of the path this conformance represents.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/pathString"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "CorePathWrangler",
+    "externalID" : "s:16CorePathWrangler01_B8ProtocolPAAE10pathStringSSvp::SYNTHESIZED::s:16CorePathWrangler08AbsoluteB0V",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "pathString"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "_PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.10.0\/Sources\/CorePathWrangler\/_PathProtocol.swift#L23"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "pathString"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "pathString"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler\/absolutepath\/pathstring"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/pathString": {
+  "abstract" : [
+    {
+      "text" : "The string reprensentation of the path this conformance represents.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pathString"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/pathString",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pathString",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath\/pathstring"
+}
+}
+}
