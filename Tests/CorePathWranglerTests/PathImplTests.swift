@@ -42,8 +42,8 @@ struct PathImplTests {
     @Test
     func appending() {
         var storage = _PathImpl(isAbsolute: false)
-        storage.append(pathComponents: CollectionOfOne(PathElement(name: "test")))
-        storage.append(pathComponents: CollectionOfOne("test2"))
+        storage.append(pathComponents: CollectionOfOne<any PathComponentConvertible>(PathElement(name: "test")))
+        storage.append(pathComponents: CollectionOfOne<any PathComponentConvertible>("test2"))
         storage.append(pathComponent: PathElement(name: "test3"))
         storage.append(pathComponents: PathElement(name: "test4"), "test5")
         #expect(storage.elements == [
