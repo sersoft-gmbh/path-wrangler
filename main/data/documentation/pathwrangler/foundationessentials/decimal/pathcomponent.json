@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The path component of the conforming type.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -90,6 +84,7 @@
               "text" : ": "
             },
             {
+              "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
               "text" : "PathComponent"
@@ -201,10 +196,7 @@
 },
 "doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/Decimal/pathComponent": {
   "abstract" : [
-    {
-      "text" : "The path component of the conforming type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -235,6 +227,40 @@
   "title" : "pathComponent",
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler\/foundationessentials\/decimal\/pathcomponent"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathComponent": {
+  "abstract" : [
+    {
+      "text" : "The type of a path component (e.g. ‘home’ and ‘user’ in ‘\/home\/user’).",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathcomponent"
 }
 }
 }

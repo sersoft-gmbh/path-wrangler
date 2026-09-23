@@ -72,7 +72,7 @@
     ],
     "remoteSource" : {
       "fileName" : "URL+PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/URL+PathProtocol.swift#L76"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/URL+PathProtocol.swift#L129"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -123,6 +123,7 @@
               "text" : ": "
             },
             {
+              "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:16CorePathWrangler08RelativeB0V",
               "text" : "RelativePath"
@@ -301,6 +302,40 @@
   "title" : "isSubpath(of:)",
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler\/foundationessentials\/url\/issubpath(of:)-4dqk5"
+},
+"doc://PathWrangler/documentation/PathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/relativepath"
 }
 }
 }

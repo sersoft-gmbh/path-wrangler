@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Appends a path extension to the last component of the receiver.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -63,7 +57,7 @@
     ],
     "remoteSource" : {
       "fileName" : "_PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L98"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L120"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -127,52 +121,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The extension to append to the last component of the receiver.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "pathExtension"
-        }
-      ]
-    },
-    {
-      "content" : [
-        {
-          "anchor" : "discussion",
-          "level" : 2,
-          "text" : "Discussion",
-          "type" : "heading"
-        },
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "If the path has no components, this method does nothing.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "Note",
-          "style" : "note",
-          "type" : "aside"
-        }
-      ],
-      "kind" : "content"
     }
   ],
   "schemaVersion" : {
@@ -247,10 +195,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath/append(pathExtension:)": {
   "abstract" : [
-    {
-      "text" : "Appends a path extension to the last component of the receiver.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

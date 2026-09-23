@@ -44,12 +44,7 @@
       },
       {
         "kind" : "text",
-        "text" : ": "
-      },
-      {
-        "kind" : "typeIdentifier",
-        "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
-        "text" : "AbsolutePath"
+        "text" : ": `Self`"
       }
     ],
     "modules" : [
@@ -99,13 +94,7 @@
             },
             {
               "kind" : "text",
-              "text" : ": "
-            },
-            {
-              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
-              "kind" : "typeIdentifier",
-              "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
-              "text" : "AbsolutePath"
+              "text" : ": `Self`"
             },
             {
               "kind" : "text",
@@ -225,12 +214,7 @@
     },
     {
       "kind" : "text",
-      "text" : ": "
-    },
-    {
-      "kind" : "typeIdentifier",
-      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
-      "text" : "AbsolutePath"
+      "text" : ": `Self`"
     }
   ],
   "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath\/current",

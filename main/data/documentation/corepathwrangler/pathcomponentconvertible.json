@@ -75,6 +75,10 @@
             {
               "kind" : "identifier",
               "text" : "PathComponentConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : " : ~Copyable, ~Escapable"
             }
           ]
         }

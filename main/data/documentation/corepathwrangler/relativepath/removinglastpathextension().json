@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -50,7 +44,7 @@
     ],
     "remoteSource" : {
       "fileName" : "_PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L130"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L152"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -166,10 +160,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removingLastPathExtension()": {
   "abstract" : [
-    {
-      "text" : "Returns a new path that has the last extension from the last component of the receiver removed.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

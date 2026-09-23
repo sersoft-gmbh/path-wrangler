@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Removes the last path component of the reciever.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -46,7 +40,7 @@
     ],
     "remoteSource" : {
       "fileName" : "_PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L112"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L134"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -166,10 +160,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/removeLastPathComponent()": {
   "abstract" : [
-    {
-      "text" : "Removes the last path component of the reciever.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

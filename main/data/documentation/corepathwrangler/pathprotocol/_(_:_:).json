@@ -20,7 +20,7 @@
   "kind" : "symbol",
   "metadata" : {
     "extendedModule" : "CorePathWrangler",
-    "externalID" : "s:16CorePathWrangler0B8ProtocolPAAE1doiyxx_qd__tAA0B20ComponentConvertibleRd__lFZ",
+    "externalID" : "s:16CorePathWrangler0B8ProtocolPAAE1doiyxx_qd__tAA0B20ComponentConvertibleRd__Ri_d__Ri0_d__lFZ",
     "fragments" : [
       {
         "kind" : "keyword",
@@ -60,6 +60,14 @@
       },
       {
         "kind" : "keyword",
+        "text" : "borrowing"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "keyword",
         "text" : "some"
       },
       {
@@ -70,6 +78,24 @@
         "kind" : "typeIdentifier",
         "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
         "text" : "PathComponentConvertible"
+      },
+      {
+        "kind" : "text",
+        "text" : " & ~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s8CopyableP",
+        "text" : "Copyable"
+      },
+      {
+        "kind" : "text",
+        "text" : " & ~"
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:s9EscapableP",
+        "text" : "Escapable"
       },
       {
         "kind" : "text",
@@ -87,7 +113,7 @@
     ],
     "remoteSource" : {
       "fileName" : "PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L101"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/PathProtocol.swift#L141"
     },
     "role" : "symbol",
     "roleHeading" : "Operator",
@@ -159,6 +185,14 @@
             },
             {
               "kind" : "keyword",
+              "text" : "borrowing"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
               "text" : "some"
             },
             {
@@ -170,6 +204,24 @@
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
               "text" : "PathComponentConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s8CopyableP",
+              "text" : "Copyable"
+            },
+            {
+              "kind" : "text",
+              "text" : " & ~"
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:s9EscapableP",
+              "text" : "Escapable"
             },
             {
               "kind" : "text",
@@ -428,6 +480,14 @@
     },
     {
       "kind" : "keyword",
+      "text" : "borrowing"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "keyword",
       "text" : "some"
     },
     {
@@ -438,6 +498,24 @@
       "kind" : "typeIdentifier",
       "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
       "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s8CopyableP",
+      "text" : "Copyable"
+    },
+    {
+      "kind" : "text",
+      "text" : " & ~"
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:s9EscapableP",
+      "text" : "Escapable"
     },
     {
       "kind" : "text",

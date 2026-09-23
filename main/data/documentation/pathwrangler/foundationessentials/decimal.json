@@ -82,9 +82,7 @@
   "relationshipsSections" : [
     {
       "identifiers" : [
-        "doc:\/\/PathWrangler\/16CorePathWrangler0B20ComponentConvertibleP",
-        "doc:\/\/PathWrangler\/s8CopyableP",
-        "doc:\/\/PathWrangler\/s9EscapableP"
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponentConvertible"
       ],
       "kind" : "relationships",
       "title" : "Conforms To",
@@ -123,11 +121,6 @@
   ]
 , 
 "references": {
-"doc://PathWrangler/16CorePathWrangler0B20ComponentConvertibleP": {
-  "identifier" : "doc:\/\/PathWrangler\/16CorePathWrangler0B20ComponentConvertibleP",
-  "title" : "CorePathWrangler.PathComponentConvertible",
-  "type" : "unresolvable"
-},
 "doc://PathWrangler/documentation/PathWrangler": {
   "abstract" : [
     {
@@ -204,15 +197,39 @@
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler\/foundationessentials\/decimal\/pathcomponentconvertible-implementations"
 },
-"doc://PathWrangler/s8CopyableP": {
-  "identifier" : "doc:\/\/PathWrangler\/s8CopyableP",
-  "title" : "Swift.Copyable",
-  "type" : "unresolvable"
-},
-"doc://PathWrangler/s9EscapableP": {
-  "identifier" : "doc:\/\/PathWrangler\/s9EscapableP",
-  "title" : "Swift.Escapable",
-  "type" : "unresolvable"
+"doc://PathWrangler/documentation/PathWrangler/PathComponentConvertible": {
+  "abstract" : [
+    {
+      "text" : "A type that can convert itself into a path component.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathcomponentconvertible"
 }
 }
 }

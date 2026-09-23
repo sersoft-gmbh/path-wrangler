@@ -122,10 +122,7 @@
 },
 "doc://PathWrangler/documentation/PathWrangler/FoundationEssentials/UUID/pathComponent": {
   "abstract" : [
-    {
-      "text" : "The path component of the conforming type.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

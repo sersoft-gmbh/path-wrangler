@@ -72,7 +72,7 @@
     ],
     "remoteSource" : {
       "fileName" : "URL+PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/URL+PathProtocol.swift#L69"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/PathWrangler\/URL+PathProtocol.swift#L122"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -123,6 +123,7 @@
               "text" : ": "
             },
             {
+              "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath",
               "kind" : "typeIdentifier",
               "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
               "text" : "AbsolutePath"
@@ -204,6 +205,40 @@
   "title" : "PathWrangler",
   "type" : "topic",
   "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/absolutepath"
 },
 "doc://PathWrangler/documentation/PathWrangler/FoundationEssentials": {
   "abstract" : [

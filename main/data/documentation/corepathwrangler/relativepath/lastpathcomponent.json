@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "The last component of this path.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -219,10 +213,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/lastPathComponent": {
   "abstract" : [
-    {
-      "text" : "The last component of this path.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {

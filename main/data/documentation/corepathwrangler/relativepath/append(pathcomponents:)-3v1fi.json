@@ -1,10 +1,4 @@
 {
-  "abstract" : [
-    {
-      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
-      "type" : "text"
-    }
-  ],
   "hierarchy" : {
     "paths" : [
       [
@@ -61,7 +55,15 @@
       },
       {
         "kind" : "text",
-        "text" : "<any "
+        "text" : "<"
+      },
+      {
+        "kind" : "keyword",
+        "text" : "any"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
       },
       {
         "kind" : "typeIdentifier",
@@ -80,7 +82,7 @@
     ],
     "remoteSource" : {
       "fileName" : "_PathProtocol.swift",
-      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L88"
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/heads\/main\/Sources\/CorePathWrangler\/_PathProtocol.swift#L89"
     },
     "role" : "symbol",
     "roleHeading" : "Instance Method",
@@ -145,7 +147,15 @@
             },
             {
               "kind" : "text",
-              "text" : "<any "
+              "text" : "<"
+            },
+            {
+              "kind" : "keyword",
+              "text" : "any"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
             },
             {
               "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
@@ -161,25 +171,6 @@
         }
       ],
       "kind" : "declarations"
-    },
-    {
-      "kind" : "parameters",
-      "parameters" : [
-        {
-          "content" : [
-            {
-              "inlineContent" : [
-                {
-                  "text" : "The sequence of path component convertible objects, whose path components to append to the receiver.",
-                  "type" : "text"
-                }
-              ],
-              "type" : "paragraph"
-            }
-          ],
-          "name" : "pathComponents"
-        }
-      ]
     }
   ],
   "schemaVersion" : {
@@ -288,10 +279,7 @@
 },
 "doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/append(pathComponents:)-3v1fi": {
   "abstract" : [
-    {
-      "text" : "Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
-      "type" : "text"
-    }
+
   ],
   "fragments" : [
     {
@@ -333,7 +321,15 @@
     },
     {
       "kind" : "text",
-      "text" : "<any "
+      "text" : "<"
+    },
+    {
+      "kind" : "keyword",
+      "text" : "any"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
     },
     {
       "kind" : "typeIdentifier",
