@@ -124,11 +124,11 @@ extension PathProtocol {
     }
 
     public mutating func append(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) {
-        append(pathComponents: CollectionOfOne(pathComponent.pathComponent))
+        append(pathComponents: CollectionOfOne<any PathComponentConvertible>(pathComponent.pathComponent))
     }
 
     public func appending(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) -> Self {
-        appending(pathComponents: CollectionOfOne(pathComponent.pathComponent))
+        appending(pathComponents: CollectionOfOne<any PathComponentConvertible>(pathComponent.pathComponent))
     }
 }
 
