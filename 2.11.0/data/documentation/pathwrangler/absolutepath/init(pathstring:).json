@@ -1,0 +1,221 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath\/init(pathString:)"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "extendedModule" : "CorePathWrangler",
+    "externalID" : "s:16CorePathWrangler01_B8ProtocolPAAE10pathStringxSS_tcfc::SYNTHESIZED::s:16CorePathWrangler08AbsoluteB0V",
+    "fragments" : [
+      {
+        "kind" : "identifier",
+        "text" : "init"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "pathString"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:SS",
+        "text" : "String"
+      },
+      {
+        "kind" : "text",
+        "text" : ")"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler",
+        "relatedModules" : [
+          "CorePathWrangler"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "_PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.11.0\/Sources\/CorePathWrangler\/_PathProtocol.swift#L37"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Initializer",
+    "symbolKind" : "init",
+    "title" : "init(pathString:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "init"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "pathString"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            },
+            {
+              "kind" : "text",
+              "text" : ")"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/absolutepath\/init(pathstring:)"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/absolutepath"
+},
+"doc://PathWrangler/documentation/PathWrangler/AbsolutePath/init(pathString:)": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "identifier",
+      "text" : "init"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathString"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:SS",
+      "text" : "String"
+    },
+    {
+      "kind" : "text",
+      "text" : ")"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath\/init(pathString:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "init(pathString:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/absolutepath\/init(pathstring:)"
+}
+}
+}

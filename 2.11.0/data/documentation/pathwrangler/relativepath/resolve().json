@@ -1,0 +1,207 @@
+{
+  "abstract" : [
+    {
+      "text" : "Resolves (simplifies) this relative path by resolving current (.) and parent (..) directory references.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath\/resolve()"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16CorePathWrangler08RelativeB0V7resolveyyF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "resolve"
+      },
+      {
+        "kind" : "text",
+        "text" : "()"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "RelativePath.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.11.0\/Sources\/CorePathWrangler\/RelativePath.swift#L29"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "resolve()"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "mutating"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "resolve"
+            },
+            {
+              "kind" : "text",
+              "text" : "()"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/relativepath\/resolve()"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/relativepath"
+},
+"doc://PathWrangler/documentation/PathWrangler/RelativePath/resolve()": {
+  "abstract" : [
+    {
+      "text" : "Resolves (simplifies) this relative path by resolving current (.) and parent (..) directory references.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "resolve"
+    },
+    {
+      "kind" : "text",
+      "text" : "()"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath\/resolve()",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "resolve()",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/relativepath\/resolve()"
+}
+}
+}

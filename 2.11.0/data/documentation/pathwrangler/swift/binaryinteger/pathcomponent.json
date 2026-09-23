@@ -1,0 +1,330 @@
+{
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift\/BinaryInteger"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift\/BinaryInteger\/pathComponent"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "conformance" : {
+      "availabilityPrefix" : [
+        {
+          "text" : "Available when",
+          "type" : "text"
+        }
+      ],
+      "conformancePrefix" : [
+        {
+          "text" : "Conforms when",
+          "type" : "text"
+        }
+      ],
+      "constraints" : [
+        {
+          "code" : "Self",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : " conforms to ",
+          "type" : "text"
+        },
+        {
+          "code" : "PathComponentConvertible",
+          "type" : "codeVoice"
+        },
+        {
+          "text" : ".",
+          "type" : "text"
+        }
+      ]
+    },
+    "extendedModule" : "Swift",
+    "externalID" : "s:Sz16CorePathWranglerAA0B20ComponentConvertibleRzrlE04pathD0SSvp",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "var"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "pathComponent"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
+        "text" : "PathComponent"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler",
+        "relatedModules" : [
+          "Swift"
+        ]
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "PathComponentConvertible.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.11.0\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L27"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Instance Property",
+    "symbolKind" : "property",
+    "title" : "pathComponent"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "var"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "pathComponent"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
+              "text" : "PathComponent"
+            },
+            {
+              "kind" : "text",
+              "text" : " { "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "get"
+            },
+            {
+              "kind" : "text",
+              "text" : " }"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/swift\/binaryinteger\/pathcomponent"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathComponent": {
+  "abstract" : [
+    {
+      "text" : "The type of a path component (e.g. ‘home’ and ‘user’ in ‘\/home\/user’).",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathcomponent"
+},
+"doc://PathWrangler/documentation/PathWrangler/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/swift"
+},
+"doc://PathWrangler/documentation/PathWrangler/Swift/BinaryInteger": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "extension"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "preciseIdentifier" : "s:Sz",
+      "text" : "BinaryInteger"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift\/BinaryInteger",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "BinaryInteger"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "BinaryInteger",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/swift\/binaryinteger"
+},
+"doc://PathWrangler/documentation/PathWrangler/Swift/BinaryInteger/pathComponent": {
+  "abstract" : [
+
+  ],
+  "conformance" : {
+    "availabilityPrefix" : [
+      {
+        "text" : "Available when",
+        "type" : "text"
+      }
+    ],
+    "conformancePrefix" : [
+      {
+        "text" : "Conforms when",
+        "type" : "text"
+      }
+    ],
+    "constraints" : [
+      {
+        "code" : "Self",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : " conforms to ",
+        "type" : "text"
+      },
+      {
+        "code" : "PathComponentConvertible",
+        "type" : "codeVoice"
+      },
+      {
+        "text" : ".",
+        "type" : "text"
+      }
+    ]
+  },
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "var"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "pathComponent"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B9Componenta",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/Swift\/BinaryInteger\/pathComponent",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "pathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/swift\/binaryinteger\/pathcomponent"
+}
+}
+}

@@ -1,0 +1,686 @@
+{
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "CorePathWrangler",
+    "modules" : [
+      {
+        "name" : "CorePathWrangler"
+      }
+    ],
+    "role" : "collection",
+    "roleHeading" : "Framework",
+    "symbolKind" : "module",
+    "title" : "CorePathWrangler"
+  },
+  "primaryContentSections" : [
+    {
+      "content" : [
+        {
+          "anchor" : "Installation",
+          "level" : 2,
+          "text" : "Installation",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Add the following package dependency in your ",
+              "type" : "text"
+            },
+            {
+              "code" : "Package.swift",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ":",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            ".package(url: \"https:\/\/github.com\/sersoft-gmbh\/path-wrangler\", from: \"2.0.0\"),"
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Or add it via Xcode (as of Xcode 11).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "anchor" : "Usage",
+          "level" : 2,
+          "text" : "Usage",
+          "type" : "heading"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "PathWrangler has two basic representations of a path: ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " and ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ". They have everything you need for simple yet great path computations.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "A relative path (as the name suggests) is not bound to any root. It’s relative to whatever absolute path you need it to be.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Thus it can also be turned into an absolute path using ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/absolute(in:)",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "An absolute path on the other hand is a path that always starts at the root.",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Both paths know how to “resolve” (or “simplify”) themselves. By doing so, they try to resolve and thus remove references of the current folder (",
+              "type" : "text"
+            },
+            {
+              "code" : ".",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ") and parent folder (",
+              "type" : "text"
+            },
+            {
+              "code" : "..",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ").",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Since absolute paths know where to start, they are even able to resolve symlinks. To do so, however, the path must exist on disk.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "Both path implementations also have a ",
+              "type" : "text"
+            },
+            {
+              "code" : "current",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " accessor that returns the current path.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "For ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " this is the ",
+              "type" : "text"
+            },
+            {
+              "code" : "cwd",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ". For ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " this is always just the relative path to the current directory, thus ",
+              "type" : "text"
+            },
+            {
+              "code" : ".",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ".",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "Path components or a relative path can be appended to both paths. There is even a convenience API that allows path building that almost looks like the path representation:",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        },
+        {
+          "code" : [
+            "let someSubDir = AbsolutePath.root \/ \"folder1\" \/ \"folder2\" \/\/ -> \"\/folder1\/folder2\""
+          ],
+          "syntax" : "swift",
+          "type" : "codeListing"
+        },
+        {
+          "inlineContent" : [
+            {
+              "text" : "A protocol named ",
+              "type" : "text"
+            },
+            {
+              "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+              "isActive" : true,
+              "type" : "reference"
+            },
+            {
+              "text" : " is used to represent path components. A bunch of default conformances (like for ",
+              "type" : "text"
+            },
+            {
+              "code" : "String",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", ",
+              "type" : "text"
+            },
+            {
+              "code" : "Int",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : ", etc.) make working with it easy.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "But adding more conformances is also easy. Just implement the only requirement ",
+              "type" : "text"
+            },
+            {
+              "code" : "pathComponent",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " and return the path component of the conforming type.",
+              "type" : "text"
+            },
+            {
+              "text" : " ",
+              "type" : "text"
+            },
+            {
+              "text" : "As of then, the type can be used wherever path components are used in PathWrangler (like with the nice ",
+              "type" : "text"
+            },
+            {
+              "code" : "\/",
+              "type" : "codeVoice"
+            },
+            {
+              "text" : " API mentioned before).",
+              "type" : "text"
+            }
+          ],
+          "type" : "paragraph"
+        }
+      ],
+      "kind" : "content"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "topicSections" : [
+    {
+      "anchor" : "Protocols",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol"
+      ],
+      "title" : "Protocols"
+    },
+    {
+      "anchor" : "Structures",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath"
+      ],
+      "title" : "Structures"
+    },
+    {
+      "anchor" : "Type-Aliases",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponent",
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathExtension"
+      ],
+      "title" : "Type Aliases"
+    },
+    {
+      "anchor" : "Extended-Modules",
+      "generated" : true,
+      "identifiers" : [
+        "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift"
+      ],
+      "title" : "Extended Modules"
+    }
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/corepathwrangler"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://CorePathWrangler/documentation/CorePathWrangler": {
+  "abstract" : [
+    {
+      "text" : "A simple path library written in Swift.",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "CorePathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/absolutepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathComponent": {
+  "abstract" : [
+    {
+      "text" : "The type of a path component (e.g. ‘home’ and ‘user’ in ‘\/home\/user’).",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathcomponent"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathComponentConvertible": {
+  "abstract" : [
+    {
+      "text" : "A type that can convert itself into a path component.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathComponentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathcomponentconvertible"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathExtension": {
+  "abstract" : [
+    {
+      "text" : "The type of a path extension (e.g. ‘txt’ of ‘file.txt’).",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathExtension"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathExtension",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathExtension"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathExtension",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathextension"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/PathProtocol": {
+  "abstract" : [
+    {
+      "text" : "A generic protocol around a path. Currently, there are two conformances, ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/AbsolutePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "It is strongly discouraged to declare new conformances to this protocol. They’re not guaranteed to work as expected.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/PathProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/pathprotocol"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/RelativePath/absolute(in:)": {
+  "abstract" : [
+    {
+      "text" : "Turns this relative path into an absolute path using the given absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "absolute"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "in"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+      "text" : "AbsolutePath"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler08AbsoluteB0V",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/RelativePath\/absolute(in:)",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "absolute(in:)",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/relativepath\/absolute(in:)"
+},
+"doc://CorePathWrangler/documentation/CorePathWrangler/Swift": {
+  "abstract" : [
+
+  ],
+  "identifier" : "doc:\/\/CorePathWrangler\/documentation\/CorePathWrangler\/Swift",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "Swift",
+  "type" : "topic",
+  "url" : "\/documentation\/corepathwrangler\/swift"
+}
+}
+}

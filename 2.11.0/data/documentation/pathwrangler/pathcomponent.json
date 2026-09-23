@@ -1,0 +1,173 @@
+{
+  "abstract" : [
+    {
+      "text" : "The type of a path component (e.g. ‘home’ and ‘user’ in ‘\/home\/user’).",
+      "type" : "text"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16CorePathWrangler0B9Componenta",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "typealias"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "PathComponent"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler"
+      }
+    ],
+    "navigatorTitle" : [
+      {
+        "kind" : "identifier",
+        "text" : "PathComponent"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "PathComponentConvertible.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.11.0\/Sources\/CorePathWrangler\/PathComponentConvertible.swift#L2"
+    },
+    "role" : "symbol",
+    "roleHeading" : "Type Alias",
+    "symbolKind" : "typealias",
+    "title" : "PathComponent"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "typealias"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "PathComponent"
+            },
+            {
+              "kind" : "text",
+              "text" : " = "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:SS",
+              "text" : "String"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/pathcomponent"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathComponent": {
+  "abstract" : [
+    {
+      "text" : "The type of a path component (e.g. ‘home’ and ‘user’ in ‘\/home\/user’).",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "typealias"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponent",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponent"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponent",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathcomponent"
+}
+}
+}

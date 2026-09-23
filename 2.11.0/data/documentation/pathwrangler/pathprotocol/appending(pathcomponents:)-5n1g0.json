@@ -1,0 +1,584 @@
+{
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementationsSections" : [
+    {
+      "anchor" : "PathProtocol-Implementations",
+      "identifiers" : [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-60uqw",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-89q4f"
+      ],
+      "title" : "PathProtocol Implementations"
+    }
+  ],
+  "hierarchy" : {
+    "paths" : [
+      [
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+        "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol"
+      ]
+    ]
+  },
+  "identifier" : {
+    "interfaceLanguage" : "swift",
+    "url" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0"
+  },
+  "kind" : "symbol",
+  "metadata" : {
+    "externalID" : "s:16CorePathWrangler0B8ProtocolP9appending14pathComponentsxqd___tSTRd__AA0B20ComponentConvertible_p7ElementRtd__lF",
+    "fragments" : [
+      {
+        "kind" : "keyword",
+        "text" : "func"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "identifier",
+        "text" : "appending"
+      },
+      {
+        "kind" : "text",
+        "text" : "("
+      },
+      {
+        "kind" : "externalParam",
+        "text" : "pathComponents"
+      },
+      {
+        "kind" : "text",
+        "text" : ": "
+      },
+      {
+        "kind" : "keyword",
+        "text" : "some"
+      },
+      {
+        "kind" : "text",
+        "text" : " "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:ST",
+        "text" : "Sequence"
+      },
+      {
+        "kind" : "text",
+        "text" : "<any "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+        "text" : "PathComponentConvertible"
+      },
+      {
+        "kind" : "text",
+        "text" : ">) -> "
+      },
+      {
+        "kind" : "typeIdentifier",
+        "text" : "Self"
+      }
+    ],
+    "modules" : [
+      {
+        "name" : "PathWrangler"
+      }
+    ],
+    "remoteSource" : {
+      "fileName" : "PathProtocol.swift",
+      "url" : "https:\/\/github.com\/sersoft-gmbh\/path-wrangler\/blob\/refs\/tags\/2.11.0\/Sources\/CorePathWrangler\/PathProtocol.swift#L43"
+    },
+    "required" : true,
+    "role" : "symbol",
+    "roleHeading" : "Instance Method",
+    "symbolKind" : "method",
+    "title" : "appending(pathComponents:)"
+  },
+  "primaryContentSections" : [
+    {
+      "declarations" : [
+        {
+          "languages" : [
+            "swift"
+          ],
+          "platforms" : [
+            "Linux"
+          ],
+          "tokens" : [
+            {
+              "kind" : "keyword",
+              "text" : "func"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "identifier",
+              "text" : "appending"
+            },
+            {
+              "kind" : "text",
+              "text" : "("
+            },
+            {
+              "kind" : "externalParam",
+              "text" : "pathComponents"
+            },
+            {
+              "kind" : "text",
+              "text" : ": "
+            },
+            {
+              "kind" : "keyword",
+              "text" : "some"
+            },
+            {
+              "kind" : "text",
+              "text" : " "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:ST",
+              "text" : "Sequence"
+            },
+            {
+              "kind" : "text",
+              "text" : "<any "
+            },
+            {
+              "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponentConvertible",
+              "kind" : "typeIdentifier",
+              "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+              "text" : "PathComponentConvertible"
+            },
+            {
+              "kind" : "text",
+              "text" : ">) -> "
+            },
+            {
+              "kind" : "typeIdentifier",
+              "text" : "Self"
+            }
+          ]
+        }
+      ],
+      "kind" : "declarations"
+    },
+    {
+      "kind" : "parameters",
+      "parameters" : [
+        {
+          "content" : [
+            {
+              "inlineContent" : [
+                {
+                  "text" : "The sequence of path component convertible objects, whose path components to append to the receiver and return.",
+                  "type" : "text"
+                }
+              ],
+              "type" : "paragraph"
+            }
+          ],
+          "name" : "pathComponents"
+        }
+      ]
+    }
+  ],
+  "schemaVersion" : {
+    "major" : 0,
+    "minor" : 3,
+    "patch" : 0
+  },
+  "sections" : [
+
+  ],
+  "variants" : [
+    {
+      "paths" : [
+        "\/documentation\/pathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0"
+      ],
+      "traits" : [
+        {
+          "interfaceLanguage" : "swift"
+        }
+      ]
+    }
+  ]
+, 
+"references": {
+"doc://PathWrangler/documentation/PathWrangler": {
+  "abstract" : [
+    {
+      "text" : "Foundation extensions for ",
+      "type" : "text"
+    },
+    {
+      "code" : "CorePathWrangler",
+      "type" : "codeVoice"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler",
+  "kind" : "symbol",
+  "role" : "collection",
+  "title" : "PathWrangler",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler"
+},
+"doc://PathWrangler/documentation/PathWrangler/AbsolutePath": {
+  "abstract" : [
+    {
+      "text" : "Represents an absolute path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "AbsolutePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "AbsolutePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/absolutepath"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathComponentConvertible": {
+  "abstract" : [
+    {
+      "text" : "A type that can convert itself into a path component.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathComponentConvertible",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathComponentConvertible"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathComponentConvertible",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathcomponentconvertible"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathProtocol": {
+  "abstract" : [
+    {
+      "text" : "A generic protocol around a path. Currently, there are two conformances, ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/AbsolutePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : " and ",
+      "type" : "text"
+    },
+    {
+      "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath",
+      "isActive" : true,
+      "type" : "reference"
+    },
+    {
+      "text" : ".",
+      "type" : "text"
+    },
+    {
+      "text" : " ",
+      "type" : "text"
+    },
+    {
+      "text" : "It is strongly discouraged to declare new conformances to this protocol. They’re not guaranteed to work as expected.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "protocol"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "PathProtocol"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "PathProtocol",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathprotocol"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathProtocol/appending(pathComponents:)-5n1g0": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "defaultImplementations" : 2,
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": "
+    },
+    {
+      "kind" : "keyword",
+      "text" : "some"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:ST",
+      "text" : "Sequence"
+    },
+    {
+      "kind" : "text",
+      "text" : "<any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : ">) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-5n1g0",
+  "kind" : "symbol",
+  "required" : true,
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathprotocol\/appending(pathcomponents:)-5n1g0"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathProtocol/appending(pathComponents:)-60uqw": {
+  "abstract" : [
+    {
+      "text" : "Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": any "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "preciseIdentifier" : "s:16CorePathWrangler0B20ComponentConvertibleP",
+      "text" : "PathComponentConvertible"
+    },
+    {
+      "kind" : "text",
+      "text" : "...) -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-60uqw",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathprotocol\/appending(pathcomponents:)-60uqw"
+},
+"doc://PathWrangler/documentation/PathWrangler/PathProtocol/appending(pathComponents:)-89q4f": {
+  "abstract" : [
+
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "func"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "appending"
+    },
+    {
+      "kind" : "text",
+      "text" : "<each "
+    },
+    {
+      "kind" : "genericParameter",
+      "text" : "Component"
+    },
+    {
+      "kind" : "text",
+      "text" : ">("
+    },
+    {
+      "kind" : "externalParam",
+      "text" : "pathComponents"
+    },
+    {
+      "kind" : "text",
+      "text" : ": repeat each "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Component"
+    },
+    {
+      "kind" : "text",
+      "text" : ") -> "
+    },
+    {
+      "kind" : "typeIdentifier",
+      "text" : "Self"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/PathProtocol\/appending(pathComponents:)-89q4f",
+  "kind" : "symbol",
+  "role" : "symbol",
+  "title" : "appending(pathComponents:)",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/pathprotocol\/appending(pathcomponents:)-89q4f"
+},
+"doc://PathWrangler/documentation/PathWrangler/RelativePath": {
+  "abstract" : [
+    {
+      "text" : "Represents a relative path.",
+      "type" : "text"
+    }
+  ],
+  "fragments" : [
+    {
+      "kind" : "keyword",
+      "text" : "struct"
+    },
+    {
+      "kind" : "text",
+      "text" : " "
+    },
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "identifier" : "doc:\/\/PathWrangler\/documentation\/PathWrangler\/RelativePath",
+  "kind" : "symbol",
+  "navigatorTitle" : [
+    {
+      "kind" : "identifier",
+      "text" : "RelativePath"
+    }
+  ],
+  "role" : "symbol",
+  "title" : "RelativePath",
+  "type" : "topic",
+  "url" : "\/documentation\/pathwrangler\/relativepath"
+}
+}
+}
