@@ -85,13 +85,35 @@ extension _PathProtocol {
     }
 
     @inlinable
+    @_disfavoredOverload
     public mutating func append(pathComponents: some Sequence<any PathComponentConvertible>) {
         _impl.append(pathComponents: pathComponents)
     }
 
     @inlinable
+    @_disfavoredOverload
     public func appending(pathComponents: some Sequence<any PathComponentConvertible>) -> Self {
         _withCopiedImpl { $0.append(pathComponents: pathComponents) }
+    }
+
+    @inlinable
+    public mutating func append<each Component: PathComponentConvertible>(pathComponents: repeat each Component) {
+        _impl.append(pathComponents: repeat each pathComponents)
+    }
+
+    @inlinable
+    public func appending<each Component: PathComponentConvertible>(pathComponents: repeat each Component) -> Self {
+        _withCopiedImpl { $0.append(pathComponents: repeat each pathComponents) }
+    }
+
+    @inlinable
+    public mutating func append(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) {
+        _impl.append(pathComponent: pathComponent)
+    }
+
+    @inlinable
+    public func appending(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) -> Self {
+        _withCopiedImpl { $0.append(pathComponent: pathComponent) }
     }
 
     @inlinable

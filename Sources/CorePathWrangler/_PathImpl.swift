@@ -7,7 +7,7 @@ import Musl
 #elseif os(Windows)
 import ucrt
 #else
-#error("Unknown platform")
+#error("Unsupported platform")
 #endif
 
 import Algorithms
@@ -51,8 +51,21 @@ struct _PathImpl: Sendable {
     }
 
     @inlinable
+    @_disfavoredOverload
     mutating func append(pathComponents: some Sequence<any PathComponentConvertible>) {
         elements.append(contentsOf: pathComponents.flatMap(\.pathElements))
+    }
+
+    @inlinable
+    public mutating func append(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) {
+        elements.append(contentsOf: pathComponent.pathElements)
+    }
+
+    @inlinable
+    public mutating func append<each Component: PathComponentConvertible>(pathComponents: repeat each Component) {
+        for component in repeat each pathComponents {
+            append(pathComponent: component)
+        }
     }
 
     private func resolvedSymlink(at path: String) -> String? {

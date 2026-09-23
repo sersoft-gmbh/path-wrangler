@@ -35,10 +35,26 @@ public protocol PathProtocol: Hashable {
 
     /// Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver.
+    @_disfavoredOverload
     mutating func append(pathComponents: some Sequence<any PathComponentConvertible>)
     /// Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver and return.
+    @_disfavoredOverload
     func appending(pathComponents: some Sequence<any PathComponentConvertible>) -> Self
+
+    /// Appends the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
+    /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver.
+    mutating func append<each Component: PathComponentConvertible>(pathComponents: repeat each Component)
+    /// Returns a new path by appending the path components, taken from each element of the sequence of path component convertible objects, to the receiver.
+    /// - Parameter pathComponents: The sequence of path component convertible objects, whose path components to append to the receiver and return.
+    func appending<each Component: PathComponentConvertible>(pathComponents: repeat each Component) -> Self
+
+    /// Appends the path component of the path component convertible object to the receiver.
+    /// - Parameter pathComponent: The path component convertible object, whose path component to append to the receiver.
+    mutating func append(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable)
+    /// Returns a new path by appending the path component taken from the path component convertible object to the receiver.
+    /// - Parameter pathComponents: The path component convertible object, whose path component to append to the receiver and return.
+    func appending(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) -> Self
 
     /// Appends a path extension to the last component of the receiver.
     /// - Parameter pathExtension: The extension to append to the last component of the receiver.
@@ -80,6 +96,7 @@ extension PathProtocol {
     /// Appends the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The variadic list of path component convertible objects, whose path components to append to the receiver.
     @inlinable
+    @_disfavoredOverload
     public mutating func append(pathComponents: any PathComponentConvertible...) {
         append(pathComponents: pathComponents)
     }
@@ -87,8 +104,31 @@ extension PathProtocol {
     /// Returns a new path by appending the path components, taken from each element of the variadic list of path component convertible objects, to the receiver.
     /// - Parameter pathComponents: The variadic list of path component convertible objects, whose path components to append to the receiver and return.
     @inlinable
+    @_disfavoredOverload
     public func appending(pathComponents: any PathComponentConvertible...) -> Self {
         appending(pathComponents: pathComponents)
+    }
+
+    public mutating func append<each Component: PathComponentConvertible>(pathComponents: repeat each Component) {
+        for component in repeat each pathComponents {
+            append(pathComponent: component)
+        }
+    }
+
+    public func appending<each Component: PathComponentConvertible>(pathComponents: repeat each Component) -> Self {
+        var componentsArray = Array<any PathComponentConvertible>()
+        for component in repeat each pathComponents {
+            componentsArray.append(component)
+        }
+        return appending(pathComponents: componentsArray)
+    }
+
+    public mutating func append(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) {
+        append(pathComponents: CollectionOfOne(pathComponent.pathComponent))
+    }
+
+    public func appending(pathComponent: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) -> Self {
+        appending(pathComponents: CollectionOfOne(pathComponent.pathComponent))
     }
 }
 
@@ -98,7 +138,7 @@ extension PathProtocol {
     ///   - lhs: The existing path to append the path component to.
     ///   - rhs: The path component convertible object to append the path component to.
     @inlinable
-    public static func / (lhs: Self, rhs: some PathComponentConvertible) -> Self {
-        lhs.appending(pathComponents: rhs)
+    public static func / (lhs: Self, rhs: borrowing some PathComponentConvertible & ~Copyable & ~Escapable) -> Self {
+        lhs.appending(pathComponent: rhs)
     }
 }

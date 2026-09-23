@@ -40,16 +40,34 @@ struct URLPathProtocolExtensionTests {
     }
 
     @Test
+    func appendingPathComponent() {
+        var url = URL(fileURLWithPath: "/a/b/c")
+        let newURL = url.appending(pathComponent: "d")
+        url.append(pathComponent: "d")
+        #expect(newURL.path == "/a/b/c/d")
+        #expect(url.path == "/a/b/c/d")
+    }
+
+    @Test
     func appendingPathComponents() {
         var url = URL(fileURLWithPath: "/a/b/c")
-        let newURL = url.appending(pathComponents: ["d", "e", "f"])
-        url.append(pathComponents: ["d", "e", "f"])
+        let newURL = url.appending(pathComponents: "d", "e", "f")
+        url.append(pathComponents: "d", "e", "f")
         #expect(newURL.path == "/a/b/c/d/e/f")
         #expect(url.path == "/a/b/c/d/e/f")
     }
 
     @Test
     func appendingVariadicPathComponents() {
+        var url = URL(fileURLWithPath: "/a/b/c")
+        let newURL = url.appending(pathComponents: "d", "e", "f" as any PathComponentConvertible)
+        url.append(pathComponents: "d", "e", "f" as any PathComponentConvertible)
+        #expect(newURL.path == "/a/b/c/d/e/f")
+        #expect(url.path == "/a/b/c/d/e/f")
+    }
+
+    @Test
+    func appendingVariadicGenericPathComponents() {
         var url = URL(fileURLWithPath: "/a/b/c")
         let newURL = url.appending(pathComponents: "d", "e", "f")
         url.append(pathComponents: "d", "e", "f")

@@ -2,7 +2,7 @@
 public typealias PathComponent = String
 
 /// A type that can convert itself into a path component.
-public protocol PathComponentConvertible {
+public protocol PathComponentConvertible: ~Copyable, ~Escapable {
     /// The path component of the conforming type.
     var pathComponent: PathComponent { get }
 }

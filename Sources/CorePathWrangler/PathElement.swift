@@ -14,9 +14,9 @@ struct PathElement: Hashable, Sendable, PathComponentConvertible {
 
     var simplificationAction: SimplificationAction {
         switch name {
-        case ".": return .remove
-        case "..": return .removeParent
-        default: return .none
+        case ".": .remove
+        case "..": .removeParent
+        default: .none
         }
     }
 
@@ -52,7 +52,7 @@ extension PathElement {
     }
 }
 
-extension PathComponentConvertible {
+extension PathComponentConvertible where Self: ~Copyable & ~Escapable {
     @inlinable
     var pathElements: Array<PathElement> { PathElement.elements(from: pathComponent) }
 }
